@@ -1,0 +1,16 @@
+echo hello world
+echo "hello world"
+python -V
+python -V
+python3 -V
+export $PATH
+export $PATH
+find-file ehobo.org
+ls
+ls man
+alias ff 'find-file $1'
+ff ehobo.org
+alias d 'dired $1'
+export $PATH
+export $PATH
+goku

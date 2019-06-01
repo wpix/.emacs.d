@@ -1,0 +1,17 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Org-mode 简明手册 - open source - 博客园"
+ (front-context-string . "  * 6 标签\n      +")
+ (rear-context-string . "      + 5.6 复选框\n")
+ (position . 662)
+ (filename . #1="https://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html")
+ (url . #1#)
+ (handler . bookmark-w3m-bookmark-jump))
+("org-capture-last-stored"
+ (filename . "~/org-notes/gtd.org")
+ (front-context-string . "** TODO check if")
+ (rear-context-string)
+ (position . 9))
+)
