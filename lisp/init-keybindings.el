@@ -1,6 +1,6 @@
 ;;mastering emacs keybindings
 (define-key global-map (kbd "RET") 'newline-and-indent)
-(define-key dired-mode-map (kbd "q") 'kill-this-buffer)
+;;(define-key dired-mode-map (kbd "q") 'kill-this-buffer)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "M-.") 'other-window)
 (global-set-key (kbd "M-i") 'imenu)

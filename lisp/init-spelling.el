@@ -40,4 +40,29 @@
 (setq langtool-autoshow-message-function
       'langtool-autoshow-detail-popup)
 
+(defun mk-flyspell-correct-previous (&optional words)
+  "Correct word before point, reach distant words.
+WORDS words at maximum are traversed backward until misspelled
+word is found.  If it's not found, give up.  If argument WORDS is
+not specified, traverse 12 words by default.
+Return T if misspelled word is found and NIL otherwise.  Never
+move point."
+  (interactive "P")
+  (let* ((Δ (- (point-max) (point)))
+         (counter (string-to-number (or words "12")))
+         (result
+          (catch 'result
+            (while (>= counter 0)
+              (when (cl-some #'flyspell-overlay-p
+                             (overlays-at (point)))
+                (flyspell-correct-word-before-point)
+                (throw 'result t))
+              (backward-word 1)
+              (setq counter (1- counter))
+              nil))))
+    (goto-char (- (point-max) Δ))
+    result))
+(global-set-key (kbd "C-'") 'mk-flyspell-correct-previous)
+
+
 (provide 'init-spelling)

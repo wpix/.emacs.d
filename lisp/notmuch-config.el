@@ -8,6 +8,7 @@
 (add-hook 'message-mode-hook 'turn-off-auto-fill)
 
 (require 'gnus-art)
+(require 'org-notmuch)
 
 (setq mail-host-address "purdue.edu")
 (setq user-full-name "Congying Wang")
