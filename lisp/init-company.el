@@ -39,7 +39,7 @@
 
 (setq company-idle-delay              0
       company-minimum-prefix-length   3
-      company-show-numbers            t
+      company-show-numbers            nil
       company-tooltip-limit           9
       company-dabbrev-downcase        nil
       company-require-match           nil

@@ -11,6 +11,8 @@
 
 (define-abbrev-table 'awk-mode-abbrev-table '())
 
+(define-abbrev-table 'bbdb-mode-abbrev-table '())
+
 (define-abbrev-table 'bibtex-mode-abbrev-table '())
 
 (define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
@@ -21,11 +23,19 @@
 
 (define-abbrev-table 'c-mode-abbrev-table '())
 
+(define-abbrev-table 'calc-trail-mode-abbrev-table '())
+
 (define-abbrev-table 'calendar-mode-abbrev-table '())
+
+(define-abbrev-table 'change-log-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
+
+(define-abbrev-table 'css-mode-abbrev-table '())
+
+(define-abbrev-table 'debugger-mode-abbrev-table '())
 
 (define-abbrev-table 'diary-fancy-display-mode-abbrev-table '())
 
@@ -34,6 +44,8 @@
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
 (define-abbrev-table 'dig-mode-abbrev-table '())
+
+(define-abbrev-table 'display-time-world-mode-abbrev-table '())
 
 (define-abbrev-table 'doctex-mode-abbrev-table '())
 
@@ -55,6 +67,8 @@
 
 (define-abbrev-table 'eshell-mode-abbrev-table '())
 
+(define-abbrev-table 'eudc-mode-abbrev-table '())
+
 (define-abbrev-table 'flymake-diagnostics-buffer-mode-abbrev-table '())
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
@@ -63,89 +77,209 @@
 
 (define-abbrev-table 'gfm-view-mode-abbrev-table '())
 
+(define-abbrev-table 'git-commit-elisp-text-mode-abbrev-table '())
+
 (define-abbrev-table 'global-abbrev-table
   '(
     ("aboce" "above" nil 0)
     ("acccount" "account" nil 0)
     ("acive" "active" nil 0)
     ("adapticpve" "adapticpve" nil 0)
+    ("adcantages" "advantages" nil 0)
+    ("adter" "after" nil 0)
+    ("agenst" "agents" nil 0)
     ("alabama" "Alabama" nil 1)
     ("alloed" "allowed" nil 0)
     ("altogehter" "altogether" nil 0)
     ("alwyas" "always" nil 0)
+    ("anomynous" "anonymous" nil 0)
+    ("aothors" "authors" nil 0)
+    ("apenture" "Aperture" nil 0)
+    ("aplogizing" "apologizing" nil 0)
     ("ar" "ar" nil 0)
     ("arizona" "Arizona" nil 1)
+    ("arragne" "Arrange" nil 0)
+    ("assignemnts" "assignments" nil 0)
+    ("automative" "automative" nil 0)
+    ("availble" "available" nil 1)
     ("aviod" "avoid" nil 0)
+    ("becaseu" "because" nil 0)
+    ("becasue" "because" nil 0)
     ("beene" "been" nil 0)
+    ("beggers" "beggars" nil 0)
+    ("behicle" "vehicle" nil 0)
     ("beoken" "broken" nil 0)
+    ("blackboard" "Blackboard" nil 0)
     ("boundaties" "boundaries" nil 0)
+    ("breif" "brief" nil 0)
+    ("broder" "border" nil 0)
+    ("busineess" "business" nil 0)
     ("callee" "caller" nil 0)
+    ("challengies" "challenges" nil 0)
+    ("chicago" "Chicago" nil 1)
+    ("christina" "Christina" nil 0)
+    ("colaboration" "collaboration" nil 0)
+    ("comminucated" "communicated" nil 0)
     ("communitie" "communities" nil 0)
+    ("comparision" "comparison" nil 0)
+    ("compelex" "complex" nil 0)
+    ("compelte" "complete" nil 0)
     ("configration" "configuration" nil 0)
     ("configred" "configured" nil 0)
     ("connectedness" "contentedness" nil 0)
+    ("consition" "condition" nil 0)
+    ("contol" "control" nil 0)
     ("contrcts" "contracts" nil 0)
-    ("couldnt" "couldn't" nil 1)
+    ("coporate" "Corporate" nil 0)
+    ("couldnt" "couldn't" nil 3)
     ("defcts" "defects" nil 0)
     ("defs" "defs" nil 0)
+    ("deliever" "deliver" nil 0)
+    ("desigated" "designated" nil 0)
+    ("didnt" "didn't" nil 0)
     ("dimention" "dimension" nil 0)
+    ("discusssion" "discussion" nil 0)
+    ("dislocaio" "dislocation" nil 0)
     ("dislocatons" "dislocations" nil 0)
     ("doanload" "download" nil 0)
+    ("dont" "don't" nil 1)
     ("ecologial" "ecological" nil 0)
+    ("eddited" "edited" nil 0)
     ("electruc" "electric" nil 0)
     ("elelctric" "electric" nil 0)
     ("emaisl" "emails" nil 1)
     ("emmacs" "emmacs" nil 0)
     ("enery" "energy" nil 0)
     ("engery" "energy" nil 0)
+    ("enought" "enough" nil 0)
+    ("entrership" "entrership" nil 0)
+    ("essientially" "Essentially" nil 0)
+    ("ethat" "that" nil 0)
     ("expanson" "Expansion" nil 0)
+    ("experiece" "experience" nil 0)
     ("exsiting" "existing" nil 0)
+    ("fieldtrip" "field trip" nil 0)
+    ("focusin" "focusing" nil 0)
     ("follwoing" "following" nil 1)
+    ("fomal" "formal" nil 0)
+    ("forawrd" "forward" nil 0)
+    ("fossile" "fossil" nil 0)
+    ("fpr" "for" nil 0)
     ("gamil" "gamil" nil 0)
     ("gorw" "grow" nil 0)
     ("gp" "go" nil 0)
+    ("headquaters" "headquarters" nil 0)
     ("hierachy" "hierarchy" nil 0)
     ("highlishts" "highlights" nil 0)
+    ("hournal" "Journal" nil 0)
     ("humen" "human" nil 0)
     ("idenity" "identity" nil 0)
-    ("india" "India" nil 0)
+    ("imoprtant" "important" nil 0)
+    ("inconvient" "inconvenient" nil 0)
+    ("india" "India" nil 2)
     ("inductry" "industry" nil 0)
+    ("industy" "industry" nil 0)
     ("inerlinked" "interlinked" nil 0)
     ("ingibited" "inhibited" nil 0)
     ("insteaf" "instead" nil 0)
     ("instrctions" "instructions" nil 0)
-    ("ive" "I've" nil 1)
+    ("instrinsic" "intrinsic" nil 0)
+    ("intelectual" "intellectual" nil 0)
+    ("interdisciplinaty" "interdisciplinary" nil 0)
+    ("interships" "internships" nil 0)
+    ("ive" "I've" nil 2)
+    ("jounrals" "journals" nil 0)
+    ("lable" "label" nil 0)
+    ("largerer" "larger" nil 0)
     ("latested" "latested" nil 0)
+    ("learend" "learned" nil 0)
     ("leat" "least" nil 0)
+    ("manufactuers" "manufacturers" nil 0)
+    ("manufacuring" "manufacturing" nil 1)
     ("massege" "message" nil 0)
+    ("measureing" "measuring" nil 0)
+    ("methodlogy" "methodology" nil 0)
     ("newbee" "Newbie" nil 0)
+    ("obsreved" "observed" nil 0)
     ("offical" "official" nil 0)
     ("osrts" "sorts" nil 0)
+    ("ot" "or" nil 0)
+    ("ourselfves" "ourselves" nil 0)
     ("overvoew" "Overview" nil 0)
+    ("palce" "place" nil 0)
     ("panchy" "Panchy" nil 0)
     ("pannels" "panels" nil 0)
     ("peotect" "protect" nil 0)
+    ("perfoemance" "performance" nil 0)
+    ("pineer" "pioneer" nil 0)
+    ("policyes" "polices" nil 0)
+    ("populatio" "population" nil 0)
     ("potentail" "potential" nil 0)
     ("potental" "potential" nil 0)
+    ("practive" "practice" nil 0)
+    ("probelm" "problem" nil 0)
+    ("proceding" "proceeding" nil 0)
+    ("pur" "Our" nil 0)
     ("rainforest" "rainforest" nil 0)
+    ("recalibrated" "recalibrated" nil 0)
     ("recombinations" "recombination" nil 0)
     ("recommand" "recommend" nil 0)
+    ("regidly" "rigidly" nil 0)
+    ("remeber" "remember" nil 0)
     ("remerber" "Remember" nil 0)
+    ("reourced" "resource" nil 0)
+    ("reources" "resources" nil 0)
     ("reparied" "repaired" nil 0)
+    ("requriement" "requirement" nil 0)
+    ("requtation" "reputation" nil 0)
+    ("resiliene" "resilience" nil 0)
+    ("reson" "Reason" nil 0)
     ("sacn" "scan" nil 0)
     ("saturday" "Saturday" nil 0)
     ("schdule" "schedule" nil 0)
     ("sessio" "session" nil 0)
+    ("shooted" "shooted" nil 0)
+    ("smplicity" "simplicity" nil 0)
+    ("softwares" "software" nil 0)
     ("sometiems" "sometimes" nil 0)
+    ("standaline" "standalone" nil 0)
     ("strategie" "strategies" nil 0)
+    ("ststems" "systems" nil 0)
+    ("studetns" "Students" nil 0)
+    ("studnets" "students" nil 1)
+    ("subsites" "subsides" nil 0)
+    ("sugestions" "suggestions" nil 0)
+    ("sumarative" "sumarative" nil 0)
+    ("summaritive" "summarize" nil 4)
+    ("sustainablity" "sustainability" nil 0)
+    ("sustanability" "sustainability" nil 0)
     ("sutdent" "student" nil 0)
+    ("suumarative" "suumarative" nil 0)
+    ("swizerland" "Switzerland" nil 0)
     ("sy" "sy" nil 0)
     ("symbpl" "symbol" nil 0)
+    ("teh" "the" nil 0)
     ("temparature" "temperature" nil 0)
-    ("ths" "this" nil 0)
+    ("theyre" "they're" nil 0)
+    ("thrid" "third" nil 0)
+    ("ths" "this" nil 2)
     ("thwory" "theory" nil 0)
+    ("trainning" "training" nil 0)
+    ("trainship" "trainship" nil 0)
+    ("traning" "training" nil 0)
+    ("tranining" "training" nil 0)
     ("triplle" "triple" nil 0)
+    ("tuesdat" "Tuesday" nil 0)
+    ("tules" "rules" nil 0)
+    ("turists" "tourists" nil 0)
+    ("uation" "uation" nil 0)
+    ("univeristy" "University" nil 1)
+    ("vai" "via" nil 0)
+    ("varaibles" "variables" nil 0)
+    ("vehivle" "vehicle" nil 0)
+    ("voltigy" "voltigy" nil 0)
     ("whskers" "whiskers" nil 0)
+    ("wrokshop" "workshop" nil 0)
    ))
 
 (define-abbrev-table 'gnus-article-edit-mode-abbrev-table '())
@@ -155,6 +289,8 @@
 (define-abbrev-table 'gnus-group-mode-abbrev-table '())
 
 (define-abbrev-table 'gnus-sticky-article-mode-abbrev-table '())
+
+(define-abbrev-table 'grep-mode-abbrev-table '())
 
 (define-abbrev-table 'helm-grep-mode-abbrev-table '())
 
@@ -170,6 +306,10 @@
 
 (define-abbrev-table 'idl-mode-abbrev-table '())
 
+(define-abbrev-table 'ivy-occur-grep-mode-abbrev-table '())
+
+(define-abbrev-table 'ivy-occur-mode-abbrev-table '())
+
 (define-abbrev-table 'java-mode-abbrev-table '())
 
 (define-abbrev-table 'js-jsx-mode-abbrev-table '())
@@ -180,6 +320,38 @@
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
+(define-abbrev-table 'log-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-cherry-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-diff-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-select-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-merge-preview-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-process-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-reflog-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-refs-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-repolist-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-revision-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stash-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stashes-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-status-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-submodule-list-mode-abbrev-table '())
+
 (define-abbrev-table 'markdown-mode-abbrev-table '())
 
 (define-abbrev-table 'markdown-view-mode-abbrev-table '())
@@ -187,6 +359,8 @@
 (define-abbrev-table 'message-mode-abbrev-table '())
 
 (define-abbrev-table 'messages-buffer-mode-abbrev-table '())
+
+(define-abbrev-table 'mhtml-mode-abbrev-table '())
 
 (define-abbrev-table 'mpc-mode-abbrev-table '())
 
@@ -214,6 +388,10 @@
 
 (define-abbrev-table 'occur-mode-abbrev-table '())
 
+(define-abbrev-table 'org-brain-visualize-mode-abbrev-table '())
+
+(define-abbrev-table 'org-export-stack-mode-abbrev-table '())
+
 (define-abbrev-table 'org-mode-abbrev-table '())
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
@@ -236,9 +414,15 @@
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
+(define-abbrev-table 'pyim-dm-mode-abbrev-table '())
+
+(define-abbrev-table 'rmail-summary-mode-abbrev-table '())
+
 (define-abbrev-table 'rst-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
+
+(define-abbrev-table 'scss-mode-abbrev-table '())
 
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
 

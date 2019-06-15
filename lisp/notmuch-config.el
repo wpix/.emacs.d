@@ -8,6 +8,7 @@
 (add-hook 'message-mode-hook 'turn-off-auto-fill)
 
 (require 'gnus-art)
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
 (require 'org-notmuch)
 
 (setq mail-host-address "purdue.edu")
@@ -27,14 +28,11 @@
       message-sendmail-f-is-evil nil
       message-kill-buffer-on-exit t
       notmuch-show-indent-messages-width 4
-      notmuch-maildir-use-notmuch-insert t
-      notmuch-fcc-dirs "sent"
       notmuch-saved-searches '((:name "inbox" :query "tag:inbox" :key "i")
 			       (:name "unread" :query "tag:unread" :key "u")
                                (:name "flagged" :query "tag:flagged" :key "f")
 			       (:name "replied" :query "tag:replied" :key "r")
-			       (:name "archive" :query "tag:archive" :key "r")
-                               (:name "sent" :query "tag:sent" :key "t")))
+			       (:name "archive" :query "tag:archive" :key "r")))
 
 ;;(define-key notmuch-show-mode-map "\C-c\C-o" 'browse-url-at-point)
 

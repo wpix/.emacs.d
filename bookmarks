@@ -2,7 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("karabiner"
+(("org capture elements"
+ (front-context-string . "\n9.1.3.1 Templat")
+ (rear-context-string . "pture templates\n")
+ (position . 274570)
+ (filename . "/Users/Ying/.emacs.d/elpa/org-plus-contrib-20190520/org")
+ (info-node . "Template elements")
+ (handler . Info-bookmark-jump))
+("org manual"
+ (front-context-string . "     Version 1.3")
+ (rear-context-string . "tation License,\n")
+ (position . 1181)
+ (filename . "/Users/Ying/.emacs.d/elpa/org-plus-contrib-20190520/org")
+ (info-node . "Top")
+ (handler . Info-bookmark-jump))
+("karabiner"
  (filename . "~/.config/karabiner.edn")
  (front-context-string . "\n         :held ")
  (rear-context-string . "    :alone   500")
@@ -15,8 +29,8 @@
  (url . #1#)
  (handler . bookmark-w3m-bookmark-jump))
 ("org-capture-last-stored"
- (filename . "~/org-notes/gtd.org")
- (front-context-string . "** TODO Add a re")
- (rear-context-string . "Tunneling AFM]]\n")
- (position . 329))
+ (filename . "~/org-notes/inbox.org")
+ (front-context-string . "** TODO Relate O")
+ (rear-context-string . "6-08 Sat 11:00>\n")
+ (position . 1194))
 )

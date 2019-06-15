@@ -1,17 +1,19 @@
 ;;mastering emacs keybindings
 (define-key global-map (kbd "RET") 'newline-and-indent)
-;;(define-key dired-mode-map (kbd "q") 'kill-this-buffer)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "M-.") 'other-window)
-(global-set-key (kbd "M-i") 'imenu)
+(global-set-key (kbd "M-i") 'helm-imenu)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-.") #'imenu-anywhere)
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "M-SPC") 'mark-sexp)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key "\C-xm" 'browse-url-at-point)
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
 
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
