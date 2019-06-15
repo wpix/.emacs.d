@@ -1,0 +1,6 @@
+This is a repo holding up my emacs configurations.
+I start with vanilla emacs as current starter kits are too complicated for a newbie to emacs, plus a non-programmer.
+
+* Features
+** Email set-up
+[[https://www.ying-ish.com/essay/emacs-notmuch-mbsync-msmtp-email/][Notmuch in Emacs with mbsync and msmtp]]
