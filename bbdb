@@ -1,9 +1,0 @@
-;; -*- mode: Emacs-Lisp; coding: utf-8; -*-
-;;; file-format: 9
-["Joe" "Andler" nil nil nil nil nil ("joeandler@gmail.com") ((notes . " ")) "f701ec18-bf4e-4736-870c-aea85cfd7ad9" "2019-06-15 00:09:01 +0000" "2019-06-15 00:09:01 +0000" nil]
-["Joseph" "Andler" nil nil nil nil nil ("jandler@purdue.edu") ((notes . " ")) "cae1ae1d-8fc0-4bbe-83da-d9bc6a499410" "2019-06-15 00:10:12 +0000" "2019-06-15 00:10:12 +0000" nil]
-["Caitlyn M" "Clarkson" nil nil nil nil nil ("clarksoc@purdue.edu") ((notes . " ")) "4bbfa044-f80f-4697-a8bb-87dbcd94327f" "2019-06-15 00:09:37 +0000" "2019-06-15 00:09:37 +0000" nil]
-["Carol" "Handwerker" nil nil nil nil nil ("carolh@purdue.edu") ((notes . " ")) "3d8d450f-32fe-4c5e-b13c-1b28b902ec7a" "2019-06-15 00:05:33 +0000" "2019-06-15 00:05:33 +0000" nil]
-["Matthew" "Korey" nil nil nil nil nil ("matthewakorey@gmail.com") ((notes . " ")) "961b381f-c473-4b5b-b4ac-46fcd5723715" "2019-06-15 00:09:21 +0000" "2019-06-15 00:09:21 +0000" nil]
-["Ruth A" "Streveler" nil nil nil nil nil ("rastreve@purdue.edu") ((notes . " ")) "5b276522-b4e3-4d85-94a2-b52cac0e070d" "2019-06-15 00:05:07 +0000" "2019-06-15 00:05:07 +0000" nil]
-["Alyssa" "Yaeger" nil nil nil nil nil ("ayaeger@purdue.edu") ((notes . " ")) "67f4ffea-9c1e-4d31-86ff-f34435b67e04" "2019-06-15 00:09:54 +0000" "2019-06-15 00:09:54 +0000" nil]
