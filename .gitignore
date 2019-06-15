@@ -1,3 +1,4 @@
 bbdb
 .#bbdb
 *.el~
+*.data
