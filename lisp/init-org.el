@@ -65,6 +65,15 @@
 
 (setq org-capture-templates
       '(("j" "Journal entry" entry (function org-journal-find-location)
-                               "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
+	 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
+
+(defun org-journal-save-entry-and-exit()
+  "Simple convenience function.
+  Saves the buffer of the current day's entry and kills the window
+  Similar to org-capture like behavior"
+  (interactive)
+  (save-buffer)
+  (kill-buffer-and-window))
+(define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
 
 (provide 'init-org)

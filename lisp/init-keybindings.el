@@ -7,10 +7,12 @@
 (global-set-key (kbd "C-.") #'imenu-anywhere)
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "M-SPC") 'mark-sexp)
+(global-set-key (kbd "C-M-u") 'sp-up-sexp)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key "\C-xm" 'browse-url-at-point)
 
+;;org mode 
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)

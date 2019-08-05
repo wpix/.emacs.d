@@ -76,10 +76,12 @@
  '(org-agenda-files
    (quote
     ("~/org-notes/inbox.org" "~/org-notes/hobo-meeting-log.org" "~/org-notes/hobo-lab-log.org" "~/org-notes/hobo-schedule.org" "~/org-notes/hobo-research.org")))
+ '(org-journal-date-format "%A, %d %B %Y")
+ '(org-journal-dir "~/org-notes/journal/")
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+    (org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.office365.com")
  '(smtpmail-smtp-service 25)
@@ -149,7 +151,7 @@
  '(org-document-title ((t (:foreground "#ffb86c" :weight semi-bold :height 1.3))))
  '(org-level-1 ((t (:inherit bold :foreground "orchid" :height 1.1))))
  '(org-level-2 ((t (:inherit bold :foreground "#bd93f9" :height 1.1))))
- '(org-level-3 ((t (:foreground "plum" :height 1.1))))
+ '(org-level-3 ((t (:foreground "plum" :weight semi-bold :height 1.1))))
  '(org-level-4 ((t (:foreground "yellow green" :weight normal))))
  '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
  '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
