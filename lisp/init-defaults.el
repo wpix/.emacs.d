@@ -33,11 +33,7 @@
 
 ;;themes and fonts
 (load-theme 'dracula t)
-;(dolist (charset '(kana han symbol cjk-misc bopomofo))
-; (set-fontset-font (frame-parameter nil 'font)
-;		   charset (font-spec :family "Hiragino Sans GB W3"
-;				                   :size 16)))
-
+(set-default-font "Monaco 14")
 (setq-default line-spacing 1)
 (set-language-environment "UTF-8")
 

@@ -28,8 +28,9 @@
 
 ;; TODO options setting
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)" "REVIEW(v)")
-	      (sequence "REPEAT(r)"  "WAIT(w!)"  "|"  "PAUSED(p!)" "CANCELLED(c)" )
+      (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)")
+	      (sequence "WAIT(w!)"  "|"  "PAUSED(p!)")
+	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v)")
 	      )))
 
 ;; logbook drawer setting
