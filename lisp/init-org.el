@@ -8,7 +8,8 @@
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (require 'org-notmuch)
-;;(load "org-tracktable.el")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
+(load "org-tracktable.el")
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)

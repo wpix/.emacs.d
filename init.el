@@ -93,7 +93,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "gray85" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight light :height 160 :width normal :foundry "nil" :family "Lantinghei TC"))))
+ '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width condensed :foundry "nil" :family "Hack"))))
  '(apropos-symbol ((t (:inherit ##))))
  '(awesome-tab-default ((t (:background "#31343E" :foreground "white"))))
  '(bold ((t (:weight semi-bold))))
@@ -149,10 +149,10 @@
  '(org-column-title ((t (:inherit org-column :underline t :weight semi-bold))))
  '(org-date ((t (:foreground "light steel blue" :underline t))))
  '(org-document-title ((t (:foreground "#ffb86c" :weight semi-bold :height 1.3))))
- '(org-level-1 ((t (:inherit bold :foreground "orchid" :height 1.2))))
- '(org-level-2 ((t (:inherit bold :foreground "#bd93f9" :height 1.2))))
- '(org-level-3 ((t (:foreground "plum" :weight semi-bold :height 1.1))))
- '(org-level-4 ((t (:foreground "yellow green" :weight semi-bold))))
+ '(org-level-1 ((t (:inherit bold :foreground "plum2" :height 1.2))))
+ '(org-level-2 ((t (:inherit bold :foreground "sky blue" :height 1.1))))
+ '(org-level-3 ((t (:foreground "#bd93f9" :weight normal :height 1.05))))
+ '(org-level-4 ((t (:foreground "yellow green" :weight normal))))
  '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
  '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
  '(org-link ((t (:foreground "SkyBlue1" :underline t))))
