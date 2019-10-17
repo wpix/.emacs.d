@@ -1,0 +1,14 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".doi.org"
+  [url-cookie "__cfduid" "d30a228292741d086be0be5f891bbe4f01571263174" "Thu, 15-Oct-20 21:59:34 GMT" "/" ".doi.org" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

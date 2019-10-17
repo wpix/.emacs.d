@@ -64,6 +64,4 @@ move point."
     result))
 (global-set-key (kbd "C-'") 'mk-flyspell-correct-previous)
 
-
-
 (provide 'init-spelling)

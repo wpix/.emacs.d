@@ -10,22 +10,21 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
-(require 'init-spelling)
 (require 'init-org)
 (require 'init-keybindings)
 (require 'init-company)
 (require 'init-ido)
 (require 'init-helm)
 (require 'init-defaults)
-(require 'init-pdf-tools)
+;;(require 'init-pdf-tools)
 (require 'init-chinese)
+(require 'init-spelling)
 (require 'init-magit)
 
 (require 'notmuch-config)
 (require 'elfeed-config)
 (require 'smartparens-config)
 (require 'hugo-config)
-
 (require 'recentf)
 
 (ido-mode 1)
@@ -81,7 +80,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+    (citeproc org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.office365.com")
  '(smtpmail-smtp-service 25)
@@ -93,7 +92,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width condensed :foundry "nil" :family "Hack"))))
+ '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Hack"))))
  '(apropos-symbol ((t (:inherit ##))))
  '(awesome-tab-default ((t (:background "#31343E" :foreground "white"))))
  '(bold ((t (:weight semi-bold))))

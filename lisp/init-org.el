@@ -14,28 +14,80 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("p" "Research project" entry (file "~/org-notes/inbox.org")
-	 "* TODO %^{Project title} :%^G:\n:PROPERTIES:\n:CREATED: %U\n:END:\n%^{Project description}\n** TODO Literature review\n** TODO %?\n** TODO Summary\n** TODO Reports\n** Ideas\n")
-        ("t" "Todo" entry (file+headline "~/org-notes/inbox.org" "tasks")
+      '(("t" "Todo" entry (file+headline "~/org-notes/inbox.org" "tasks")
          "* TODO %?\n  %i\n  %a")
-	("n" "Notmuch" entry (file+headline "~/org-notes/inbox.org" "emails")
-	 "%?\n  %i\n  %a")
-	("e" "Experiments" entry (file "~/org-notes/hobo-lab-log.org")
-	 "* %?\n  %i\n  %a" )))
+	("n" "Notmuch" entry (file+headline "~/org-notes/inbox.org" "emails") "%?\n  %i\n  %a")
+	("i" "ideas" entry (file+headline "~/org-notes/hobo-research.org" "ideas") "%?\n  %i\n  %a")))
 
 	
 (global-set-key (kbd "<f7>") 'org-mark-ring-push)
 (global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
 
+
 ;; TODO options setting
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)")
-	      (sequence "WAIT(w!)"  "|"  "PAUSED(p!)")
-	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v)")
+	      (sequence "WAIT(w)"  "|"  "PAUSED(p)")
+	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v!)")
 	      )))
 
-;; logbook drawer setting
-(setq org-log-done 'note)
+
+;; allow for export=>beamer by placing
+
+;; #+LaTeX_CLASS: beamer in org files
+(unless (boundp 'org-export-latex-classes)
+  (setq org-export-latex-classes nil))
+(add-to-list 'org-export-latex-classes
+  ;; beamer class, for presentations
+  '("beamer"
+     "\\documentclass[10pt]{beamer}\n
+      \\mode<{{{beamermode}}}>\n
+      \\usetheme{{{{beamertheme}}}}\n
+      \\usecolortheme{{{{beamercolortheme}}}}\n
+      \\beamertemplateballitem\n
+      \\setbeameroption{show notes}
+      \\usepackage[utf8]{inputenc}\n
+      \\usepackage[T1]{fontenc}\n
+      \\usepackage{hyperref}\n
+      \\usepackage{color}
+      \\usepackage{listings}
+      \\lstset{numbers=none,language=[ISO]C++,tabsize=4,
+  frame=single,
+  basicstyle=\\small,
+  showspaces=false,showstringspaces=false,
+  showtabs=false,
+  keywordstyle=\\color{blue}\\bfseries,
+  commentstyle=\\color{red},
+  }\n
+      \\usepackage{verbatim}\n
+      \\institute{{{{beamerinstitute}}}}\n          
+       \\subject{{{{beamersubject}}}}\n"
+
+     ("\\section{%s}" . "\\section*{%s}")
+     
+     ("\\begin{frame}[fragile]\\frametitle{%s}"
+       "\\end{frame}"
+       "\\begin{frame}[fragile]\\frametitle{%s}"
+       "\\end{frame}")))
+
+  ;; letter class, for formal letters
+
+  (add-to-list 'org-export-latex-classes
+
+  '("letter"
+     "\\documentclass[10pt]{letter}\n
+      \\usepackage[utf8]{inputenc}\n
+      \\usepackage[T1]{fontenc}\n
+      \\usepackage{color}"
+     
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+
+
 
 (with-eval-after-load 'org       
   (setq org-startup-indented t) ; Enable `org-indent-mode' by default
@@ -49,7 +101,7 @@
           "* %i%?" :empty-lines 1)
         org-capture-templates)
 (setq org-brain-visualize-default-choices 'all)
-(setq org-brain-title-max-length 20)
+(setq org-brain-title-max-length 30)
 (setq org-brain-show-resources nil)
 
 ;;org-journals
