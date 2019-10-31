@@ -7,9 +7,22 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+
+
+;;==================================================================
 (require 'org-notmuch)
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
 (load "org-tracktable.el")
+
+
+
+;;===================== Org-TODO/Capture setting ===================
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)")
+	      (sequence "WAIT(w)"  "|"  "PAUSED(p)")
+	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v!)")
+	      )))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
@@ -19,21 +32,34 @@
 	("n" "Notmuch" entry (file+headline "~/org-notes/inbox.org" "emails") "%?\n  %i\n  %a")
 	("i" "ideas" entry (file+headline "~/org-notes/hobo-research.org" "ideas") "%?\n  %i\n  %a")))
 
-	
-(global-set-key (kbd "<f7>") 'org-mark-ring-push)
-(global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
+
+;;======================== Org-R setting ============================
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((R . t)
+     (latex . t)))
+
+(setq org-confirm-babel-evaluate nil)
+
+;;======================== Org-ref setting ============================
+(require 'org-ref)
+(setq org-latex-toc-command "\\tableofcontents \\clearpage")
+;; org-ref citation management 
+(setq bibtex-completion-bibliography "~/Dropbox/bibliography/references.bib"
+      bibtex-completion-library-path "~/Dropbox/bibliography/bibtex-pdfs"
+      bibtex-completion-notes-path "~/Dropbox/bibliography/helm-bibtex-notes")
+
+;; open pdf with system pdf viewer (works on mac)
+(setq bibtex-completion-pdf-open-function
+  (lambda (fpath)
+    (start-process "open" "*open*" "open" fpath)))
 
 
-;; TODO options setting
-(setq org-todo-keywords
-      (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)")
-	      (sequence "WAIT(w)"  "|"  "PAUSED(p)")
-	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v!)")
-	      )))
+;;======================== Org-LATEX setting ============================
 
+(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
 ;; allow for export=>beamer by placing
-
 ;; #+LaTeX_CLASS: beamer in org files
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
@@ -71,7 +97,6 @@
        "\\end{frame}")))
 
   ;; letter class, for formal letters
-
   (add-to-list 'org-export-latex-classes
 
   '("letter"
@@ -89,11 +114,16 @@
 
 
 
+;;======================== Org-mode setting ============================
 (with-eval-after-load 'org       
   (setq org-startup-indented t) ; Enable `org-indent-mode' by default
   (add-hook 'org-mode-hook #'visual-line-mode))
 
-;;org-brain
+(global-set-key (kbd "<f7>") 'org-mark-ring-push)
+(global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
+
+
+;;======================== Org-brain  setting ============================
 (setq org-brain-path "~/Documents/Brains/whiskers/")
 (setq org-id-track-globally t)
 (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
@@ -104,7 +134,8 @@
 (setq org-brain-title-max-length 30)
 (setq org-brain-show-resources nil)
 
-;;org-journals
+
+;;======================== Org-journal setting ============================
 (customize-set-variable 'org-journal-dir "~/org-notes/journal/")
 (customize-set-variable 'org-journal-date-format "%A, %d %B %Y")
 (require 'org-journal)
@@ -129,5 +160,8 @@
   (save-buffer)
   (kill-buffer-and-window))
 (define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
+
+
+
 
 (provide 'init-org)

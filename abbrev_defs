@@ -7,6 +7,12 @@
 
 (define-abbrev-table 'Man-mode-abbrev-table '())
 
+(define-abbrev-table 'Rd-mode-abbrev-table '())
+
+(define-abbrev-table 'Rd-mode-skeleton-abbrev-table
+  '(
+   ))
+
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'awk-mode-abbrev-table '())
@@ -69,6 +75,22 @@
 
 (define-abbrev-table 'eshell-mode-abbrev-table '())
 
+(define-abbrev-table 'ess-help-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-r-help-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-r-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-r-package-menu-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-r-transcript-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-transcript-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-watch-mode-abbrev-table '())
+
 (define-abbrev-table 'eudc-mode-abbrev-table '())
 
 (define-abbrev-table 'flymake-diagnostics-buffer-mode-abbrev-table '())
@@ -84,6 +106,7 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ("aboce" "above" nil 0)
+    ("abstrat" "Abstract" nil 0)
     ("acaemic" "academic" nil 0)
     ("acccount" "account" nil 0)
     ("accpeting" "accepting" nil 0)
@@ -113,7 +136,7 @@
     ("aplogizing" "apologizing" nil 0)
     ("appendex" "Appendix" nil 0)
     ("apperance" "appearance" nil 0)
-    ("ar" "ar" nil 1)
+    ("ar" "ar" nil 2)
     ("arizona" "Arizona" nil 1)
     ("arkward" "awkward" nil 0)
     ("arragne" "Arrange" nil 0)
@@ -160,7 +183,7 @@
     ("compelex" "complex" nil 0)
     ("compelte" "complete" nil 0)
     ("compressice" "compressice" nil 0)
-    ("compressive" "compression" nil 4)
+    ("compressive" "compression" nil 5)
     ("conciouns" "conscious" nil 0)
     ("configration" "configuration" nil 0)
     ("configred" "configured" nil 0)
@@ -171,6 +194,7 @@
     ("conponents" "components" nil 0)
     ("consindering" "considering" nil 0)
     ("consition" "condition" nil 1)
+    ("constrution" "constrution" nil 0)
     ("continous" "continuous" nil 2)
     ("contol" "control" nil 0)
     ("contrcts" "contracts" nil 0)
@@ -183,6 +207,7 @@
     ("deformatin" "deformation" nil 1)
     ("defromation" "deformation" nil 0)
     ("defs" "defs" nil 0)
+    ("deifnes" "defines" nil 0)
     ("deliever" "deliver" nil 0)
     ("delievery" "delivery" nil 0)
     ("desigated" "designated" nil 0)
@@ -247,7 +272,7 @@
     ("experiece" "experience" nil 0)
     ("experiemnta" "experimental" nil 0)
     ("experiemntal" "experimental" nil 0)
-    ("experiemnts" "experiments" nil 1)
+    ("experiemnts" "experiments" nil 2)
     ("exsiting" "existing" nil 0)
     ("fata" "data" nil 0)
     ("fidlocaiton" "fidlocaiton" nil 0)
@@ -266,7 +291,7 @@
     ("furing" "during" nil 1)
     ("gamil" "gamil" nil 0)
     ("garanted" "granted" nil 0)
-    ("gb" "GB" nil 66)
+    ("gb" "GB" nil 68)
     ("generalizability" "generalization" nil 0)
     ("gorw" "grow" nil 0)
     ("gp" "go" nil 0)
@@ -291,7 +316,7 @@
     ("inductry" "industry" nil 0)
     ("industy" "industry" nil 0)
     ("inerlinked" "interlinked" nil 0)
-    ("informaiton" "information" nil 0)
+    ("informaiton" "information" nil 1)
     ("ingibited" "inhibited" nil 0)
     ("insited" "insisted" nil 0)
     ("insteaf" "instead" nil 0)
@@ -301,21 +326,23 @@
     ("instrinsic" "intrinsic" nil 0)
     ("intelectual" "intellectual" nil 0)
     ("interdiscciplinary" "interdisciplinary" nil 0)
-    ("interdisciplinaty" "interdisciplinary" nil 1)
+    ("interdisciplinaty" "interdisciplinary" nil 2)
     ("intermetallic" "intermetallic" nil 1)
-    ("internationl" "international" nil 0)
+    ("internationl" "international" nil 1)
     ("interships" "internships" nil 0)
     ("ipad" "ipad" nil 0)
     ("ive" "I've" nil 5)
-    ("jounral" "journal" nil 0)
-    ("jounrals" "journals" nil 0)
+    ("jounral" "journal" nil 1)
+    ("jounrals" "journals" nil 1)
     ("journala" "journals" nil 0)
     ("lable" "label" nil 0)
     ("largerer" "larger" nil 0)
     ("latested" "latested" nil 0)
     ("learend" "learned" nil 0)
+    ("learnig" "learning" nil 0)
     ("leat" "least" nil 0)
     ("longested" "longest ed" nil 0)
+    ("lterature" "literature" nil 0)
     ("manufactuers" "manufacturers" nil 0)
     ("manufacuring" "manufacturing" nil 1)
     ("massege" "message" nil 0)
@@ -392,6 +419,8 @@
     ("provess" "process" nil 0)
     ("pur" "Our" nil 0)
     ("queation" "question" nil 0)
+    ("quesntities" "quantities" nil 0)
+    ("quilibrium" "equilibrium" nil 0)
     ("rainforest" "rainforest" nil 0)
     ("recalibrated" "recalibrated" nil 0)
     ("recombinations" "recombination" nil 0)
@@ -402,6 +431,7 @@
     ("reewing" "reewing" nil 0)
     ("refered" "refereed" nil 1)
     ("regidly" "rigidly" nil 0)
+    ("reivew" "review" nil 0)
     ("relacation" "relaxation" nil 4)
     ("relaitonships" "relationships" nil 0)
     ("remeber" "remember" nil 1)
@@ -415,13 +445,13 @@
     ("resech" "resech" nil 0)
     ("resiliene" "resilience" nil 0)
     ("reson" "Reason" nil 0)
-    ("resutls" "Results" nil 5)
+    ("resutls" "Results" nil 7)
     ("reviwing" "reviewing" nil 0)
     ("ridicuous" "ridiculous" nil 0)
     ("roundtable" "round table" nil 1)
     ("sacn" "scan" nil 0)
     ("sangid" "sangid" nil 0)
-    ("saturday" "Saturday" nil 0)
+    ("saturday" "Saturday" nil 1)
     ("schdule" "schedule" nil 1)
     ("schemetic" "schematic" nil 1)
     ("scractch" "Scratch" nil 3)
@@ -431,6 +461,7 @@
     ("shooted" "shooted" nil 0)
     ("shouls" "should" nil 0)
     ("smplicity" "simplicity" nil 0)
+    ("sociometric" "sociometric" nil 0)
     ("softwares" "software" nil 0)
     ("sometiems" "sometimes" nil 0)
     ("ssumptions" "assumptions" nil 0)
@@ -459,6 +490,7 @@
     ("sy" "sy" nil 0)
     ("symbpl" "symbol" nil 0)
     ("synchrotron" "synchrotron" nil 0)
+    ("sysstematic" "systematic" nil 0)
     ("taht" "that" nil 0)
     ("tbehacior" "tbehacior" nil 0)
     ("teh" "the" nil 0)
@@ -481,7 +513,7 @@
     ("thwory" "theory" nil 0)
     ("timeframe" "time frame" nil 0)
     ("topis" "topics" nil 0)
-    ("traineeship" "traineeship" nil 1)
+    ("traineeship" "traineeship" nil 2)
     ("trainning" "training" nil 0)
     ("trainship" "trainship" nil 0)
     ("tranferred" "transferred" nil 0)
@@ -551,6 +583,10 @@
 (define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-ess-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-ess-r-mode-abbrev-table '())
 
 (define-abbrev-table 'ivy-occur-grep-mode-abbrev-table '())
 

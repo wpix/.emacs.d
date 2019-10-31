@@ -1,4 +1,6 @@
 (require 'package)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -38,8 +40,8 @@
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 (ace-link-setup-default)
 
-
-
+;;should be deleted after 26.3
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 
 ;;----------------------------------------------------------------------------
@@ -80,7 +82,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (citeproc org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+    (exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.office365.com")
  '(smtpmail-smtp-service 25)
