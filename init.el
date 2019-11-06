@@ -1,6 +1,4 @@
 (require 'package)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -8,6 +6,15 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+;; Path
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+
+;;themes and fonts
+(load-theme 'dracula t)
+(set-default-font "Monaco 14")
+(setq-default line-spacing 1)
+(set-language-environment "UTF-8")
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -17,31 +24,76 @@
 (require 'init-company)
 (require 'init-ido)
 (require 'init-helm)
-(require 'init-defaults)
-;;(require 'init-pdf-tools)
 (require 'init-chinese)
 (require 'init-spelling)
 (require 'init-magit)
 
+(require 'scimax-hydra)
+
 (require 'notmuch-config)
 (require 'elfeed-config)
-(require 'smartparens-config)
 (require 'hugo-config)
-(require 'recentf)
 
 (ido-mode 1)
+
+(require 'recentf)
 (recentf-mode t)
+
+(require 'smartparens-config)
 (smartparens-mode 1)
+
 (ace-popup-menu-mode 1)
+(ace-link-setup-default)
+
 ;;(global-linum-mode 1)
 (delete-selection-mode 1)
 (winner-mode 1)
-(which-key-mode -1)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
-(ace-link-setup-default)
 
-;;should be deleted after 26.3
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;;----------------------------------------------------------------------------
+;; Env etc. setting 
+;;----------------------------------------------------------------------------
+;; mute notifications and sounds
+(setq use-dialog-box nil)
+(setq ring-bell-function 'ignore)
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(setq tooltip-use-echo-area t)
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+	kill-buffer-query-functions))
+(setq inhibit-startup-echo-area-message "your$USER")
+
+;;How to remove a confirmation question with 'M-x revert-buffer' ?
+(setq revert-without-query '(".*"))
+
+
+
+;;----------------------------------------------------------------------------
+;; Default Browser 
+;;----------------------------------------------------------------------------
+(setq w3m-coding-system 'utf-8
+  w3m-file-coding-system 'utf-8
+  w3m-file-name-coding-system 'utf-8
+  w3m-input-coding-system 'utf-8
+  w3m-output-coding-system 'utf-8
+  w3m-use-cookies t)
+
+(defun browse-url-at-point-default ()
+  (interactive)
+  (let ((browse-url-browser-function 'browse-url-default-macosx-browser))
+    (browse-url-at-point)))
+(global-set-key (kbd "<f6> d") 'browse-url-at-point-default)
+(global-set-key (kbd "<f6> w") 'w3m-goto-url-new-session)
 
 
 ;;----------------------------------------------------------------------------
@@ -82,7 +134,8 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+    (elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+ '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.office365.com")
  '(smtpmail-smtp-service 25)

@@ -13,11 +13,13 @@
  ("/Users/" . "Ying/")
  ("/" . "Users/")
  ("/Users/Ying/.emacs.d/" . "lisp/")
- ("/Users/Ying/" . ".emacs.d/")
+ ("/Users/Ying/" . "Downloads/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Ying/OneDrive - purdue.edu/Publications/2019 Sn-MST/drafts/"
+ "/Users/Ying/Downloads/"
  "/Users/Ying/.emacs.d/lisp/"
  "/Users/Ying/.emacs.d/"
  "/Users/Ying/org-notes/publications/"
@@ -38,6 +40,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "Sn-mst.bib"
+ "2019-02-07-Figure-draft.docx"
+ "org-mode-R-tutorial.org"
  "init-org.el"
  "init.el"
  "slip-cracking-prewriting.org"
@@ -45,28 +50,33 @@
  "hobo-research.org"
  "thesis.org"
  "slip-cracking.org"
- "2019-08-crack-initiation.org"
- "init-defaults.el"
- "fiction-seasons.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2019 ENE Inquiry/" (24000 25730 0 0) "Inquiry-review.org" "ENEinquiry copy.bib" "cover-letter.tex" "Inquiry-review.bbl" "SLR/" "ENE503_Weekly_CourseMap.pdf" "Inquiry-review.pdf" "Inquiry-notes.tex" "readings/" "cover-letter.org" "Inquiry-review.tex" "homework/" "Inquiry-notes.org" "cover-letter.pdf" ".#Inquiry-review.org" "slides/" "ENEinquiry.bib" "Purdue-Logo.png" ".DS_Store" "ENE503_Syllabus_Fall2019.pdf" "../" "./")
+
+ ("/Users/Ying/Downloads/org-babel-examples-master/python3/" (24000 46365 260801 121000) "python3-babel.org" ".#python3-babel.org" "../" "./")
+
+ ("/Users/Ying/.pyenv/shims/" (24000 47714 147013 943000) "pydoc3" "2to3-3.7" "python3.7-gdb.py" "pyvenv" "idle3.7" "pydoc3.7" "pip" "python3-config" "python-config" "python3.7" "idle3" "python3.7m-config" "python3.7m" "pyvenv-3.7" "easy_install-3.7" "python3.7-config" "pip3" "python" "pydoc" "easy_install" "python3" "2to3" "idle" "pip3.7" "../" "./")
+
+ ("/Users/Ying/.emacs.d/lisp/" (24000 32429 930520 199000) "init-org.el" "init-defaults.el" "hugo-config.el" "notmuch-config.el" "init-helm.el" "init-magit.el" "init-spelling.el~" ".#init-spelling.el" "init-pdf-tools.el" "init-keybindings.el" "init-company.el" "elfeed-config.el" "init-chinese.el" "init-spelling.el" ".DS_Store" "init-ido.el" ".#init-helm.el" ".#init-defaults.el" "../" "./")
+
+ ("/Users/Ying/OneDrive - purdue.edu/Publications/2019 Sn-MST/drafts/" (23995 22359 548394 343000) "Sn-mst.bib" "slip-cracking.org alias" "2019-08-crack-initiation.org" "whisker_rotation_outline.docx" "whisker-nucleation.org_archive" "2019-02-07-Figure-draft.docx" ".#whisker-nucleation.org" ".DS_Store" "gbm-sem.jpg" "../" "./")
+
+ ("/Users/Ying/" (23995 23251 698228 557000) ".zlogout" "java.log.9696" ".bnd2/" ".bnd/" ".conda/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".continuum/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".newsrc-dribble" ".501879.padl" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".anaconda_backup/" ".profile" "Applications/" "Movies/" ".ssh/" ".anaconda/" ".msmtprc" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" "PSV Updates/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" "TBD/" ".matplotlib/" "PS Vita/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" "org-notes/" "Pictures/" "Gallery/" ".local/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" "PSV Packages/" ".wget-hsts" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" "java.log.20694" ".condarc" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" "anaconda/" ".s3cfg" ".nix-channels" "../" "./")
+
+ ("/Users/Ying/Downloads/" (23995 23162 786032 957000) "Rotation-2.docx" "NPS Downloads/" "CEACAA009BGEC3.dat.exe" "unitcell.vasp" "Scopus - Analyze search results.pdf" "99ad4f2e-d114-11e5-811e-c16def718574.png" "ENE 690 Fall 2019 Syllabus.pdf" "bnd" "1-s2.0-S1359645419300667-main.pdf" "391196251_浪味仙zz/" "175.full.pdf" "manuscript.org" "org-mode-R-tutorial.org" "aiueo_stamp_kana.png" "Congying Wang Review 2019.pdf" "Successful-Interdisciplinary-Collaboration-Supporting-Science-Teachers-with-a-Systematic-Ongoing-Intentional-Collaboration-Between-University-Engineering-and-Science-Teacher-Education-FacultyJournal-of-Science-Teacher-Education.pdf" "drive-download-20191027T173327Z-001/" "unitcell-color.vesta" "1542619.pdf" "Euler-agnles.pdf" "master/" "ess-18.10.2/" "morales.tex" "Yang-Li2007_Article_DeformationBehaviorOfTinAndSom.pdf" "Net-price-Calculator.pdf" "annealing-textures.pdf" "Scopus - Analyze search results - ASEE.pdf" "marczellm-beamerports-bb0838bf190c/" "A5.txt" "ENE503_SLR 1st Draft_Curry, Fantasi_10.14.19.docx" "scripta-materialia.csl" "Primo_BibTeX_Export.bib" "aiueo_stamp_hira.png" "GnuPG-2.2.17.dmg.sig" "testing-poster.tex" "ENE503_SLR_draft1_Li_Revision.docx" "2019_Grad_Program_OH_Agenda.pdf" "Presentation.pdf" "minerals-09-00017-v2.pdf" ".localized" "L7-Matlab-MTEX-4Feb16.pptx" "2020 College of Engineering Dean's Teaching Fellowship- final.pdf" "scopus-3.bib" "L13-Grain_Bndries_RFspace-15Mar16.pptx" "elsarticle/" "1547722.pdf" ".DS_Store" "Target assassin.pdf" "scopus.bib" "scopus-2.bib" "scopus-6.bib" "BaiduPCS-Go-v3.5.6-darwin-osx-amd64/" "LSN27b.XtalPlast_class1.ppt" "scopus-7.bib" "scopus-5.bib" "Emacs-26.3-universal.dmg" "Rotation.docx" "drive-download-20191023T212441Z-001/" "ENE503_SLR_Draft1_Marete_Oct14_Gendergap_in_aviation_education.docx" "Armin RAJABZADEH.pdf" "scopus-4.bib" "../" "./")
+
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/7 Meetings/Purdue Group /My Presentation/2019-10 polycrystal deformation/" (23980 33484 0 0) "purduelogo.png" "polycrystal-deformation.org" "#polycrystal-deformation.org#" "../" "./")
 
- ("/Users/Ying/.emacs.d/lisp/" (23941 24439 519814 692000) "init-org.el" "init-defaults.el" "hugo-config.el" "notmuch-config.el" "init-helm.el" "init-magit.el" "init-spelling.el~" "init-pdf-tools.el" "init-keybindings.el" "init-company.el" "elfeed-config.el" "init-chinese.el" "init-spelling.el" ".DS_Store" "init-ido.el" ".#init-helm.el" "../" "./")
-
  ("/Users/Ying/.emacs.d/" (23973 52712 787276 498000) "company-statistics-cache.el" "themes/" ".git/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "transient/" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "misc/" "bbdb" "../" "./")
-
- ("/Users/Ying/" (23974 57988 284245 867000) ".zlogout" "java.log.9696" ".bnd2/" ".bnd/" ".conda/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".continuum/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".newsrc-dribble" ".501879.padl" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".anaconda_backup/" ".profile" "Applications/" "Movies/" ".ssh/" ".anaconda/" ".msmtprc" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" "pipix/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" "PSV Updates/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" "PS Vita/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" "org-notes/" "Pictures/" ".local/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" "PSV Packages/" ".wget-hsts" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" "Tools/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" "java.log.20694" ".condarc" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" "anaconda/" ".s3cfg" ".nix-channels" "../" "./")
 
  ("/Users/Ying/Documents/" (23975 21433 0 0) "Thesis.scriv Recovered/" "Backups/" "ExpressVPN Shortcuts/" "Scrivener Scratchpad Notes/" "MATLAB/" "Bookends/" "WebEx/" "PS Vita/" ".localized" "Documents - Congying’s MacBook Pro/" ".DS_Store" "Brains/" ".rqd/" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/" (23975 21433 0 0) "11 Workflows/" "10 Personal/" "Meetings/" "9 Individual Development/" "4 IGERT/" "1 Images/" "2 Thesis/" "5 References/" "Publications/" ".localized" "7 Experiments/" ".DS_Store" "6 Conferences/" ".com.apple.timemachine.supported" "8 Notes/" "self-intro.pptx" "3 Courses/" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/" (23975 21433 0 0) "2017 Kinetics of Materials/" "2017 Crystal defects & TEM.zip" "2019 ENE CAP/" "2019 ENE Inquiry/" "2018 LCA/" "2017 Dislocation Dynamics/" "2018 Deformation mechanisms /" "ENE offer letter.pdf" "2019 EduMethods in Eng/" "2017 Selected work from Cahn/" "2019 Texture Courses/" ".DS_Store" "2019 Mentored Teaching/" "2017 MSE230 TA/" "2017 Defects in Solids/" "faculty/" "../" "./")
-
- ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2019 ENE Inquiry/" (23975 21433 0 0) "Inquiry-review.org" "ENE503_Weekly_CourseMap.pdf" "W02_ENE503_WhatDoesItMeanToHaveAFramework_Purzer.pptx" "Inquiry-notes.tex" "Inquiry-notes.pdf" "W00_ENE503_AboutThisCourse_F19.pptx" "readings/" "MajorAssignments_ENE503_v2.pdf" "W01_ENE503_WhatIsResearch_Purzer_F19.pptx" "homework/" "Systematic-review-inquiry.scriv/" "Inquiry-notes.org" ".#Inquiry-review.org" "W03_ENE503_HowToSearchLiterature_Purzer.pptx" ".DS_Store" "ENE503_SLRpitch_Wang.mp4" "ENE503_Syllabus_Fall2019.pdf" "../" "./")
 
  ("/Users/Ying/Documents/Bookends/" (23913 30751 0 0) "Attachments/" ".DS_Store" "../" "./")
 
@@ -114,8 +124,6 @@
  ("/Users/Ying/.emacs.d/site-lisp/" (23804 1231 265218 141000) "pdf-tools/" "let-alist/" "notmuch/" "org-tracktable.el" "advance-words-count.el" "tablist/" "ox-extra.el" "org-notmuch.el" ".DS_Store" "../" "./")
 
  ("/Users/Ying/Google Drive/Conferences/poster-2019ASEE/" (23805 9097 380432 261000) "ASEE_final_congying_wang.pdf" "poster-2019ASEEE.tex" "purdue.png" "beamerthemeconfposter.sty" "poster-2019ASEEE.org" ".DS_Store" ".#poster-2019ASEEE.tex" "../" "./")
-
- ("/Users/Ying/Downloads/" (23798 43049 229047 860000) "L1-Introduction-12Jan16.pptx" "whatyouneed.md" "Multifunction Paste.kmmacros" "dict-en.oxt" "08644031.pdf" "0dfc6929-468d-4048-9ddc-6d334f1459ad.png" "ResponseSummary.pdf" "my-applications.html" "摘  要.docx" "99ad4f2e-d114-11e5-811e-c16def718574.png" "L2-Components_EulerAngles-19Jan16.pdf" "org-bookmark-heading-master/" "Generalized stacking fault energy in magnesium alloys- Density functional theory calculations.pdf" "AppCleaner.app/" "readline-master.tar" "org-tracktable-master/" "aiueo_stamp_kana.png" "ASEE_final_congying_wang.pdf" "RecentDownloads.alfredworkflow" "LibreOffice_6.2.4_MacOS_x86-64.dmg" "shorten_url.alfredworkflow" "Cisco_WebEx_Add-On.dmg" "alfred-org-mode-workflow-master/" "L2-Components_EulerAngles-19Jan16.pptx" "Generalized stacking fault energies and slip in β-tin.pdf" "f2e4836a5c9860691021cb7126e5c5dd3b6c7f67-pty.png" "master/" "2019_Poster_Presentation_Guidelines.pdf" "Lorex/" "Net-price-Calculator.pdf" "Paste quote.kmactions" "OSX-Certificate-Installer.tar" "5d64fa5046378165dcd85ecff7529749eb3d2177.png" "LATEST-notmuch-0.28.4.tar" "rr.jpeg" "aiueo_stamp_hira.png" "mactex-basictex-20190410.pkg" "L1-Introduction-12Jan16.pdf" "Alfred_4.0.1_1078.dmg" "SolsticeClientMac_V2A0AA5480CPCF6CI093256B4.app/" ".localized" "Bookends Tools.alfredworkflow" "Clean.URLs.alfredworkflow" "f2e4836a5c9860691021cb7126e5c5dd3b6c7f67.png" "avy-master/" ".DS_Store" "org-mode-poster-master/" "1-s2.0-S1359646216302287-mmc1.docx" "Copy Escaped Path.workflow/" "ene685_recommendation_template(1).docx" "CongyingWang_Puerto Rico Trip Information.docx" "05-07_Synchrotron_edited.doc" "../" "./")
 
  ("/Users/Ying/Downloads/org-mode-poster-master/" (23798 40021 824565 597000) "src/" "README.org" "lib/" "README.md" "ext/" "Makefile" ".DS_Store" "../" "./")
 

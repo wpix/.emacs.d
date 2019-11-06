@@ -2,119 +2,11 @@
 (setq load-path (cons "~/org-mode/lisp" load-path))
 (setq load-path (cons "~/org-mode/contrib/lisp" load-path))
 (require 'org-install)
-(require 'org-brain)
 (require 'ox-extra)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
-
-
-;;==================================================================
-(require 'org-notmuch)
-(add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
-(load "org-tracktable.el")
-
-
-
-;;===================== Org-TODO/Capture setting ===================
-(setq org-todo-keywords
-      (quote ((sequence "TODO(t)"  "DOING(g)" "SOMEDAY(y)" "|" "DONE(d)")
-	      (sequence "WAIT(w)"  "|"  "PAUSED(p)")
-	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(s!)"  "|"  "REVIEW(v!)")
-	      )))
-
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-(define-key global-map "\C-cc" 'org-capture)
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org-notes/inbox.org" "tasks")
-         "* TODO %?\n  %i\n  %a")
-	("n" "Notmuch" entry (file+headline "~/org-notes/inbox.org" "emails") "%?\n  %i\n  %a")
-	("i" "ideas" entry (file+headline "~/org-notes/hobo-research.org" "ideas") "%?\n  %i\n  %a")))
-
-
-;;======================== Org-R setting ============================
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((R . t)
-     (latex . t)))
-
-(setq org-confirm-babel-evaluate nil)
-
-;;======================== Org-ref setting ============================
-(require 'org-ref)
-(setq org-latex-toc-command "\\tableofcontents \\clearpage")
-;; org-ref citation management 
-(setq bibtex-completion-bibliography "~/Dropbox/bibliography/references.bib"
-      bibtex-completion-library-path "~/Dropbox/bibliography/bibtex-pdfs"
-      bibtex-completion-notes-path "~/Dropbox/bibliography/helm-bibtex-notes")
-
-;; open pdf with system pdf viewer (works on mac)
-(setq bibtex-completion-pdf-open-function
-  (lambda (fpath)
-    (start-process "open" "*open*" "open" fpath)))
-
-
-;;======================== Org-LATEX setting ============================
-
-(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
-
-;; allow for export=>beamer by placing
-;; #+LaTeX_CLASS: beamer in org files
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-(add-to-list 'org-export-latex-classes
-  ;; beamer class, for presentations
-  '("beamer"
-     "\\documentclass[10pt]{beamer}\n
-      \\mode<{{{beamermode}}}>\n
-      \\usetheme{{{{beamertheme}}}}\n
-      \\usecolortheme{{{{beamercolortheme}}}}\n
-      \\beamertemplateballitem\n
-      \\setbeameroption{show notes}
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{hyperref}\n
-      \\usepackage{color}
-      \\usepackage{listings}
-      \\lstset{numbers=none,language=[ISO]C++,tabsize=4,
-  frame=single,
-  basicstyle=\\small,
-  showspaces=false,showstringspaces=false,
-  showtabs=false,
-  keywordstyle=\\color{blue}\\bfseries,
-  commentstyle=\\color{red},
-  }\n
-      \\usepackage{verbatim}\n
-      \\institute{{{{beamerinstitute}}}}\n          
-       \\subject{{{{beamersubject}}}}\n"
-
-     ("\\section{%s}" . "\\section*{%s}")
-     
-     ("\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}"
-       "\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}")))
-
-  ;; letter class, for formal letters
-  (add-to-list 'org-export-latex-classes
-
-  '("letter"
-     "\\documentclass[10pt]{letter}\n
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{color}"
-     
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-
-
-
-;;======================== Org-mode setting ============================
 (with-eval-after-load 'org       
   (setq org-startup-indented t) ; Enable `org-indent-mode' by default
   (add-hook 'org-mode-hook #'visual-line-mode))
@@ -122,17 +14,29 @@
 (global-set-key (kbd "<f7>") 'org-mark-ring-push)
 (global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
 
+(require 'yorg-babel)
+(require 'yorg-papers)
 
-;;======================== Org-brain  setting ============================
-(setq org-brain-path "~/Documents/Brains/whiskers/")
-(setq org-id-track-globally t)
-(setq org-id-locations-file "~/.emacs.d/.org-id-locations")
-(push '("b" "Brain" plain (function org-brain-goto-end)
-          "* %i%?" :empty-lines 1)
-        org-capture-templates)
-(setq org-brain-visualize-default-choices 'all)
-(setq org-brain-title-max-length 30)
-(setq org-brain-show-resources nil)
+;;======================Org-Notmuch ================================
+(require 'org-notmuch)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
+(load "org-tracktable.el")
+
+;;===================== Org-TODO/Capture setting ===================
+(setq org-agenda-files '("/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
+
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "In Progress(i)" "TBS(s)" "|" "DONE(d)")
+	      (sequence "WAIT(w)" "PAUSED(p)" "|" "CANCELED(x!)")
+	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(g!)"  "|"  "REVIEW(v!)")
+	      )))
+
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "todo" entry (file+headline "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/inbox.org" "tasks")
+         "* TODO %?\n  %i\n  %a")
+	("i" "ideas" entry (file+headline "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/research.org" "ideas") "%?\n  %i\n  %a")))
 
 
 ;;======================== Org-journal setting ============================
@@ -149,7 +53,7 @@
   (goto-char (point-min)))
 
 (setq org-capture-templates
-      '(("j" "Journal entry" entry (function org-journal-find-location)
+      '(("j" "journal entry" entry (function org-journal-find-location)
 	 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
 
 (defun org-journal-save-entry-and-exit()
@@ -163,5 +67,5 @@
 
 
 
-
+;;===================end=======================
 (provide 'init-org)

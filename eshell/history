@@ -14,3 +14,4 @@ alias d 'dired $1'
 export $PATH
 export $PATH
 goku
+which dot

@@ -2,7 +2,9 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".doi.org"
+ '((".google.com"
+  [url-cookie "NID" "190=eRFuiaBjJtn78cEqtxXNkkZgchuARoEr8LjWL2JuPV5To9oribX_V1nXFtbXThRflCUe71yUOWgzYs8DX-7DSihDWpm_ecG_-OYFcOJ9HoDasX8khCzL2O_36yyNIXinwYMJE9x5y5Iqg8LPb6UfRFgEj8Je82Wqt5v5Vxugpp0" "Tue, 05-May-2020 18:57:41 GMT" "/" ".google.com" nil])
+ (".doi.org"
   [url-cookie "__cfduid" "d30a228292741d086be0be5f891bbe4f01571263174" "Thu, 15-Oct-20 21:59:34 GMT" "/" ".doi.org" nil]))
 )
 (setq url-cookie-secure-storage

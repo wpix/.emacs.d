@@ -13,6 +13,14 @@
   '(
    ))
 
+(define-abbrev-table 'S+-transcript-mode-abbrev-table '())
+
+(define-abbrev-table 'SAS-listing-mode-abbrev-table '())
+
+(define-abbrev-table 'SAS-log-mode-abbrev-table '())
+
+(define-abbrev-table 'SAS-mode-abbrev-table '())
+
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'awk-mode-abbrev-table '())
@@ -75,7 +83,15 @@
 
 (define-abbrev-table 'eshell-mode-abbrev-table '())
 
+(define-abbrev-table 'ess-bugs-mode-abbrev-table '())
+
 (define-abbrev-table 'ess-help-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-jags-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-julia-help-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-julia-mode-abbrev-table '())
 
 (define-abbrev-table 'ess-mode-abbrev-table '())
 
@@ -86,6 +102,12 @@
 (define-abbrev-table 'ess-r-package-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'ess-r-transcript-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-stata-help-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-stata-mode-abbrev-table '())
+
+(define-abbrev-table 'ess-stata-transcript-mode-abbrev-table '())
 
 (define-abbrev-table 'ess-transcript-mode-abbrev-table '())
 
@@ -312,6 +334,7 @@
     ("inconvient" "inconvenient" nil 0)
     ("indendent" "independent" nil 0)
     ("india" "India" nil 3)
+    ("individiual" "individual" nil 0)
     ("indluences" "influences" nil 0)
     ("inductry" "industry" nil 0)
     ("industy" "industry" nil 0)
@@ -584,9 +607,17 @@
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
 
+(define-abbrev-table 'inferior-ess-julia-mode-abbrev-table '())
+
 (define-abbrev-table 'inferior-ess-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-ess-r-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-ess-stata-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-julia-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-python-mode-abbrev-table '())
 
 (define-abbrev-table 'ivy-occur-grep-mode-abbrev-table '())
 
@@ -597,6 +628,8 @@
 (define-abbrev-table 'js-jsx-mode-abbrev-table '())
 
 (define-abbrev-table 'js-mode-abbrev-table '())
+
+(define-abbrev-table 'julia-mode-abbrev-table '())
 
 (define-abbrev-table 'latex-mode-abbrev-table '())
 
@@ -702,11 +735,19 @@
 
 (define-abbrev-table 'pyim-dm-mode-abbrev-table '())
 
+(define-abbrev-table 'python-mode-abbrev-table '())
+
+(define-abbrev-table 'python-mode-skeleton-abbrev-table
+  '(
+   ))
+
 (define-abbrev-table 'rmail-summary-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
+
+(define-abbrev-table 'sas-dir-mode-abbrev-table '())
 
 (define-abbrev-table 'scss-mode-abbrev-table '())
 
