@@ -8,4 +8,4 @@
 	("https://necromuralist.github.io/rss.xml" emacs)
 	))
 
-(provide 'elfeed-config)
+(provide 'config-elfeed)

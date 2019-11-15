@@ -11,13 +11,14 @@
   (setq org-startup-indented t) ; Enable `org-indent-mode' by default
   (add-hook 'org-mode-hook #'visual-line-mode))
 
+;;====================== Keybindings ===============================
 (global-set-key (kbd "<f7>") 'org-mark-ring-push)
 (global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
 
-(require 'yorg-babel)
-(require 'yorg-papers)
-
-;;======================Org-Notmuch ================================
+;;====================== Org-Notmuch ===============================
 (require 'org-notmuch)
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
 (load "org-tracktable.el")
@@ -26,7 +27,7 @@
 (setq org-agenda-files '("/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "In Progress(i)" "TBS(s)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "InProgress(i)" "TBS(s)" "|" "DONE(d)")
 	      (sequence "WAIT(w)" "PAUSED(p)" "|" "CANCELED(x!)")
 	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(g!)"  "|"  "REVIEW(v!)")
 	      )))

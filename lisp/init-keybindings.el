@@ -1,30 +1,26 @@
 ;;mastering emacs keybindings
 (define-key global-map (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-a") 'back-to-indentation)
-(global-set-key (kbd "M-.") 'other-window)
-(global-set-key (kbd "M-i") 'helm-imenu)
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-.") #'imenu-anywhere)
-(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
+
 (global-set-key (kbd "M-SPC") 'mark-sexp)
 (global-set-key (kbd "C-M-u") 'sp-up-sexp)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key "\C-xm" 'browse-url-at-point)
-
-;;org mode 
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c b") 'org-iswitchb)
-
+;;===================== Helm =======================
+(global-set-key (kbd "M-i") 'helm-imenu)
+(global-set-key (kbd "C-x c y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x c b") 'helm-mini)
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 ;;(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+;;rebind tab to do persistent action
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-c z")  'helm-select-action)
+
+;;===================== ido/ibuffer.imenu ====================
+(global-set-key (kbd "C-.") #'imenu-anywhere)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x b") #'ido-switch-buffer)
-
-(global-set-key [remap dabbrev-expand] 'hippie-expand)
-
-
 
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \\[find-file] a recent file"
@@ -34,6 +30,7 @@
     (message "Aborting")))
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 
+;;==================== OTHERS ==============================
 (defun jump-to-mark ()
   "Jumps to the local mark, respecting the `mark-ring' order.
   This is the same as using \\[set-mark-command] with the prefix argument."
@@ -67,6 +64,9 @@
 (global-set-key (kbd "C-S-M-s") 'windmove-down)
 (global-set-key (kbd "C-S-M-d") 'windmove-right)
 (global-set-key (kbd "C-S-M-a") 'windmove-left)
+
+(global-set-key (kbd "M-.") 'other-window)
+(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 
 (global-set-key (kbd "C-S-a") 'shrink-window-horizontally)
 (global-set-key (kbd "C-S-d") 'enlarge-window-horizontally)

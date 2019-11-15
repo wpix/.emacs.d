@@ -1,9 +1,10 @@
 ;;======================== Org-ref setting ============================
 (require 'org-ref)
+(key-chord-define-global "jj" 'org-ref-bibtex-hydra/body)
 (setq org-latex-toc-command "\\tableofcontents \\clearpage")
 ;; org-ref citation management 
-(setq bibtex-completion-bibliography "~/Dropbox/bibliography/references.bib"
-      bibtex-completion-library-path "~/Dropbox/bibliography/bibtex-pdfs"
+(setq bibtex-completion-bibliography "~/org-notes/bibliography/bibliography/references.bib"
+      bibtex-completion-library-path "/Users/Ying/Documents/Bookends/Attachment"
       bibtex-completion-notes-path "~/Dropbox/bibliography/helm-bibtex-notes")
 
 ;; open pdf with system pdf viewer (works on mac)
@@ -11,10 +12,39 @@
   (lambda (fpath)
     (start-process "open" "*open*" "open" fpath)))
 
+;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(key-chord-define-global "kk" 'org-ref-cite-hydra/body)
+(setq org-ref-bibtex-hydra-key-binding "\C-cj")
 
+(setf (cdr (assoc 'org-mode bibtex-completion-format-citation-functions)) 'org-ref-format-citation)
+
+(setq org-ref-show-citation-on-enter nil)
+(setq org-ref-show-broken-links t)
+(setq bibtex-dialect 'biblatex)
+
+
+
+;;org-ref-bibtex-generate-longtitles
+;org-ref-bibtex-generate-shorttitles
+(add-to-list 'org-ref-bibtex-journal-abbreviations
+	     '("JIR" "Journal of Irreproducible Research" "J. Irrep. Res."))
+
+
+;; Tell org-ref to let helm-bibtex find notes for it
+(setq org-ref-notes-function
+      (lambda (thekey)
+	(let ((bibtex-completion-bibliography (org-ref-find-bibliography)))
+	  (bibtex-completion-edit-notes
+	   (list (car (org-ref-get-bibtex-key-and-file thekey)))))))
+		 
 ;;======================== Org-LATEX setting ============================
 
-(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(setq org-latex-pdf-process
+      '("pdflatex -interaction nonstopmode -output-directory %o %f"
+	"bibtex %b"
+	"pdflatex -interaction nonstopmode -output-directory %o %f"
+	"pdflatex -interaction nonstopmode -output-directory %o %f"))
+
 
 ;; allow for export=>beamer by placing
 ;; #+LaTeX_CLASS: beamer in org files

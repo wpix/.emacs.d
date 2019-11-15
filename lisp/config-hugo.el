@@ -13,4 +13,4 @@
 	   (easy-hugo-url "https://ying-ish.com")
 	   (easy-hugo-postdir "content/photo"))))
 
-(provide 'hugo-config)
+(provide 'config-hugo)

@@ -94,4 +94,4 @@
       (notmuch-show-tag '("+flagged" "-unread")))))
 
 
-(provide 'notmuch-config)
+(provide 'config-notmuch)

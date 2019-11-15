@@ -19,7 +19,7 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
-(require 'init-org)
+
 (require 'init-keybindings)
 (require 'init-company)
 (require 'init-ido)
@@ -27,12 +27,19 @@
 (require 'init-chinese)
 (require 'init-spelling)
 (require 'init-magit)
+(require 'init-browser)
+
+(require 'init-org)
+(require 'yorg-babel)
+(require 'yorg-papers)
+(require 'yorg-projectile)
+
 
 (require 'scimax-hydra)
 
-(require 'notmuch-config)
-(require 'elfeed-config)
-(require 'hugo-config)
+(require 'config-notmuch)
+(require 'config-elfeed)
+(require 'config-hugo)
 
 (ido-mode 1)
 
@@ -76,26 +83,6 @@
 ;;How to remove a confirmation question with 'M-x revert-buffer' ?
 (setq revert-without-query '(".*"))
 
-
-
-;;----------------------------------------------------------------------------
-;; Default Browser 
-;;----------------------------------------------------------------------------
-(setq w3m-coding-system 'utf-8
-  w3m-file-coding-system 'utf-8
-  w3m-file-name-coding-system 'utf-8
-  w3m-input-coding-system 'utf-8
-  w3m-output-coding-system 'utf-8
-  w3m-use-cookies t)
-
-(defun browse-url-at-point-default ()
-  (interactive)
-  (let ((browse-url-browser-function 'browse-url-default-macosx-browser))
-    (browse-url-at-point)))
-(global-set-key (kbd "<f6> d") 'browse-url-at-point-default)
-(global-set-key (kbd "<f6> w") 'w3m-goto-url-new-session)
-
-
 ;;----------------------------------------------------------------------------
 ;; Customize settings
 ;;----------------------------------------------------------------------------
@@ -134,9 +121,10 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region which-key doom-themes langtool company dracula-theme helm)))
+    (flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(send-mail-function (quote smtpmail-send-it))
+ '(show-paren-mode t)
  '(smtpmail-smtp-server "smtp.office365.com")
  '(smtpmail-smtp-service 25)
  '(which-key-idle-delay 1)
