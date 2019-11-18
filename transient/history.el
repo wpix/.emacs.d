@@ -1,4 +1,7 @@
 ((magit-commit nil)
  (magit-dispatch nil)
  (magit-merge nil)
- (magit-push nil))
+ (magit-push nil)
+ (magit-submodule nil)
+ (magit-subtree nil)
+ (magit-subtree-export nil))

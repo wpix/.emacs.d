@@ -13,10 +13,6 @@
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 ;;(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
-;;rebind tab to do persistent action
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-c z")  'helm-select-action)
-
 ;;===================== ido/ibuffer.imenu ====================
 (global-set-key (kbd "C-.") #'imenu-anywhere)
 (global-set-key (kbd "C-x C-b") 'ibuffer)

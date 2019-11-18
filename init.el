@@ -6,7 +6,8 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
-
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
 ;; Path
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
@@ -48,6 +49,9 @@
 
 (require 'smartparens-config)
 (smartparens-mode 1)
+
+(require 'yasnippet)
+(yas-global-mode 1)
 
 (ace-popup-menu-mode 1)
 (ace-link-setup-default)
@@ -115,13 +119,16 @@
  '(notmuch-show-logo nil)
  '(org-agenda-files
    (quote
-    ("~/org-notes/inbox.org" "~/org-notes/hobo-meeting-log.org" "~/org-notes/hobo-lab-log.org" "~/org-notes/hobo-schedule.org" "~/org-notes/hobo-research.org")))
+    ("~/Documents/Publications/2019 Sn-MST/drafts/2019-08-crack-initiation.org" "/Users/Ying/org-notes/journal/20191101")))
  '(org-journal-date-format "%A, %d %B %Y")
+ '(org-journal-date-prefix "** ")
  '(org-journal-dir "~/org-notes/journal/")
+ '(org-journal-enable-agenda-integration t)
+ '(org-journal-file-type (quote monthly))
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)

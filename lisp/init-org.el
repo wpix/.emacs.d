@@ -20,11 +20,15 @@
 
 ;;====================== Org-Notmuch ===============================
 (require 'org-notmuch)
-(add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
-(load "org-tracktable.el")
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/org-tracktable")
+;;(load "org-tracktable.el")
 
 ;;===================== Org-TODO/Capture setting ===================
-(setq org-agenda-files '("/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
+(setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
+(setq org-agenda-files '(
+			 "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"
+			 "/Users/Ying/Documents/Publications"
+			 "~/org-notes/journal"))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "InProgress(i)" "TBS(s)" "|" "DONE(d)")
@@ -44,6 +48,8 @@
 (customize-set-variable 'org-journal-dir "~/org-notes/journal/")
 (customize-set-variable 'org-journal-date-format "%A, %d %B %Y")
 (require 'org-journal)
+
+(setq org-journal-enable-agenda-integration t)
 
 (defun org-journal-find-location ()
   ;; Open today's journal, but specify a non-nil prefix argument in order to
@@ -65,8 +71,6 @@
   (save-buffer)
   (kill-buffer-and-window))
 (define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
-
-
 
 ;;===================end=======================
 (provide 'init-org)

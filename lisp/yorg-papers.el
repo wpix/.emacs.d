@@ -13,16 +13,13 @@
     (start-process "open" "*open*" "open" fpath)))
 
 ;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
-(key-chord-define-global "kk" 'org-ref-cite-hydra/body)
 (setq org-ref-bibtex-hydra-key-binding "\C-cj")
 
 (setf (cdr (assoc 'org-mode bibtex-completion-format-citation-functions)) 'org-ref-format-citation)
 
 (setq org-ref-show-citation-on-enter nil)
-(setq org-ref-show-broken-links t)
+(setq org-ref-show-broken-links nil)
 (setq bibtex-dialect 'biblatex)
-
-
 
 ;;org-ref-bibtex-generate-longtitles
 ;org-ref-bibtex-generate-shorttitles

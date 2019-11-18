@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: Daily checkin 
+# key: dcheck
+# --
+#+TITLE: Daily Checkin 
+#+AUTHOR: `user-full-name`
+#+DATE: `(format-time-string "%F")`
+#+FILETAGS: writing 
+#+VERSION: 0.1.0
+
+* What are your goals for today?
+
+* Did you meet your goals today? And if not, why?
+
+* How many minutes did you write today?
+
+* What type of (internal) resistance did you experience today?
+
+* What was your biggest (external) challenge today?
+
+* What treat did you give yourself today?
+
+* What went well today that you can be proud of?
+
+* Open question: This is an (optional) open space for anything you want to consistently reflect on as part of your daily update.
+
+* What are your goals for tomorrow?
+
+*************** TODO Refelct on daily writing goals :report:
+Do not remove this. It is here so this shows up in my agenda as an item to do.
+*************** END

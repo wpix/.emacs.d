@@ -4,6 +4,15 @@
 (projectile-mode +1)
 
 (setq projectile-project-search-path
-      '("~/Documents/Publications/" "~/org-notes/"))
+      '("~/Documents/Publications/"
+	"~/org-notes/"
+	"~/hugo/swnsa/"
+	"~/hugo/mini/"))
+
+;;================= Scimax setting ======================
+(projectile-mode +1)
+
+
+
 
 (provide 'yorg-projectile)
