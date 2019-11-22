@@ -58,7 +58,7 @@
 ;;; Loading popular dialects (they should become optional in the future)
 
 (require 'ess-r-mode)
-(require 'ess-julia)
+;;(require 'ess-julia)
 ;; ess-remote
 (require 'essd-els)
 (require 'ess-stata-mode)

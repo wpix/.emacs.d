@@ -26,9 +26,8 @@
 ;;===================== Org-TODO/Capture setting ===================
 (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
 (setq org-agenda-files '(
-			 "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"
-			 "/Users/Ying/Documents/Publications"
-			 "~/org-notes/journal"))
+			 "/Users/Ying/org-notes"
+			 "/Users/Ying/Documents/Publications"))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "InProgress(i)" "TBS(s)" "|" "DONE(d)")

@@ -3,19 +3,28 @@
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+
+(setq load-prefer-newer t)
 (package-initialize)
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
+	     "~/.emacs.d/plugins/yasnippet")
 ;; Path
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
 ;;themes and fonts
 (load-theme 'dracula t)
-(set-default-font "Monaco 14")
-(setq-default line-spacing 1)
-(set-language-environment "UTF-8")
+;;(set-default-font "Monaco 14")
+;;(setq-default line-spacing 1)
+;;(set-language-environment "UTF-8")
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -28,13 +37,13 @@
 (require 'init-chinese)
 (require 'init-spelling)
 (require 'init-magit)
+(require 'init-chinese)
 (require 'init-browser)
 
 (require 'init-org)
 (require 'yorg-babel)
 (require 'yorg-papers)
-(require 'yorg-projectile)
-
+;;(require 'yorg-projectile) 
 
 (require 'scimax-hydra)
 
@@ -55,7 +64,6 @@
 
 (ace-popup-menu-mode 1)
 (ace-link-setup-default)
-
 ;;(global-linum-mode 1)
 (delete-selection-mode 1)
 (winner-mode 1)
@@ -87,6 +95,54 @@
 ;;How to remove a confirmation question with 'M-x revert-buffer' ?
 (setq revert-without-query '(".*"))
 
+
+;; (defun qiang-font-existsp (font)
+;;   (if (null (x-list-fonts font))
+;;       nil
+;;     t))
+
+;; (defvar zh-font-list '("PingFang SC" "Hiragino Sans GB" "Microsoft Yahei" "Source Han Sans Normal" "STHeiti" "黑体" "新宋体" "宋体"))
+;; (defvar en-font-list '("DejaVu Sans Mono" "Monaco" "Consolas" "Monospace" "Courier New"))
+
+;; (defun qiang-make-font-string (font-name font-size)
+;;   (if (and (stringp font-size)
+;;            (equal ":" (string (elt font-size 0))))
+;;       (format "%s%s" font-name font-size)
+;;     (format "%s %s" font-name font-size)))
+
+;; (defun qiang-set-font (english-fonts
+;;                        english-font-size
+;;                        chinese-fonts
+;;                        &optional chinese-font-scale)
+
+;;   (setq chinese-font-scale (or chinese-font-scale 1.2))
+
+;;   (setq face-font-rescale-alist
+;;         (loop for x in zh-font-list
+;;               collect (cons x chinese-font-scale)))
+
+;;   "english-font-size could be set to \":pixelsize=18\" or a integer.
+;; If set/leave chinese-font-scale to nil, it will follow english-font-size"
+
+;;   (require 'cl)                         ; for find if
+;;   (let ((en-font (qiang-make-font-string
+;;                   (find-if #'qiang-font-existsp english-fonts)
+;;                   english-font-size))
+;;         (zh-font (font-spec :family (find-if #'qiang-font-existsp chinese-fonts))))
+
+;;     ;; Set the default English font
+;;     (message "Set English Font to %s" en-font)
+;;     (set-face-attribute 'default nil :font en-font)
+
+;;     ;; Set Chinese font
+;;     ;; Do not use 'unicode charset, it will cause the English font setting invalid
+;;     (message "Set Chinese Font to %s" zh-font)
+;;     (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;       (set-fontset-font (frame-parameter nil 'font)
+;;                         charset zh-font))))
+
+;; (qiang-set-font en-font-list 14 zh-font-list)
+
 ;;----------------------------------------------------------------------------
 ;; Customize settings
 ;;----------------------------------------------------------------------------
@@ -95,6 +151,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(exec-path-from-shell-check-startup-files nil)
  '(flyspell-use-global-abbrev-table-p t)
  '(gnus-treat-hide-citation-maybe t)
  '(google-this-keybind "C-c / g")
@@ -128,7 +185,230 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+ '(pyim-default-scheme (quote rime))
+ '(pyim-dicts
+   (quote
+    ((:name "big" :file "/Users/Ying/.emacs.d/pyim/pyim-bigdict.pyim"))))
+ '(pyim-english-input-switch-functions (quote (pyim-probe-isearch-mode)))
+ '(pyim-exhibit-delay-ms 20)
+ '(pyim-isearch-mode t nil (pyim))
+ '(pyim-magic-converter t)
+ '(pyim-page-style (quote two-lines))
+ '(pyim-page-tooltip (quote pos-tip))
+ '(pyim-schemes
+   (quote
+    ((rime-flypy :document "support ;" :class rime :first-chars "abcdefghijklmnopqrstuvwxyz/" :rest-chars "abcdefghijklmnopqrstuvwxyz;=/,\\" :prefer-trigger-chars nil)
+     (quanpin :document "全拼输入法方案（不可删除）。" :class quanpin :first-chars "abcdefghijklmnopqrstuwxyz" :rest-chars "vmpfwckzyjqdltxuognbhsrei'-a" :prefer-trigger-chars "v")
+     (rime :document "rime 输入法。
+
+这个 scheme 适用于 librime 支持的所有输入法，通用性较好，但无法支
+持 trigger-chars, 所以类似 pyim 全拼支持的v快捷键将无法使用。" :class rime :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz'-a" :prefer-trigger-chars nil)
+     (rime-quanpin :document "rime 全拼输入法。
+
+这个 scheme 专门用于 librime 全拼输入法，同时支持 trigger-chars,
+也就是v快捷键，使用 rime 全拼的朋友建议使用这个 scheme。" :class rime :first-chars "abcdefghjklmnopqrstwxyz" :rest-chars "vmpfwckzyjqdltxuognbhsrei'-a" :prefer-trigger-chars "v")
+     (rime-microsoft-shuangpin :document "rime 微软双拼输入法。" :class rime :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz;" :prefer-trigger-chars nil)
+     (wubi :document "五笔输入法。" :class xingma :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz'" :code-prefix "." :code-split-length 4 :code-maximum-length 4 :prefer-trigger-chars nil)
+     (cangjie :document "倉頡输入法。" :class xingma :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz" :code-prefix "@" :code-split-length 5 :code-maximum-length 5 :prefer-trigger-chars nil)
+     (pyim-shuangpin :document "与 pyim 配合良好的双拼输入法方案，源自小鹤双拼方案。" :class shuangpin :first-chars "abcdefghijklmnpqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz" :prefer-trigger-chars "o" :keymaps
+		     (("a" "a" "a")
+		      ("b" "b" "in")
+		      ("c" "c" "ao")
+		      ("d" "d" "ai")
+		      ("e" "e" "e")
+		      ("f" "f" "en")
+		      ("g" "g" "eng")
+		      ("h" "h" "ang")
+		      ("i" "ch" "i")
+		      ("j" "j" "an")
+		      ("k" "k" "ing" "uai")
+		      ("l" "l" "iang" "uang")
+		      ("m" "m" "ian")
+		      ("n" "n" "iao")
+		      ("o" "o" "uo" "o")
+		      ("p" "p" "ie")
+		      ("q" "q" "iu")
+		      ("r" "r" "uan")
+		      ("s" "s" "iong" "ong")
+		      ("t" "t" "ue" "ve")
+		      ("u" "sh" "u")
+		      ("v" "zh" "v" "ui")
+		      ("w" "w" "ei")
+		      ("x" "x" "ia" "ua")
+		      ("y" "y" "un")
+		      ("z" "z" "ou")
+		      ("aa" "a")
+		      ("aj" "an")
+		      ("ad" "ai")
+		      ("ac" "ao")
+		      ("ah" "ang")
+		      ("ee" "e")
+		      ("ew" "ei")
+		      ("ef" "en")
+		      ("er" "er")
+		      ("eg" "eng")
+		      ("ag" "ng")
+		      ("ao" "o")
+		      ("au" "ou")))
+     (ziranma-shuangpin :document "自然码双拼方案。" :class shuangpin :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz" :prefer-trigger-chars nil :keymaps
+			(("a" "a" "a")
+			 ("b" "b" "ou")
+			 ("c" "c" "iao")
+			 ("d" "d" "uang" "iang")
+			 ("e" "e" "e")
+			 ("f" "f" "en")
+			 ("g" "g" "eng")
+			 ("h" "h" "ang")
+			 ("i" "ch" "i")
+			 ("j" "j" "an")
+			 ("k" "k" "ao")
+			 ("l" "l" "ai")
+			 ("m" "m" "ian")
+			 ("n" "n" "in")
+			 ("o" "o" "uo" "o")
+			 ("p" "p" "un")
+			 ("q" "q" "iu")
+			 ("r" "r" "uan" "er")
+			 ("s" "s" "iong" "ong")
+			 ("t" "t" "ue" "ve")
+			 ("u" "sh" "u")
+			 ("v" "zh" "v" "ui")
+			 ("w" "w" "ia" "ua")
+			 ("x" "x" "ie")
+			 ("y" "y" "uai" "ing")
+			 ("z" "z" "ei")
+			 ("aa" "a")
+			 ("an" "an")
+			 ("ai" "ai")
+			 ("ao" "ao")
+			 ("ah" "ang")
+			 ("ee" "e")
+			 ("ei" "ei")
+			 ("en" "en")
+			 ("er" "er")
+			 ("eg" "eng")
+			 ("oo" "o")
+			 ("ou" "ou")))
+     (microsoft-shuangpin :document "微软双拼方案。" :class shuangpin :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz;" :prefer-trigger-chars nil :keymaps
+			  (("a" "a" "a")
+			   ("b" "b" "ou")
+			   ("c" "c" "iao")
+			   ("d" "d" "uang" "iang")
+			   ("e" "e" "e")
+			   ("f" "f" "en")
+			   ("g" "g" "eng")
+			   ("h" "h" "ang")
+			   ("i" "ch" "i")
+			   ("j" "j" "an")
+			   ("k" "k" "ao")
+			   ("l" "l" "ai")
+			   ("m" "m" "ian")
+			   ("n" "n" "in")
+			   ("o" "o" "uo" "o")
+			   ("p" "p" "un")
+			   ("q" "q" "iu")
+			   ("r" "r" "uan" "er")
+			   ("s" "s" "iong" "ong")
+			   ("t" "t" "ue")
+			   ("u" "sh" "u")
+			   ("v" "zh" "ve" "ui")
+			   ("w" "w" "ia" "ua")
+			   ("x" "x" "ie")
+			   ("y" "y" "uai" "v")
+			   ("z" "z" "ei")
+			   (";" ";" "ing")
+			   ("oa" "a")
+			   ("oj" "an")
+			   ("ol" "ai")
+			   ("ok" "ao")
+			   ("oh" "ang")
+			   ("oe" "e")
+			   ("oz" "ei")
+			   ("of" "en")
+			   ("or" "er")
+			   ("og" "eng")
+			   ("oo" "o")
+			   ("ob" "ou")))
+     (zhinengabc-shuangpin :document "智能ABC双拼方案" :class shuangpin :first-chars "abcdefghjklmnopqrstvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz" :prefer-trigger-chars nil :keymaps
+			   (("q" "q" "ei")
+			    ("w" "w" "ian")
+			    ("e" "ch" "e")
+			    ("r" "r" "iu" "er")
+			    ("t" "t" "uang" "iang")
+			    ("y" "y" "ing")
+			    ("u" "u" "u")
+			    ("i" "i" "i")
+			    ("o" "o" "o" "uo")
+			    ("p" "p" "uan" "van")
+			    ("a" "zh" "a")
+			    ("s" "s" "ong" "iong")
+			    ("d" "d" "ua" "ia")
+			    ("f" "f" "en")
+			    ("g" "g" "eng")
+			    ("h" "h" "ang")
+			    ("j" "j" "an")
+			    ("k" "k" "ao")
+			    ("l" "l" "ai")
+			    ("z" "z" "iao")
+			    ("x" "x" "ie")
+			    ("c" "c" "in" "uai")
+			    ("v" "sh" "v")
+			    ("b" "b" "ou")
+			    ("n" "n" "un")
+			    ("m" "m" "ue" "ui")
+			    ("oa" "a")
+			    ("oj" "an")
+			    ("ol" "ai")
+			    ("ok" "ao")
+			    ("oh" "ang")
+			    ("oe" "e")
+			    ("oz" "ei")
+			    ("of" "en")
+			    ("or" "er")
+			    ("og" "eng")
+			    ("oo" "o")
+			    ("ob" "ou")))
+     (xiaohe-shuangpin :document "小鹤双拼输入法方案。" :class shuangpin :first-chars "abcdefghijklmnopqrstuvwxyz" :rest-chars "abcdefghijklmnopqrstuvwxyz" :prefer-trigger-chars nil :keymaps
+		       (("a" "a" "a")
+			("b" "b" "in")
+			("c" "c" "ao")
+			("d" "d" "ai")
+			("e" "e" "e")
+			("f" "f" "en")
+			("g" "g" "eng")
+			("h" "h" "ang")
+			("i" "ch" "i")
+			("j" "j" "an")
+			("k" "k" "ing" "uai")
+			("l" "l" "iang" "uang")
+			("m" "m" "ian")
+			("n" "n" "iao")
+			("o" "o" "uo" "o")
+			("p" "p" "ie")
+			("q" "q" "iu")
+			("r" "r" "uan")
+			("s" "s" "iong" "ong")
+			("t" "t" "ue" "ve")
+			("u" "sh" "u")
+			("v" "zh" "v" "ui")
+			("w" "w" "ei")
+			("x" "x" "ia" "ua")
+			("y" "y" "un")
+			("z" "z" "ou")
+			("aa" "a")
+			("an" "an")
+			("ai" "ai")
+			("ao" "ao")
+			("ah" "ang")
+			("ee" "e")
+			("ei" "ei")
+			("en" "en")
+			("er" "er")
+			("eg" "eng")
+			("og" "ng")
+			("oo" "o")
+			("ou" "ou"))))))
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
