@@ -185,16 +185,16 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
    (quote
     ((:name "big" :file "/Users/Ying/.emacs.d/pyim/pyim-bigdict.pyim"))))
  '(pyim-english-input-switch-functions (quote (pyim-probe-isearch-mode)))
- '(pyim-exhibit-delay-ms 20)
+ '(pyim-exhibit-delay-ms 0)
  '(pyim-isearch-mode t nil (pyim))
- '(pyim-magic-converter t)
- '(pyim-page-style (quote two-lines))
+ '(pyim-magic-converter nil)
+ '(pyim-page-style (quote one-line))
  '(pyim-page-tooltip (quote pos-tip))
  '(pyim-schemes
    (quote
@@ -489,7 +489,8 @@
  '(org-tag ((t (:background "#373844" :foreground "#ff79c6" :weight semi-bold))))
  '(org-todo ((t (:background "#373844" :foreground "#ffb86c" :weight semi-bold))))
  '(org-warning ((t (:foreground "#ff79c6" :weight semi-bold))))
- '(popup-tip-face ((t (:background "LightGoldenrod3" :foreground "black"))))
+ '(popup-tip-face ((t (:background "gray20" :foreground "gray95"))))
+ '(pyim-page ((t (:inherit default :background "gray25" :foreground "#dcdccc"))))
  '(read-multiple-choice-face ((t (:inherit underline :weight semi-bold))))
  '(success ((t (:foreground "DarkOliveGreen2" :weight semi-bold))))
  '(tty-menu-enabled-face ((t (:background "blue" :foreground "yellow" :weight semi-bold))))

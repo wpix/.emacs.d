@@ -71,5 +71,13 @@
   (kill-buffer-and-window))
 (define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
 
+
+
+;;=================== org word counts/goals =========================
+(require 'wc-goal-mode)
+(require 'advance-words-count)
+(setq words-count-messages-display 'pos-tip)
+
+
 ;;===================end=======================
 (provide 'init-org)

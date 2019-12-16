@@ -1,8 +1,8 @@
 __build_info:
   rime_version: 1.5.3
   timestamps:
-    default: 1574322096
-    default.custom: 1574400231
+    default: 1574436219
+    default.custom: 1574436452
     key_bindings: 1574322096
     key_bindings.custom: 0
     punctuation: 1574322096
@@ -146,3 +146,5 @@ switcher:
     - zh_hant
     - zh_hans
     - zh_hant_tw
+switches:
+  - reset: 1
