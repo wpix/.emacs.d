@@ -176,7 +176,7 @@
  '(notmuch-show-logo nil)
  '(org-agenda-files
    (quote
-    ("~/Documents/Publications/2019 Sn-MST/drafts/2019-08-crack-initiation.org" "/Users/Ying/org-notes/journal/20191101")))
+    ("~/org-notes/journal/20200101" "~/Documents/Publications/2019 Sn-MST/drafts/2019-08-crack-initiation.org")))
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "** ")
  '(org-journal-dir "~/org-notes/journal/")
@@ -185,7 +185,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (ebib wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
    (quote

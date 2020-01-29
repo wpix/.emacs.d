@@ -24,7 +24,7 @@
 (setq save-abbrevs 'silent) 
 
 ;;languagetool
-(setq langtool-language-tool-jar (expand-file-name "languagetool-commandline.jar" "~/Tools/LanguageTool") langtool-java-classpath nil)
+(setq langtool-language-tool-jar (expand-file-name "languagetool-commandline.jar" "~/Users/LanguageTool-4.8") langtool-java-classpath nil)
 (require 'langtool)
 (setq langtool-default-language "en-US")
 
