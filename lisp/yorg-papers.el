@@ -12,7 +12,7 @@
   (lambda (fpath)
     (start-process "open" "*open*" "open" fpath)))
 
-;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 (setq org-ref-bibtex-hydra-key-binding "\C-cj")
 
 (setf (cdr (assoc 'org-mode bibtex-completion-format-citation-functions)) 'org-ref-format-citation)
@@ -34,6 +34,33 @@
 	  (bibtex-completion-edit-notes
 	   (list (car (org-ref-get-bibtex-key-and-file thekey)))))))
 		 
+
+
+
+
+;;======================== Org-ref-pandoc setting ============================
+(require 'ox-word)
+
+;;=================== org pandoc ====================================
+(setq helm-bibtex-format-citation-functions
+      '((org-mode . (lambda (x) (insert (concat
+                                         "\\cite{"
+                                         (mapconcat 'identity x ",")
+                                         "}")) ""))))
+
+(require 'ox-pandoc)
+
+;; default options for all output formats
+(setq org-pandoc-options '((standalone . t)))
+;; cancel above settings only for 'docx' format
+(setq org-pandoc-options-for-docx '((standalone . nil)))
+;; special settings for beamer-pdf and latex-pdf exporters
+(setq org-pandoc-options-for-beamer-pdf '((pdf-engine . "xelatex")))
+(setq org-pandoc-options-for-latex-pdf '((pdf-engine . "pdflatex")))
+;; special extensions for markdown_github output
+(setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
+
+
 ;;======================== Org-LATEX setting ============================
 
 (setq org-latex-pdf-process

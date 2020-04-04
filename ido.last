@@ -18,6 +18,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/"
+ "/Users/Ying/Documents/Publications/ASEEs/2019 IGERT-india-PR/drafts/"
  "/Users/Ying/Documents/Publications/2019 Sn-MST/drafts/"
  "/Users/Ying/.emacs.d/lisp/"
  "/Users/Ying/OneDrive - purdue.edu/Publications/2019 Sn-MST/drafts/"
@@ -41,6 +43,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "ene-theory-ab.bib"
+ "asee-motivation.org"
  "Sn-mst.bib"
  "2019-02-07-Figure-draft.docx"
  "org-mode-R-tutorial.org"
@@ -49,13 +53,15 @@
  "slip-cracking-prewriting.org"
  ".chunkwmrc"
  "hobo-research.org"
- "thesis.org"
- "slip-cracking.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Ying/" (24019 16257 400320 470000) ".zlogout" "java.log.9696" ".bnd2/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".newsrc-dribble" ".501879.padl" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" ".msmtprc" ".cisco/" ".chunkwmrc" "Uncategorized/" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" "*message*-20191118-160924" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" "PSV Updates/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" "PS Vita/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" "org-notes/" "resources/" "Pictures/" "Gallery/" ".local/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" "PSV Packages/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" "java.log.20694" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".s3cfg" ".nix-channels" "../" "./")
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/" (24125 33996 0 0) "theory-ab-blx.bib" "ene-theory-notes.org" ".#theory-ab.org" "theory-ab.tex" "theory-ab.bbl" "theory-ab.org" "apacite.dtx" "ene-theory-ab.bib" "theory-ab.pdf" "apacite.ins" "../" "./")
+
+ ("/Users/Ying/Documents/Publications/ASEEs/2019 IGERT-india-PR/drafts/" (24112 35896 0 0) "asee-motivation.org" "ene-motivation.bib" ".DS_Store" "../" "./")
+
+ ("/Users/Ying/" (24112 14351 346216 177000) ".zlogout" "java.log.9696" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".newsrc-dribble" ".501879.padl" "liberime/" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" "【答案02】陈平年终演讲完整版：金融开放的挑战和机遇-79016055.flv" ".zoomus/" "config.log" "librime/" ".Trash/" ".Rapp.history" "Dropbox/" "陈平：不懂美国政治的特朗普，还能当选吗？-82424567.flv" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" "PSV Updates/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" "PS Vita/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" "【眉山论剑】为什么我说香港动乱，对你们年轻人反而是机遇？-82460243.flv" ".zprofile" "org-notes/" "Pictures/" "Gallery/" ".local/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" "PSV Packages/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" "java.log.20694" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".s3cfg" ".nix-channels" "../" "./")
 
  ("/Users/Ying/Documents/Publications/2019 Sn-MST/drafts/" (24017 60098 0 0) "sn-mst-supplementary.pdf" "model2-names.bst" "Sn-mst.bib" "sn-mst-supplementary.org" "model4-names.bst" "sn-mst-supplementary.bbl" "model1-num-names.bst" "slip-cracking.org alias" "2019-08-crack-initiation copy.org" "sn-mst-supplementary.tex" "model6-num-names.bst" "model5-names.bst" "2019-08-crack-initiation.bbl" "2019-08-crack-initiation.org" "model3-num-names.bst" "2019-Sn-mst-figures.pdf" "elsarticle-template.tex" "2019-08-crack-initiation.pdf" "#2019-08-crack-initiation.org#" ".#2019-08-crack-initiation.org" "whisker_rotation_outline.docx" "whisker-nucleation.org_archive" "2019-02-07-Figure-draft.docx" "2019-08-crack-initiation.tex" "model1a-num-names.bst" ".#whisker-nucleation.org" ".DS_Store" ".#Sn-mst.bib" "elsarticle-template.pdf" "gbm-sem.jpg" "elsarticle-num.bst" "numcompress.sty" "../" "./")
 

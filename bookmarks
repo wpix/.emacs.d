@@ -3,10 +3,10 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-refile-last-stored"
- (filename . "~/Documents/Publications/2019 Sn-MST/drafts/2019-08-crack-initiation.org")
- (front-context-string . "** fig(gb2) \nill")
- (rear-context-string . "plot in python)\n")
- (position . 27139))
+ (filename . "~/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/theory-ab.org")
+ (front-context-string . "** week 8 Vygots")
+ (rear-context-string . "mpetent one. \n\n\n")
+ (position . 36896))
 ("org capture elements"
  (front-context-string . "\n9.1.3.1 Templat")
  (rear-context-string . "pture templates\n")
