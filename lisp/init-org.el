@@ -3,6 +3,7 @@
 (setq load-path (cons "~/org-mode/contrib/lisp" load-path))
 (require 'org-install)
 (require 'ox-extra)
+(require 'org)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
@@ -30,18 +31,34 @@
 			 "/Users/Ying/Documents/Publications"))
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "InProgress(i)" "TBS(s)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "InProgress(i)" "|" "DONE(d)")
 	      (sequence "WAIT(w)" "PAUSED(p)" "|" "CANCELED(x!)")
 	      (sequence "1st(a)"  "2nd(b)"  "3rd(c)"  "STAGED(g!)"  "|"  "REVIEW(v!)")
 	      )))
 
-;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-directory "~/org-notes")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
+
+
+(defun transform-square-brackets-to-round-ones(string-to-transform)
+  "Transforms [ into ( and ] into ), other chars left unchanged."
+  (concat 
+  (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform))
+  )
+
 (setq org-capture-templates
       '(("t" "todo" entry (file+headline "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/inbox.org" "tasks")
          "* TODO %?\n  %i\n  %a")
+	("w" "Web site"
+ entry
+ (file+olp "~/org-notes/notes.org" "Web")
+ "* %c :website:\n%U %?%:initial")
+	(("j" "journal entry" entry (function org-journal-find-location)
+	 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?"))
 	("i" "ideas" entry (file+headline "/Users/Ying/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/research.org" "ideas") "%?\n  %i\n  %a")))
 
+(setq org-protocol-default-template-key "w")
 
 ;;======================== Org-journal setting ============================
 (customize-set-variable 'org-journal-dir "~/org-notes/journal/")
@@ -57,10 +74,6 @@
   ;; Position point on the journal's top-level heading so that org-capture
   ;; will add the new entry as a child entry.
   (goto-char (point-min)))
-
-(setq org-capture-templates
-      '(("j" "journal entry" entry (function org-journal-find-location)
-	 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
 
 (defun org-journal-save-entry-and-exit()
   "Simple convenience function.

@@ -52,21 +52,18 @@
    (get-buffers-matching-mode major-mode)
    (car (occur-read-primary-args))))
 ;; global key for `multi-occur-in-this-mode' - you should change this.
-(global-set-key (kbd "C-<f2>") 'multi-occur-in-this-mode)
+(global-set-key (kbd "M-]") 'multi-occur-in-this-mode)
 
 
-;; Window resize keybindings
-(global-set-key (kbd "C-S-M-w") 'windmove-up)
-(global-set-key (kbd "C-S-M-s") 'windmove-down)
-(global-set-key (kbd "C-S-M-d") 'windmove-right)
-(global-set-key (kbd "C-S-M-a") 'windmove-left)
 
 (global-set-key (kbd "M-.") 'other-window)
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 
-(global-set-key (kbd "C-S-a") 'shrink-window-horizontally)
-(global-set-key (kbd "C-S-d") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-S-s") 'shrink-window)
-(global-set-key (kbd "C-S-w") 'enlarge-window)
+
+;;Editing
+(global-set-key (kbd "M-[") 'insert-pair)
+(global-set-key (kbd "M-{") 'insert-pair)
+(global-set-key (kbd "M-)") 'delete-pair)
+
 
 (provide 'init-keybindings)

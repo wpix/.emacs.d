@@ -23,9 +23,7 @@
 
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
-(define-abbrev-table 'awk-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'awk-mode-abbrev-table '())
 
 (define-abbrev-table 'bbdb-mode-abbrev-table '())
 
@@ -37,13 +35,9 @@
 
 (define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
 
-(define-abbrev-table 'c++-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'c++-mode-abbrev-table '())
 
-(define-abbrev-table 'c-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'c-mode-abbrev-table '())
 
 (define-abbrev-table 'calc-trail-mode-abbrev-table '())
 
@@ -406,7 +400,7 @@
     ("highight" "highlight" nil 0)
     ("highlishts" "highlights" nil 0)
     ("hournal" "Journal" nil 0)
-    ("humen" "human" nil 1)
+    ("humen" "human" nil 2)
     ("idenity" "identity" nil 0)
     ("imcompatabitities" "incompatibilities" nil 0)
     ("imoprtant" "important" nil 0)
@@ -437,6 +431,7 @@
     ("instrcutor" "instructor" nil 0)
     ("instrinsic" "intrinsic" nil 0)
     ("instructos" "instructs" nil 1)
+    ("instuition" "intuition" nil 0)
     ("intelectual" "intellectual" nil 0)
     ("intercultrual" "intercultural" nil 0)
     ("interdiciplinary" "interdisciplinary" nil 7)
@@ -449,15 +444,17 @@
     ("interdisicplinary" "interdisciplinary" nil 0)
     ("intererts" "interests" nil 0)
     ("intergranular" "intergranular" nil 1)
+    ("interllectural" "intellectual" nil 0)
     ("interlligence" "intelligence" nil 1)
     ("intermetallic" "intermetallic" nil 1)
     ("internaitonal" "international" nil 0)
     ("internationl" "international" nil 7)
-    ("interships" "internships" nil 4)
+    ("interships" "internships" nil 6)
     ("interspecimen" "interspecimen" nil 0)
     ("intervenion" "intervention" nil 0)
     ("intiiative" "initiative" nil 0)
     ("intrisically" "intrinsically" nil 0)
+    ("inﬂuence" "influence" nil 0)
     ("ipad" "ipad" nil 0)
     ("itnercultural" "intercultural" nil 0)
     ("itnerviewees" "interviewees" nil 0)
@@ -615,7 +612,7 @@
     ("requriement" "requirement" nil 0)
     ("requtation" "reputation" nil 0)
     ("resaerch" "research" nil 1)
-    ("resech" "resech" nil 1)
+    ("resech" "resech" nil 2)
     ("resiliene" "resilience" nil 0)
     ("reson" "Reason" nil 0)
     ("responsed" "responded" nil 0)
@@ -632,6 +629,7 @@
     ("saturday" "Saturday" nil 3)
     ("schdule" "schedule" nil 1)
     ("schemetic" "schematic" nil 2)
+    ("scholling" "schooling" nil 0)
     ("scractch" "Scratch" nil 3)
     ("secon" "second" nil 0)
     ("seragated" "segregated" nil 0)
@@ -812,9 +810,7 @@
 
 (define-abbrev-table 'ivy-occur-mode-abbrev-table '())
 
-(define-abbrev-table 'java-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'java-mode-abbrev-table '())
 
 (define-abbrev-table 'js-jsx-mode-abbrev-table '())
 
@@ -890,9 +886,7 @@
 
 (define-abbrev-table 'nxml-mode-abbrev-table '())
 
-(define-abbrev-table 'objc-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'objc-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -916,9 +910,7 @@
 
 (define-abbrev-table 'pdf-outline-buffer-mode-abbrev-table '())
 
-(define-abbrev-table 'pike-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'pike-mode-abbrev-table '())
 
 (define-abbrev-table 'plain-tex-mode-abbrev-table '())
 

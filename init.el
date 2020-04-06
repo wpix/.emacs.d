@@ -29,6 +29,10 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
+(server-start)
+(require 'org-protocol)
+(require 's)
+(require 'org-protocol-capture-html)
 
 (require 'init-keybindings)
 (require 'init-company)
@@ -185,7 +189,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
    (quote
