@@ -28,7 +28,7 @@
       message-sendmail-f-is-evil nil
       message-kill-buffer-on-exit t
       notmuch-show-indent-messages-width 4
-      notmuch-saved-searches '((:name "inbox" :query "tag:inbox" :key "i")
+      notmuch-saved-searches '((:name "inbox" :query "tag:inbox and not from:wang3294@purdue.edu" :key "i")
 			       (:name "unread" :query "tag:unread" :key "u")
                                (:name "sent" :query "from:wang3294@purdue.edu" :key "s")
 			       (:name "archive" :query "tag:archive" :key "a")
