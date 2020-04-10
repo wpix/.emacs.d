@@ -4,9 +4,9 @@
 (require 'use-package)
 (use-package pyim
     :ensure nil
-    :demand t
+    :demand nil
     :config
-    (setq default-input-method "pyim")
+    ;(setq default-input-method "pyim")
     (setq pyim-page-length 5)
     (setq pyim-page-style 'one-line)
     :bind
@@ -16,12 +16,12 @@
 ;;("-" . pyim-self-insert-command)
 ;;("=" . pyim-self-insert-command)) 
 
-(add-hook 'emacs-startup-hook
-          #'(lambda () (pyim-restart-1 t)))
+;; (add-hook 'emacs-startup-hook
+;;           #'(lambda () (pyim-restart-1 t)))
 
-(pyim-isearch-mode 1)
-(setq-default pyim-english-input-switch-functions
-              '(pyim-probe-isearch-mode))
+;; (pyim-isearch-mode nil)
+;; (setq-default pyim-english-input-switch-functions
+;;               '(pyim-probe-isearch-mode))
 
 ;; (add-to-list 'load-path "~/liberime/build/")
 ;; ;;(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
@@ -115,4 +115,4 @@
 ;;               :slant 'normal
 ;;               :size 15.0)))
 
-(provide 'init-chinese)
+;; (provide 'init-chinese)

@@ -13,17 +13,19 @@
  ("/Users/" . "Ying/")
  ("/" . "Users/")
  ("/Users/Ying/.emacs.d/" . "lisp/")
- ("/Users/Ying/" . "Downloads/")
+ ("/Users/Ying/" . "Documents/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Ying/Documents/"
+ "/Users/Ying/Downloads/"
+ "/Users/Ying/.emacs.d/lisp/"
+ "/Users/Ying/.config/"
  "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/"
  "/Users/Ying/Documents/Publications/ASEEs/2019 IGERT-india-PR/drafts/"
  "/Users/Ying/Documents/Publications/2019 Sn-MST/drafts/"
- "/Users/Ying/.emacs.d/lisp/"
  "/Users/Ying/OneDrive - purdue.edu/Publications/2019 Sn-MST/drafts/"
- "/Users/Ying/Downloads/"
  "/Users/Ying/.emacs.d/"
  "/Users/Ying/org-notes/publications/"
  "/Users/Ying/"
@@ -32,7 +34,6 @@
  "/Users/Ying/OneDrive - purdue.edu/Publications/2019 crack-initiation/drafts/"
  "/Users/Ying/OneDrive - purdue.edu/Publications/"
  "/Users/Ying/Google Drive/Publications/"
- "/Users/Ying/.config/"
  "/Users/Ying/Documents/Bookends/Attachments/"
  "/Users/Ying/Library/Rime/"
  "/Users/Ying/.emacs.d/site-lisp/"
@@ -57,15 +58,27 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/Ying/Documents/" (24204 28914 0 0) "Backups/" "ExpressVPN Shortcuts/" "MATLAB/" "Bookends/" "WebEx/" "Publications/" "Typora/" ".localized" "Documents - Congying’s MacBook Pro/" ".DS_Store" "Brains/" ".rqd/" "../" "./")
+
+ ("/Users/Ying/" (24206 52388 283252 922000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" "liberime/" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" "librime/" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
+
+ ("/Users/Ying/Downloads/" (24206 21953 331408 872000) "1-s2.0-S1359645400003219-main.pdf" "signature.jpg" "Implementation_of_the_Next_Gen.pdf" "国务院公报1989.pdf" "Synchrotron-2020-0327 JB.docx" "1999 ホーホケキョ となりの山田くん [我的邻居山田君] [My Neighbors the Yamadas]/" "NPS Downloads/" "unitcell.vasp" "Interdisciplinary_Engineering_.pdf" "A-new-org-mode-exporter-to-Word-for-scimax.tex" "Synchrotron-2020-0329 1037_Aska.docx" "1-s2.0-S0959652619305554-main.pdf" "Attachments/" "新万国读本_英语版.pdf" "391196251_浪味仙zz/" "storage_config.txt" "1-s2.0-S0956053X18306998-main.pdf" "koma-script.pdf" "Rime-master/" "Interdisciplinary_instruction_.pdf" "新万国读本_德法西拉版.pdf" "Policy_Documents.pdf" "BaiduPCS-Go-v3.6-darwin-osx-amd64/" "imessage.2fa.alfredworkflow" "Scanned_documents_/" "unitcell-color.vesta" "highlight.zip" "Hughes 2001.pdf" "Net-price-Calculator.pdf" "README.md" "2017_SUBARU_IMPREZA_2.0_I_LIMITED_AWD_ID_Card.pdf" "A5.txt" "orgpapers.pdf" "original-manuscript.pdf" "Undergraduate_engineering_stud.pdf" "v2-0ccc707eb95750fd6a7538944a8dc420_r.jpg" "90%的人听了它都会爱上古典吉他！《爱的罗曼史》- 莫勒.flv" "新万国读本_德法西拉易读版.pdf" "Synchrotron-2020-0325-Ying.docx" "Pandoc-does-org-mode-now.tex" "05585730.pdf" "LanguageTool-4.8/" "tracked-changes-0205.pdf" ".localized" "squirrel_config-master/" "Synchrotron-2020-0328 Y.docx" "Synchrotron-2020-0401 1300_Aska.docx" "Academic-Careers-Research-Statements-2017.pdf" ".DS_Store" "Synchrotron-2020-0402-1500.docx" "Revised Syllabus.docx" "CR-Health-Inline-Arsenic-In-Rice-06-16.jp2" "tcprofile.xlsx" "pandoc-templates-master/" "(新版)中日交流标准日本语初级上册动词一览表.pdf" "rotation - definitions 032920.pptx" "Engagement_in_academic_advisin.pdf" "../" "./")
+
+ ("/Users/Ying/.emacs.d/" (24206 51385 434886 669000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "../" "./")
+
+ ("/Users/Ying/.emacs.d/elpa/" (24206 52202 835939 291000) "academic-phrases-20180723.1021/" "company-readme.txt" "define-word-20191031.1736/" "ht-20200217.2331/" "exec-path-from-shell-20191229.112/" "gnupg/" "s-20180406.808/" "elfeed-20200209.1942/" "ebib-20200327.1040/" "use-package-20200322.2110/" "request-20200219.2257/" "easy-hugo-20200209.743/" "pdf-tools-20190413.2018/" "projectile-20200329.1908/" "ox-pandoc-20180510.1338/" "lv-20200227.1301/" "org-pdftools-20200330.806/" "yasnippet-snippets-20200403.1026/" "pos-tip-20191227.1356/" "parsebib-20200303.2324/" "ox-reveal-20200327.1636/" "org-ref-20200330.1218/" "imenu-anywhere-20190512.1939/" "ace-popup-menu-20190713.1337/" "helm-bibtex-20191028.1313/" "xr-1.18/" "company-20200324.2145/" "magit-20200408.2341/" "whole-line-or-region-20200305.221/" "org-noter-20191020.1212/" "bind-key-20191110.416/" "hydra-20200306.913/" "helm-core-20200306.1417/" "google-translate-20190620.1416/" "toc-org-20190902.1055/" "wc-goal-mode-20140829.1359/" "queue-0.2/" "ace-link-20190716.920/" "ess-readme.txt" "highlight-indentation-20181204.839/" "biblio-20200331.2013/" "avy-20200311.1106/" "bbdb-20200102.403/" "helm-20200331.1151/" "flx-20191115.659/" "popup-20160709.1429/" "anki-editor-20190922.1223/" "ess-smart-underscore-20190309.101/" "f-20191110.1357/" "pyvenv-20191202.1039/" "pyim-basedict-20190719.1252/" "helm-org-rifle-20190809.1831/" "archives/" "flx-ido-20180117.1519/" "emojify-20200309.553/" "cnfonts-20200327.101/" "transient-20200226.1612/" "elpy-20200329.1830/" "citeproc-org-0.2.2/" "cmake-mode-20190710.1319/" "key-chord-20160227.1238/" "focus-20191209.2210/" "biblio-core-20200331.2013/" "epl-20180205.2049/" "tablist-20200227.1918/" "company-statistics-20170210.1933/" "ob-ipython-20180224.953/" "packed-20180318.1729/" "pkg-info-20150517.1143/" "avy-menu-20190713.1348/" "julia-mode-20200331.1658/" "yasnippet-20200405.47/" "pyim-20200403.520/" "smartparens-20200324.2147/" "auto-compile-20191020.1040/" "org-20200406/" "string-inflection-20180827.1301/" "dracula-theme-20200404.1413/" "w3m-20200325.2226/" ".DS_Store" "ess-20200408.2126/" "org-brain-20200408.744/" "htmlize-20191111.2130/" "ob-translate-20170720.1919/" "dash-20200119.2310/" "ess-smart-underscore-readme.txt" "async-20200113.1745/" "ivy-20200319.1247/" "langtool-20200117.441/" "dash-functional-20191109.1327/" "git-commit-20200207.1819/" "org-journal-20200407.1040/" "markdown-mode-20191230.1055/" "../" "./")
+
+ ("/Users/Ying/.emacs.d/elpa/org-pdftools-20200330.806/" (24206 51385 444453 777000) "org-pdftools-pkg.el" "org-pdftools-autoloads.el" "org-pdftools.el" "../" "./")
+
+ ("/Users/Ying/.emacs.d/lisp/" (24206 44851 9597 841000) "config-hugo.el" "init-org.el" "config-elfeed.el" "init-helm.el" "ying-hydra.el" "init-magit.el" "init-keybindings.el" "init-company.el" "ying-papers.el~" "scimax-hydra.el" "ox-word.el" "ying-babel.el" "init-chinese.el" "init-spelling.el" "ying-papers.el" "init-browser.el" ".DS_Store" "init-ido.el" "ying-hydra copy.el" "config-notmuch.el" "ying-projectile.el" "../" "./")
+
+ ("/Users/Ying/.config/" (24206 716 243698 874000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "neomutt/" "menus/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "../" "./")
+
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/" (24125 33996 0 0) "theory-ab-blx.bib" "ene-theory-notes.org" ".#theory-ab.org" "theory-ab.tex" "theory-ab.bbl" "theory-ab.org" "apacite.dtx" "ene-theory-ab.bib" "theory-ab.pdf" "apacite.ins" "../" "./")
 
  ("/Users/Ying/Documents/Publications/ASEEs/2019 IGERT-india-PR/drafts/" (24112 35896 0 0) "asee-motivation.org" "ene-motivation.bib" ".DS_Store" "../" "./")
 
- ("/Users/Ying/" (24112 14351 346216 177000) ".zlogout" "java.log.9696" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".newsrc-dribble" ".501879.padl" "liberime/" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" "【答案02】陈平年终演讲完整版：金融开放的挑战和机遇-79016055.flv" ".zoomus/" "config.log" "librime/" ".Trash/" ".Rapp.history" "Dropbox/" "陈平：不懂美国政治的特朗普，还能当选吗？-82424567.flv" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" "PSV Updates/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" "PS Vita/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" "【眉山论剑】为什么我说香港动乱，对你们年轻人反而是机遇？-82460243.flv" ".zprofile" "org-notes/" "Pictures/" "Gallery/" ".local/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" "PSV Packages/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" "java.log.20694" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".s3cfg" ".nix-channels" "../" "./")
-
  ("/Users/Ying/Documents/Publications/2019 Sn-MST/drafts/" (24017 60098 0 0) "sn-mst-supplementary.pdf" "model2-names.bst" "Sn-mst.bib" "sn-mst-supplementary.org" "model4-names.bst" "sn-mst-supplementary.bbl" "model1-num-names.bst" "slip-cracking.org alias" "2019-08-crack-initiation copy.org" "sn-mst-supplementary.tex" "model6-num-names.bst" "model5-names.bst" "2019-08-crack-initiation.bbl" "2019-08-crack-initiation.org" "model3-num-names.bst" "2019-Sn-mst-figures.pdf" "elsarticle-template.tex" "2019-08-crack-initiation.pdf" "#2019-08-crack-initiation.org#" ".#2019-08-crack-initiation.org" "whisker_rotation_outline.docx" "whisker-nucleation.org_archive" "2019-02-07-Figure-draft.docx" "2019-08-crack-initiation.tex" "model1a-num-names.bst" ".#whisker-nucleation.org" ".DS_Store" ".#Sn-mst.bib" "elsarticle-template.pdf" "gbm-sem.jpg" "elsarticle-num.bst" "numcompress.sty" "../" "./")
-
- ("/Users/Ying/.emacs.d/lisp/" (24013 60113 525365 411000) "config-hugo.el" "init-org.el" "config-elfeed.el" ".#yorg-projectile.el" "init-helm.el" "init-magit.el" "init-spelling.el~" "yorg-projectile.el" "init-pdf-tools.el" "init-keybindings.el" "init-company.el" "scimax-hydra.el" "init-chinese.el" "init-spelling.el" "yorg-papers.el" "yorg-babel.el" "yorg-word.el" "init-browser.el" ".DS_Store" "init-ido.el" "config-notmuch.el" ".#init-defaults.el" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2019 ENE Inquiry/" (24004 18930 0 0) "Inquiry-review.org" "ENEinquiry copy.bib" "cover-letter.tex" "Inquiry-review.bbl" "SLR/" "ENE503_Weekly_CourseMap.pdf" "readings/" "cover-letter.org" "Inquiry-review.tex" "homework/" "selection-rule.gv" "Inquiry-notes.org" "cover-letter.pdf" "Inquiry-review.out" "slides/" "ENEinquiry.bib" "Purdue-Logo.png" ".DS_Store" "ENE503_Syllabus_Fall2019.pdf" "Inquiry-review.log" "Inquiry-review.fdb_latexmk" "Inquiry-review.aux" "selection-rule.gv.pdf" "Inquiry-review.blg" "Inquiry-review.fls" "../" "./")
 
@@ -79,13 +92,7 @@
 
  ("/Users/Ying/OneDrive - purdue.edu/Publications/2019 Sn-MST/drafts/" (23995 22359 548394 343000) "Sn-mst.bib" "slip-cracking.org alias" "2019-08-crack-initiation.org" "whisker_rotation_outline.docx" "whisker-nucleation.org_archive" "2019-02-07-Figure-draft.docx" ".#whisker-nucleation.org" ".DS_Store" "gbm-sem.jpg" "../" "./")
 
- ("/Users/Ying/Downloads/" (23995 23162 786032 957000) "Rotation-2.docx" "NPS Downloads/" "CEACAA009BGEC3.dat.exe" "unitcell.vasp" "Scopus - Analyze search results.pdf" "99ad4f2e-d114-11e5-811e-c16def718574.png" "ENE 690 Fall 2019 Syllabus.pdf" "bnd" "1-s2.0-S1359645419300667-main.pdf" "391196251_浪味仙zz/" "175.full.pdf" "manuscript.org" "org-mode-R-tutorial.org" "aiueo_stamp_kana.png" "Congying Wang Review 2019.pdf" "Successful-Interdisciplinary-Collaboration-Supporting-Science-Teachers-with-a-Systematic-Ongoing-Intentional-Collaboration-Between-University-Engineering-and-Science-Teacher-Education-FacultyJournal-of-Science-Teacher-Education.pdf" "drive-download-20191027T173327Z-001/" "unitcell-color.vesta" "1542619.pdf" "Euler-agnles.pdf" "master/" "ess-18.10.2/" "morales.tex" "Yang-Li2007_Article_DeformationBehaviorOfTinAndSom.pdf" "Net-price-Calculator.pdf" "annealing-textures.pdf" "Scopus - Analyze search results - ASEE.pdf" "marczellm-beamerports-bb0838bf190c/" "A5.txt" "ENE503_SLR 1st Draft_Curry, Fantasi_10.14.19.docx" "scripta-materialia.csl" "Primo_BibTeX_Export.bib" "aiueo_stamp_hira.png" "GnuPG-2.2.17.dmg.sig" "testing-poster.tex" "ENE503_SLR_draft1_Li_Revision.docx" "2019_Grad_Program_OH_Agenda.pdf" "Presentation.pdf" "minerals-09-00017-v2.pdf" ".localized" "L7-Matlab-MTEX-4Feb16.pptx" "2020 College of Engineering Dean's Teaching Fellowship- final.pdf" "scopus-3.bib" "L13-Grain_Bndries_RFspace-15Mar16.pptx" "elsarticle/" "1547722.pdf" ".DS_Store" "Target assassin.pdf" "scopus.bib" "scopus-2.bib" "scopus-6.bib" "BaiduPCS-Go-v3.5.6-darwin-osx-amd64/" "LSN27b.XtalPlast_class1.ppt" "scopus-7.bib" "scopus-5.bib" "Emacs-26.3-universal.dmg" "Rotation.docx" "drive-download-20191023T212441Z-001/" "ENE503_SLR_Draft1_Marete_Oct14_Gendergap_in_aviation_education.docx" "Armin RAJABZADEH.pdf" "scopus-4.bib" "../" "./")
-
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/7 Meetings/Purdue Group /My Presentation/2019-10 polycrystal deformation/" (23980 33484 0 0) "purduelogo.png" "polycrystal-deformation.org" "#polycrystal-deformation.org#" "../" "./")
-
- ("/Users/Ying/.emacs.d/" (23973 52712 787276 498000) "company-statistics-cache.el" "themes/" ".git/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "transient/" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "misc/" "bbdb" "../" "./")
-
- ("/Users/Ying/Documents/" (23975 21433 0 0) "Thesis.scriv Recovered/" "Backups/" "ExpressVPN Shortcuts/" "Scrivener Scratchpad Notes/" "MATLAB/" "Bookends/" "WebEx/" "PS Vita/" ".localized" "Documents - Congying’s MacBook Pro/" ".DS_Store" "Brains/" ".rqd/" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/" (23975 21433 0 0) "11 Workflows/" "10 Personal/" "Meetings/" "9 Individual Development/" "4 IGERT/" "1 Images/" "2 Thesis/" "5 References/" "Publications/" ".localized" "7 Experiments/" ".DS_Store" "6 Conferences/" ".com.apple.timemachine.supported" "8 Notes/" "self-intro.pptx" "3 Courses/" "../" "./")
 
@@ -111,8 +118,6 @@
 
  ("/Users/Ying/OneDrive - purdue.edu/" (23902 49306 244009 818000) ".849C9593-D756-4E56-8D6E-42412F2A707B" "Document.docx" "untitled.pdf" "Print/" "Publications/" "Icon
 " ".DS_Store" "../" "./")
-
- ("/Users/Ying/.config/" (23896 45694 336784 518000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "neomutt/" "menus/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "../" "./")
 
  ("/Users/Ying/OneDrive - purdue.edu/Publications/2019 crack-initiation/drafts/" (23900 33953 717605 527000) "2019-08-crack-initiation.org" "whisker_rotation_outline.docx" "whisker-nucleation.org_archive" "2019-02-07-Figure-draft.docx" ".#whisker-nucleation.org" ".DS_Store" "../" "./")
 

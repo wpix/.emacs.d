@@ -15,6 +15,8 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
+(add-to-list 'load-path "~/org-mode/site-lisp")
+(add-to-list 'load-path "~/org-mode/lisp")
 (add-to-list 'load-path
 	     "~/.emacs.d/plugins/yasnippet")
 ;; Path
@@ -22,9 +24,19 @@
 
 ;;themes and fonts
 (load-theme 'dracula t)
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
 ;;(set-default-font "Monaco 14")
 ;;(setq-default line-spacing 1)
 ;;(set-language-environment "UTF-8")
+(defun endless/upgrade ()		
+  "Upgrade all packages, no questions asked."
+  (interactive)
+  (save-window-excursion
+    (list-packages)
+    (package-menu-mark-upgrades)
+    (package-menu-execute 'no-query)))
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -35,21 +47,19 @@
 (require 'org-protocol-capture-html)
 
 (require 'init-keybindings)
-(require 'init-company)
-(require 'init-ido)
-(require 'init-helm)
-(require 'init-chinese)
 (require 'init-spelling)
+(require 'init-company)
 (require 'init-magit)
-(require 'init-chinese)
+(require 'init-helm)
+(require 'init-ido)
+;(require 'init-chinese)
 (require 'init-browser)
-
 (require 'init-org)
-(require 'yorg-babel)
-(require 'yorg-papers)
-;;(require 'yorg-projectile) 
 
-(require 'scimax-hydra)
+(require 'ying-babel)
+(require 'ying-hydra)
+(require 'ying-papers)
+(require 'ying-projectile) 
 
 (require 'config-notmuch)
 (require 'config-elfeed)
@@ -66,10 +76,13 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+(require 'helm-org-rifle)
+
 (ace-popup-menu-mode 1)
 (ace-link-setup-default)
 ;;(global-linum-mode 1)
 (delete-selection-mode 1)
+
 (winner-mode 1)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
@@ -83,9 +96,10 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (tool-bar-mode -1)
-(tooltip-mode -1)
+(tooltip-mode 1)
+
 (setq tooltip-use-echo-area t)
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
@@ -161,42 +175,50 @@
  '(google-this-keybind "C-c / g")
  '(ido-enable-flex-matching t)
  '(ispell-highlight-face (quote flyspell-incorrect))
+ '(line-number-mode nil)
  '(notmuch-address-internal-completion (quote (received nil)))
  '(notmuch-draft-folder "")
  '(notmuch-draft-save-plaintext nil)
  '(notmuch-hello-sections
    (quote
-    (notmuch-hello-insert-saved-searches notmuch-hello-insert-search notmuch-hello-insert-recent-searches notmuch-hello-insert-alltags notmuch-hello-insert-footer)))
+    (notmuch-hello-insert-header notmuch-hello-insert-saved-searches notmuch-hello-insert-search notmuch-hello-insert-recent-searches notmuch-hello-insert-alltags notmuch-hello-insert-footer)))
  '(notmuch-mua-cite-function (quote ignore))
  '(notmuch-mua-reply-insert-header-p-function (quote ignore))
- '(notmuch-saved-searches
+ '(notmuch-saved-searches nil)
+ '(notmuch-search-line-faces
    (quote
-    ((:name "inbox" :query "tag:inbox" :key "i" :search-type tree)
-     (:name "unread" :query "tag:unread" :key "u" :search-type tree)
-     (:name "flagged" :query "tag:flagged" :key "f" :search-type tree)
-     (:name "archive" :query "tag:archive" :key "a" :search-type tree)
-     (:name "carol" :query "carol" :key "c" :search-type tree)
-     (:name "blendell" :query "blendell" :key "b" :search-type tree))))
+    (("unread" . notmuch-search-unread-face)
+     ("flagged" . notmuch-search-flagged-face))))
+ '(notmuch-show-indent-multipart t)
  '(notmuch-show-logo nil)
+ '(notmuch-show-relative-dates nil)
+ '(notmuch-tag-added-formats
+   (quote
+    (("list"
+      (notmuch-apply-face tag
+			  (quote
+			   (:foreground "gray33")))))))
  '(org-agenda-files
    (quote
-    ("~/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/theory-ab.org" "~/org-notes/journal/20200101" "/Users/Ying/org-notes/journal/20200201")))
+    ("~/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/theory-ab.org" "~/org/journal/20200101" "/Users/Ying/org/journal/20200201")))
+ '(org-directory "~/org")
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "** ")
- '(org-journal-dir "~/org-notes/journal/")
+ '(org-journal-dir "~/org/journal/")
  '(org-journal-enable-agenda-integration t)
  '(org-journal-file-type (quote monthly))
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe pyim yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (helm-org-rifle ace-window emojify markdown-mode anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+ '(projectile-mode t nil (projectile))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
    (quote
     ((:name "big" :file "/Users/Ying/.emacs.d/pyim/pyim-bigdict.pyim"))))
  '(pyim-english-input-switch-functions (quote (pyim-probe-isearch-mode)))
  '(pyim-exhibit-delay-ms 0)
- '(pyim-isearch-mode t nil (pyim))
+ '(pyim-isearch-mode nil nil (pyim))
  '(pyim-magic-converter nil)
  '(pyim-page-style (quote one-line))
  '(pyim-page-tooltip (quote pos-tip))
@@ -470,27 +492,38 @@
  '(minibuffer-prompt ((t (:foreground "#ff79c6" :weight semi-bold))))
  '(mode-line-buffer-id ((t (:weight semi-bold))))
  '(mode-line-emphasis ((t (:weight semi-bold))))
- '(notmuch-search-unread-face ((t (:weight semi-bold))))
+ '(notmuch-search-flagged-face ((t (:background "lemon chiffon" :foreground "black"))))
+ '(notmuch-search-subject ((t (:inherit default))))
+ '(notmuch-search-unread-face ((t (:background "dark gray" :foreground "Black" :weight semi-bold))))
  '(notmuch-tag-added ((t (:underline "light green"))))
- '(notmuch-tag-unread ((t (:foreground "IndianRed3"))))
- '(notmuch-tree-match-author-face ((t (:foreground "orchid1"))))
- '(notmuch-tree-match-tag-face ((t (:foreground "orchid1"))))
+ '(notmuch-tag-face ((t (:background "selectedControlColor" :foreground "LightYellow1"))))
+ '(notmuch-tag-flagged ((t (:foreground "yellow" :weight semi-bold))))
+ '(notmuch-tag-unread ((t (:foreground "IndianRed3" :weight semi-bold))))
+ '(notmuch-tree-match-author-face ((t (:foreground "gray76"))))
+ '(notmuch-tree-match-tag-face ((t (:foreground "plum"))))
+ '(notmuch-wash-toggle-button ((t (:inherit font-lock-comment-face :foreground "selectedControlColor"))))
  '(org-agenda-date ((t (:foreground "plum1" :underline nil))))
  '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight semi-bold))))
  '(org-agenda-date-weekend ((t (:inherit org-agenda-date))))
  '(org-agenda-done ((t (:foreground "DarkOliveGreen3"))))
+ '(org-block ((t (:background "controlColor" :foreground "misty rose"))))
+ '(org-block-begin-line ((t (:inherit org-meta-line :foreground "olive drab"))))
+ '(org-block-end-line ((t (:inherit org-block-begin-line :foreground "olive drab"))))
  '(org-column-title ((t (:inherit org-column :underline t :weight semi-bold))))
  '(org-date ((t (:foreground "light steel blue" :underline t))))
  '(org-document-title ((t (:foreground "#ffb86c" :weight semi-bold :height 1.3))))
  '(org-drawer ((t (:foreground "unemphasizedSelectedTextBackgroundColor"))))
+ '(org-footnote ((t (:foreground "MediumPurple4"))))
  '(org-level-1 ((t (:inherit bold :foreground "plum2" :height 1.2))))
  '(org-level-2 ((t (:inherit bold :foreground "sky blue" :height 1.1))))
  '(org-level-3 ((t (:foreground "#bd93f9" :weight normal :height 1.05))))
- '(org-level-4 ((t (:foreground "yellow green" :weight normal))))
+ '(org-level-4 ((t (:foreground "LightSalmon1" :weight normal))))
  '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
  '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
  '(org-link ((t (:foreground "SkyBlue1" :underline t))))
  '(org-list-dt ((t (:weight semi-bold))))
+ '(org-ref-acronym-face ((t (:inherit org-link :foreground "thistle1"))))
+ '(org-ref-cite-face ((t (:inherit org-link :foreground "light sky blue"))))
  '(org-tag ((t (:background "#373844" :foreground "#ff79c6" :weight semi-bold))))
  '(org-todo ((t (:background "#373844" :foreground "#ffb86c" :weight semi-bold))))
  '(org-warning ((t (:foreground "#ff79c6" :weight semi-bold))))
@@ -502,3 +535,5 @@
  '(which-key-special-key-face ((t (:inherit which-key-key-face :inverse-video t :weight semi-bold))))
  '(widget-button ((t (:weight semi-bold)))))
 (put 'set-goal-column 'disabled nil)
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)

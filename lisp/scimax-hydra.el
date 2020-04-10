@@ -119,51 +119,51 @@ This is a macro so I don't have to quote the hydra name."
 
 (defhydra scimax-base (:color blue)
   "base"
-  ("," scimax-hydra-pop "back" :color blue)
-  ("x" counsel-M-x "M-x")
-  ("C-s" save-buffer "Save")
-  ("/" undo-tree-undo "undo" :color red)
-  ("\\" undo-tree-redo "redo" :color red)
-  ("8" (switch-to-buffer "*scratch*") "*scratch*")
+  ("," scimax-hydra-pop "back" :color red)
+  ;("x" counsel-M-x "M-x")
+  ;("C-s" save-buffer "Save")
+  ;("z" undo-tree-undo "undo" :color red)
+  ;("x" undo-tree-redo "redo" :color red)
+  ("s" (switch-to-buffer "*scratch*") "*scratch*")
   ("?" scimax-hydra-help "Menu help")
-  ("." scimax-dispatch-mode-hydra "Major mode hydras")
-  ("u" (hydra--universal-argument current-prefix-arg) "C-u" :color red)
+  ("." scimax-dispatch-mode-hydra "Major mode")
+  ("u" (hydra--universal-argument current-prefix-arg) "C-u" :color yellow)
   ("q" nil "quit"))
 
 ;;* scimax hydra
+
 
 (defhydra scimax (:color blue :inherit (scimax-base/heads)
                          :columns 4 :body-pre (scimax-hydra-reset)
                          :idle 0.5)
   "scimax"
-  ("a" (scimax-open-hydra scimax-applications/body) "Applications")
+  ("a" (scimax-open-hydra scimax-applications/body) "Apps")
   ("b" (scimax-open-hydra scimax-buffers/body) "Buffers")
   ;; c for user? compile?
   ;; d ?
-  ("e" (scimax-open-hydra scimax-errors/body) "Edit/Errors")
-  ("f" (scimax-open-hydra scimax-files/body) "Files")
-  ("g" (scimax-open-hydra scimax-google/body) "Google")
+  ;;("e" (scimax-open-hydra scimax-errors/body) "Edit/Errors")
+  ;;("f" (scimax-open-hydra scimax-files/body) "Files")
+  ;;("g" (scimax-open-hydra scimax-google/body) "Google")
   ("h" (scimax-open-hydra scimax-help/body) "Help")
   ("i" (scimax-open-hydra scimax-insert/body) "Insert")
   ("j" (scimax-open-hydra scimax-jump/body) "Jump")
-  ("k" (scimax-open-hydra scimax-bookmarks/body) "Bookmarks")
-  ("l" (scimax-open-hydra scimax-lisp/body) "Lisp")
-  ("m" (scimax-open-hydra scimax-minor-modes/body) "Minor modes/mark")
-  ("M" (scimax-open-hydra scimax-smerge/body) "smerge")
-  ("s-m" scimax-dispatch-mode-hydra "Major mode hydras")
-  ("n" (scimax-open-hydra scimax-navigation/body) "Navigation")
-  ("o" (scimax-open-hydra scimax-org/body) "org")
+  ;;("k" (scimax-open-hydra scimax-bookmarks/body) "Bookmarks")
+  ;;("l" (scimax-open-hydra scimax-lisp/body) "Lisp")
+  ("m" (scimax-open-hydra scimax-minor-modes/body) "Minor modes")
+  ;("M" (scimax-open-hydra scimax-smerge/body) "smerge")
+  ("s-m" scimax-dispatch-mode-hydra "Major mode")
+  ;;("n" (scimax-open-hydra scimax-navigation/body) "Navigation")
+  ;;("o" (scimax-open-hydra scimax-org/body) "org")
   ("p" (scimax-open-hydra hydra-projectile/body) "Project")
   ;; q is for quit, don't reassign
-  ("r" (scimax-open-hydra scimax-registers/body) "Registers/resume")
-  ("s" (scimax-open-hydra scimax-search/body) "Search")
-  ("t" (scimax-open-hydra scimax-text/body) "Text")
+  ;;("r" (scimax-open-hydra scimax-registers/body) "Registers/resume")
+  ;;("s" (scimax-open-hydra scimax-search/body) "Search")
+  ;;("t" (scimax-open-hydra scimax-text/body) "Text")
   ;; u is a prefix arg, do not reassign
-  ("v" (scimax-open-hydra scimax-version-control/body) "Version control")
-  ("w" (scimax-open-hydra scimax-windows/body) "Windows")
+  ("v" (scimax-open-hydra scimax-version-control/body) "Git")
+  ("w" (scimax-open-hydra scimax-windows/body) "Windows"))
   ;; x is for M-x, don't reassign
-  ("z" (scimax-open-hydra scimax-customize/body) "Customize"))
-
+  ;;("z" (scimax-open-hydra scimax-customize/body) "Customize"))
 
 ;;** applications
 
@@ -275,64 +275,64 @@ Switch                  ^Kill                Split        Misc
 
 ;;** edit/errors
 
-(defhydra scimax-errors (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
-  "
-edit/errors
-Edit                Errors
-------------------------------------------------------------------
-_a_: edit abbrevs   _n_: next error
-_c_: copy (dwim)    _p_: prev error
-_k_: kill (dwim)
-_v_: paste
-_V_: paste ring
-------------------------------------------------------------------
-"
-  ("a" edit-abbrevs)
-  ("c" scimax-copy-dwim)
-  ("v" yank)
-  ("V" counsel-yank-pop)
-  ("k" scimax-kill-dwim)
-  ("n" next-error :color red)
-  ("p" previous-error :color red))
+;; (defhydra scimax-errors (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
+;;   "
+;; edit/errors
+;; Edit                Errors
+;; ------------------------------------------------------------------
+;; _a_: edit abbrevs   _n_: next error
+;; _c_: copy (dwim)    _p_: prev error
+;; _k_: kill (dwim)
+;; _v_: paste
+;; _V_: paste ring
+;; ------------------------------------------------------------------
+;; "
+;;   ("a" edit-abbrevs)
+;;   ("c" scimax-copy-dwim)
+;;   ("v" yank)
+;;   ("V" counsel-yank-pop)
+;;   ("k" scimax-kill-dwim)
+;;   ("n" next-error :color red)
+;;   ("p" previous-error :color red))
 
 
 ;;** files
 
-(defhydra scimax-files (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
-  "
-files
-------------------------------------------------------------------
-_f_: find file     _R_: rename  _r_: recentf
-_4_: other window  _k_: close   _l_: locate
-_5_: other frame   _d_: dired
-_p_: ffap
-------------------------------------------------------------------"
-  ("4" find-file-other-window)
-  ("5" find-file-other-frame)
-  ("b" describe-file)
-  ("d" (dired default-directory))
-  ("f" find-file)
-  ("k" kill-this-buffer)
-  ("l" counsel-locate)
-  ("p" ffap)
-  ("r" counsel-recentf)
-  ("R" write-file))
+;; (defhydra scimax-files (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
+;;   "
+;; files
+;; ------------------------------------------------------------------
+;; _f_: find file     _R_: rename  _r_: recentf
+;; _4_: other window  _k_: close   _l_: locate
+;; _5_: other frame   _d_: dired
+;; _p_: ffap
+;; ------------------------------------------------------------------"
+;;   ("4" find-file-other-window)
+;;   ("5" find-file-other-frame)
+;;   ("b" describe-file)
+;;   ("d" (dired default-directory))
+;;   ("f" find-file)
+;;   ("k" kill-this-buffer)
+;;   ("l" counsel-locate)
+;;   ("p" ffap)
+;;   ("r" counsel-recentf)
+;;   ("R" write-file))
 
 
 ;;** google
-(defhydra scimax-google (:color blue :inherit (scimax-base/heads) :columns 3)
-  "google"
-  ("e" google-this-error "Error")
-  ("f" google-this-forecast "Forecast")
-  ("g" google-this-region "Region")
-  ("k" google-this-lucky-search "Lucky")
-  ("l" google-this-line "Line")
-  ("m" google-maps "Maps")
-  ("r" google-this-ray "Ray")
-  ("s" google-this-search "Search")
-  ("t" google-this "This")
-  ("w" google-this-word "Word")
-  ("y" google-this-symbol "Symbol"))
+;; (defhydra scimax-google (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "google"
+;;   ("e" google-this-error "Error")
+;;   ("f" google-this-forecast "Forecast")
+;;   ("g" google-this-region "Region")
+;;   ("k" google-this-lucky-search "Lucky")
+;;   ("l" google-this-line "Line")
+;;   ("m" google-maps "Maps")
+;;   ("r" google-this-ray "Ray")
+;;   ("s" google-this-search "Search")
+;;   ("t" google-this "This")
+;;   ("w" google-this-word "Word")
+;;   ("y" google-this-symbol "Symbol"))
 
 ;;** help
 
@@ -381,16 +381,16 @@ _p_: ffap
   "jump"
   ("<" beginning-of-buffer "Beginning of buffer")
   (">" end-of-buffer "End of buffer")
-  ("a" beginning-of-line "Beginning of line")
+  ;;("a" beginning-of-line "Beginning of line")
   ("b" counsel-ibuffer "Buffer")
   ("d" ace-window "Ace window")
-  ("e" end-of-line "End of line")
-  ("c" (scimax-open-hydra scimax-jump-char/body) "Char")
+  ;;("e" end-of-line "End of line")
+  ;;("c" (scimax-open-hydra scimax-jump-char/body) "Char")
   ("g" goto-line "Goto line")
   ("h" org-db-open-heading "org-db-heading")
-  ("l" (scimax-open-hydra scimax-jump-line/body) "Line")
+  ;;("l" (scimax-open-hydra scimax-jump-line/body) "Line")
   ("k" ace-link "Link")
-  ("o" (scimax-open-hydra scimax-jump-org/body) "Org")
+  ;;("o" (scimax-open-hydra scimax-jump-org/body) "Org")
   ("p" avy-jump-to-paragraph "Paragraph")
   ("r" counsel-recentf "Recent file")
   ("s" avy-jump-to-sentence "Sentence")
@@ -398,34 +398,34 @@ _p_: ffap
   ("y" (scimax-open-hydra scimax-jump-symbol/body) "Symbol" ))
 
 
-(defhydra scimax-jump-char (:color blue :inherit (scimax-base/heads) :columns 3)
-  "char"
-  ("c" avy-goto-char "Char")
-  ("l" avy-goto-char-in-line "In line")
-  ("t" avy-goto-char-timer "Timer")
-  ("2" avy-goto-char-2 "Char2")
-  ("a" avy-goto-char-2-above "Above")
-  ("b" avy-goto-char-2-below "Below"))
+;; (defhydra scimax-jump-char (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "char"
+;;   ("c" avy-goto-char "Char")
+;;   ("l" avy-goto-char-in-line "In line")
+;;   ("t" avy-goto-char-timer "Timer")
+;;   ("2" avy-goto-char-2 "Char2")
+;;   ("a" avy-goto-char-2-above "Above")
+;;   ("b" avy-goto-char-2-below "Below"))
 
 
-(defhydra scimax-jump-line (:color blue :inherit (scimax-base/heads) :columns 3)
-  "line"
-  ("a" avy-goto-line-above "Above")
-  ("b" avy-goto-line-below "Below")
-  ("l" avy-goto-line "Line"))
+;; (defhydra scimax-jump-line (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "line"
+;;   ("a" avy-goto-line-above "Above")
+;;   ("b" avy-goto-line-below "Below")
+;;   ("l" avy-goto-line "Line"))
 
 
-(defhydra scimax-jump-org (:color blue :inherit (scimax-base/heads) :columns 3)
-  "org"
-  ("a" ivy-org-jump-to-agenda-heading "Agenda heading")
-  ("bb" scimax-jump-to-block "Jump to block")
-  ("bv" scimax-jump-to-visible-block "Jump to visible block")
-  ("d" ivy-org-jump-to-heading-in-directory "Directory heading")
-  ("h" ivy-org-jump-to-heading "Heading")
-  ("k" ace-link "link")
-  ("o" ivy-org-jump-to-open-headline "Open heading")
-  ("p" ivy-org-jump-to-project-headline "Project heading")
-  ("v" ivy-org-jump-to-visible-headline "Visible heading"))
+;; (defhydra scimax-jump-org (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "org"
+;;   ("a" ivy-org-jump-to-agenda-heading "Agenda heading")
+;;   ("bb" scimax-jump-to-block "Jump to block")
+;;   ("bv" scimax-jump-to-visible-block "Jump to visible block")
+;;   ("d" ivy-org-jump-to-heading-in-directory "Directory heading")
+;;   ("h" ivy-org-jump-to-heading "Heading")
+;;   ("k" ace-link "link")
+;;   ("o" ivy-org-jump-to-open-headline "Open heading")
+;;   ("p" ivy-org-jump-to-project-headline "Project heading")
+;;   ("v" ivy-org-jump-to-visible-headline "Visible heading"))
 
 
 (defhydra scimax-jump-word (:color blue :inherit (scimax-base/heads) :columns 3)
@@ -450,41 +450,41 @@ _p_: ffap
 
 ;;** bookmarks
 
-(require 'org-mac-link)
+;; (require 'org-mac-link)
 
-(defun scimax-bookmark-chrome (nickname)
-  "Save the url currently open as a bookmark."
-  (interactive (list (bmkp-completing-read-lax "Nickname: ")))
-  (bmkp-url-target-set (car (split-string (org-as-mac-chrome-get-frontmost-url) "::"))
-		       nil nickname))
+;; (defun scimax-bookmark-chrome (nickname)
+;;   "Save the url currently open as a bookmark."
+;;   (interactive (list (bmkp-completing-read-lax "Nickname: ")))
+;;   (bmkp-url-target-set (car (split-string (org-as-mac-chrome-get-frontmost-url) "::"))
+;; 		       nil nickname))
 
-(defhydra scimax-bookmarks (:color blue :inherit (scimax-base/heads) :columns 3)
-  "bookmarks"
-  ("k" bookmark-jump "jump")
-  ("l" bookmark-bmenu-list "list")
-  ("sc" scimax-bookmark-chrome "save chrome url")
-  ("su" bmkp-url-target-set "save url")
-  ("n" bookmark-set "new"))
+;; (defhydra scimax-bookmarks (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "bookmarks"
+;;   ("k" bookmark-jump "jump")
+;;   ("l" bookmark-bmenu-list "list")
+;;   ("sc" scimax-bookmark-chrome "save chrome url")
+;;   ("su" bmkp-url-target-set "save url")
+;;   ("n" bookmark-set "new"))
 
 ;;** lisp
 
-(defhydra scimax-lisp (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
-  "lisp"
-  ("a" eval-buffer "eval buffer")
-  ("c" byte-recompile-file "byte-compile file")
-  ("d" (eval-defun t) "debug defun")
-  ("z" (eval-defun nil) "stop edebug")
-  ("e" eval-defun "eval defun")
-  ("v" eval-last-sexp "eval last sexp")
-  ("g" (eval-region (point-min) (point)) "eval region")
-  ("h" (describe-function 'lispy-mode) "lispy help")
-  ("i" ielm "ielm")
-  ("l" load-file "load file")
-  ("L" counsel-load-library "load library")
-  ("f" counsel-find-library "find library")
-  ("r" eval-region "region")
-  ("t" toggle-debug-on-error "toggle debug")
-  ("y" edebug-on-entry "debug on entry"))
+;; (defhydra scimax-lisp (:color blue :inherit (scimax-base/heads) :columns 3 :hint nil)
+;;   "lisp"
+;;   ("a" eval-buffer "eval buffer")
+;;   ("c" byte-recompile-file "byte-compile file")
+;;   ("d" (eval-defun t) "debug defun")
+;;   ("z" (eval-defun nil) "stop edebug")
+;;   ("e" eval-defun "eval defun")
+;;   ("v" eval-last-sexp "eval last sexp")
+;;   ("g" (eval-region (point-min) (point)) "eval region")
+;;   ("h" (describe-function 'lispy-mode) "lispy help")
+;;   ("i" ielm "ielm")
+;;   ("l" load-file "load file")
+;;   ("L" counsel-load-library "load library")
+;;   ("f" counsel-find-library "find library")
+;;   ("r" eval-region "region")
+;;   ("t" toggle-debug-on-error "toggle debug")
+;;   ("y" edebug-on-entry "debug on entry"))
 
 ;;** mark/minor modes
 
@@ -526,174 +526,174 @@ _j_: jump to mark
 
 ;;** navigation
 
-(defvar scimax-hydra-modes (make-ring 4)
-  "Holds list of navigation modes.")
+;; (defvar scimax-hydra-modes (make-ring 4)
+;;   "Holds list of navigation modes.")
 
-(ring-insert scimax-hydra-modes 'scimax-nav-paragraph/body)
-(ring-insert scimax-hydra-modes 'scimax-nav-sentence/body)
-(ring-insert scimax-hydra-modes 'scimax-nav-word/body)
-(ring-insert scimax-hydra-modes 'scimax-navigation/body)
-
-
-(defvar scimax-hydra-mode-counter 0
-  "Integer counter for current mode.")
+;; (ring-insert scimax-hydra-modes 'scimax-nav-paragraph/body)
+;; (ring-insert scimax-hydra-modes 'scimax-nav-sentence/body)
+;; (ring-insert scimax-hydra-modes 'scimax-nav-word/body)
+;; (ring-insert scimax-hydra-modes 'scimax-navigation/body)
 
 
-(defun scimax-hydra-cycle-navigation-mode (&optional arg)
-  (interactive "P")
-  (if arg
-      (decf scimax-hydra-mode-counter)
-    (incf scimax-hydra-mode-counter))
-  (eval `(scimax-open-hydra ,(ring-ref scimax-hydra-modes scimax-hydra-mode-counter))))
+;; (defvar scimax-hydra-mode-counter 0
+;;   "Integer counter for current mode.")
 
 
-(defhydra scimax-navigation (:color red :inherit (scimax-base/heads)
-				    :columns 4 :hint nil
-				    :pre (setq scimax-hydra-mode-counter 0))
-  "
-navigation
------------------------------------------------------------------------------------
-_j_: ← _k_: ↑ _l_: ↓ _;_: →  _i_: imenu
-_a_: beginning of line _e_: end of line _<_: beginning of buffer _>_: end of buffer
-
-_H-w_: beginning of word _H-s_: beginning of sentence _H-p_: beginning of paragraph
-_s-w_: end of word _s-s_: end of sentence _s-p_: end of paragraph
-_z_: jump
-
-_f_: delete forward _d_: delete backward
-_t_: transpose chars
-_<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
------------------------------------------------------------------------------------
-"
-  ("j" backward-char)
-  (";" forward-char)
-  ("k" previous-line)
-  ("l" next-line)
-  ("i" counsel-imenu)
-  ("a" beginning-of-line)
-  ("e" end-of-line)
-  ("f" delete-char :color red)
-  ("d" backward-delete-char :color red)
-  ("<" beginning-of-buffer)
-  (">" end-of-buffer)
-  ("t" transpose-chars)
-  ("z" (scimax-open-hydra scimax-jump/body) :color blue)
-  ("H-w" backward-word)
-  ("H-s" backward-sentence)
-  ("H-p" backaward-paragraph)
-  ("s-p" forward-paragraph)
-  ("s-w" forward-word)
-  ("s-s" forward-sentence)
-  ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
-  ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
+;; (defun scimax-hydra-cycle-navigation-mode (&optional arg)
+;;   (interactive "P")
+;;   (if arg
+;;       (decf scimax-hydra-mode-counter)
+;;     (incf scimax-hydra-mode-counter))
+;;   (eval `(scimax-open-hydra ,(ring-ref scimax-hydra-modes scimax-hydra-mode-counter))))
 
 
+;; (defhydra scimax-navigation (:color red :inherit (scimax-base/heads)
+;; 				    :columns 4 :hint nil
+;; 				    :pre (setq scimax-hydra-mode-counter 0))
+;;   "
+;; navigation
+;; -----------------------------------------------------------------------------------
+;; _j_: ← _k_: ↑ _l_: ↓ _;_: →  _i_: imenu
+;; _a_: beginning of line _e_: end of line _<_: beginning of buffer _>_: end of buffer
 
-(defhydra scimax-nav-word (:color red :inherit (scimax-base/heads)
-				  :columns 4 :hint nil
-				  :pre (setq scimax-hydra-mode-counter 1))
-  "
-word navigation
-----------------------------
-_j_: ← _k_: ↑ _l_: ↓ _;_: →
-_a_: beginning of line _e_: end of line _i_: imenu
-_f_: kill forward _d_: kill backward _m_: Mark word
-_t_: transpose words
-_z_: jump
+;; _H-w_: beginning of word _H-s_: beginning of sentence _H-p_: beginning of paragraph
+;; _s-w_: end of word _s-s_: end of sentence _s-p_: end of paragraph
+;; _z_: jump
 
-_<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
-------------------------------------------------------------------"
-  ("j" backward-word)
-  (";" forward-word)
-  ("k" previous-line)
-  ("l" next-line)
-  ("<" beginning-of-buffer)
-  (">" end-of-buffer)
-  ("i" counsel-imenu)
-  ("a" beginning-of-line)
-  ("e" end-of-line)
-  ("f" (kill-word 1))
-  ("d" backward-kill-word)
-  ("t" transpose-words)
-  ("z" (scimax-open-hydra scimax-jump/body) :color blue)
-
-  ("m" mark-word)
-  ("<tab>" (scimax-hydra-cycle-navigation-mode) :color blue)
-  ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
-
-
-(defhydra scimax-nav-sentence (:color red :inherit (scimax-base/heads) :columns 4 :hint nil
-				      :pre (setq scimax-hydra-mode-counter 2))
-  "
-sentence
-_j_: ← _k_: ↑ _l_: ↓ _;_: →
-_f_: kill forward _d_: kill backward
-_t_: transpose sentences
-_z_: jump
-
-_<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
-------------------------------------------------------------------"
-  ("j" backward-sentence)
-  (";" forward-sentence)
-  ("k" previous-line)
-  ("l" next-line)
-  ("d" (kill-sentence -1))
-  ("f" kill-sentence)
-  ("t" transpose-sentences)
-  ("m" (unless (sentence-beginning-p)
-	 (backward-sentence)
-	 (set-mark (point))
-	 (forward-sentence)))
-  ("z" (scimax-open-hydra scimax-jump/body) :color blue)
-  ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
-  ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
+;; _f_: delete forward _d_: delete backward
+;; _t_: transpose chars
+;; _<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
+;; -----------------------------------------------------------------------------------
+;; "
+;;   ("j" backward-char)
+;;   (";" forward-char)
+;;   ("k" previous-line)
+;;   ("l" next-line)
+;;   ("i" counsel-imenu)
+;;   ("a" beginning-of-line)
+;;   ("e" end-of-line)
+;;   ("f" delete-char :color red)
+;;   ("d" backward-delete-char :color red)
+;;   ("<" beginning-of-buffer)
+;;   (">" end-of-buffer)
+;;   ("t" transpose-chars)
+;;   ("z" (scimax-open-hydra scimax-jump/body) :color blue)
+;;   ("H-w" backward-word)
+;;   ("H-s" backward-sentence)
+;;   ("H-p" backaward-paragraph)
+;;   ("s-p" forward-paragraph)
+;;   ("s-w" forward-word)
+;;   ("s-s" forward-sentence)
+;;   ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
+;;   ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
 
 
-(defhydra scimax-nav-paragraph (:color red :inherit (scimax-base/heads) :columns 4 :hint nil
-				       :pre (setq scimax-hydra-mode-counter 3))
-  "
-paragraph
-_j_: ← _k_: ↑ _l_: ↓ _;_: →
-_f_: kill forward _d_: kill backward
-_t_: transpose paragraphs  _m_: mark paragraph
-_z_: jump
 
-_<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
-------------------------------------------------------------------"
-  ("j" backward-paragraph)
-  (";" forward-paragraph)
-  ("k" previous-line)
-  ("l" next-line)
-  ("d" (kill-paragraph -1))
-  ("f" (kill-paragraph nil))
-  ("t" transpose-paragraphs)
-  ("m" mark-paragraph)
-  ("z" (scimax-open-hydra scimax-jump/body) :color blue)
-  ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
-  ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
+;; (defhydra scimax-nav-word (:color red :inherit (scimax-base/heads)
+;; 				  :columns 4 :hint nil
+;; 				  :pre (setq scimax-hydra-mode-counter 1))
+;;   "
+;; word navigation
+;; ----------------------------
+;; _j_: ← _k_: ↑ _l_: ↓ _;_: →
+;; _a_: beginning of line _e_: end of line _i_: imenu
+;; _f_: kill forward _d_: kill backward _m_: Mark word
+;; _t_: transpose words
+;; _z_: jump
+
+;; _<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
+;; ------------------------------------------------------------------"
+;;   ("j" backward-word)
+;;   (";" forward-word)
+;;   ("k" previous-line)
+;;   ("l" next-line)
+;;   ("<" beginning-of-buffer)
+;;   (">" end-of-buffer)
+;;   ("i" counsel-imenu)
+;;   ("a" beginning-of-line)
+;;   ("e" end-of-line)
+;;   ("f" (kill-word 1))
+;;   ("d" backward-kill-word)
+;;   ("t" transpose-words)
+;;   ("z" (scimax-open-hydra scimax-jump/body) :color blue)
+
+;;   ("m" mark-word)
+;;   ("<tab>" (scimax-hydra-cycle-navigation-mode) :color blue)
+;;   ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
+
+
+;; (defhydra scimax-nav-sentence (:color red :inherit (scimax-base/heads) :columns 4 :hint nil
+;; 				      :pre (setq scimax-hydra-mode-counter 2))
+;;   "
+;; sentence
+;; _j_: ← _k_: ↑ _l_: ↓ _;_: →
+;; _f_: kill forward _d_: kill backward
+;; _t_: transpose sentences
+;; _z_: jump
+
+;; _<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
+;; ------------------------------------------------------------------"
+;;   ("j" backward-sentence)
+;;   (";" forward-sentence)
+;;   ("k" previous-line)
+;;   ("l" next-line)
+;;   ("d" (kill-sentence -1))
+;;   ("f" kill-sentence)
+;;   ("t" transpose-sentences)
+;;   ("m" (unless (sentence-beginning-p)
+;; 	 (backward-sentence)
+;; 	 (set-mark (point))
+;; 	 (forward-sentence)))
+;;   ("z" (scimax-open-hydra scimax-jump/body) :color blue)
+;;   ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
+;;   ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
+
+
+;; (defhydra scimax-nav-paragraph (:color red :inherit (scimax-base/heads) :columns 4 :hint nil
+;; 				       :pre (setq scimax-hydra-mode-counter 3))
+;;   "
+;; paragraph
+;; _j_: ← _k_: ↑ _l_: ↓ _;_: →
+;; _f_: kill forward _d_: kill backward
+;; _t_: transpose paragraphs  _m_: mark paragraph
+;; _z_: jump
+
+;; _<tab>_: %(ring-ref scimax-hydra-modes (+ 1 scimax-hydra-mode-counter)) _S-<tab>_: %(ring-ref scimax-hydra-modes (- scimax-hydra-mode-counter 1))
+;; ------------------------------------------------------------------"
+;;   ("j" backward-paragraph)
+;;   (";" forward-paragraph)
+;;   ("k" previous-line)
+;;   ("l" next-line)
+;;   ("d" (kill-paragraph -1))
+;;   ("f" (kill-paragraph nil))
+;;   ("t" transpose-paragraphs)
+;;   ("m" mark-paragraph)
+;;   ("z" (scimax-open-hydra scimax-jump/body) :color blue)
+;;   ("<tab>" scimax-hydra-cycle-navigation-mode :color blue)
+;;   ("S-<tab>" (scimax-hydra-cycle-navigation-mode t) :color blue))
 
 ;;** org
 
-(defhydra scimax-org (:color blue :inherit (scimax-base/heads) :columns 3)
-  "org-mode"
-  ("'" org-edit-special "edit")
-  ("a" org-agenda "agenda")
-  ("b" (scimax-open-hydra scimax-org-block/body) "block hydra")
-  ("cc" org-ctrl-c-ctrl-c "C-c C-c")
-  ("sl" scimax-store-link "store link")
-  ("il" org-insert-link "insert link")
-  ("d" (scimax-open-hydra scimax-org-db/body) "org-db hydra")
-  ("e" org-export-dispatch "Export")
-  ("E" (scimax-open-hydra hydra-ox/body) "export hydra")
-  ("g" org-babel-tangle "tangle")
-  ("h" ivy-org-jump-to-heading "jump to heading")
-  ("I" org-clock-in "clock in")
-  ("O" org-clock-out "clock out")
-  ("n" outline-next-heading "next heading" :color red)
-  ("p" outline-previous-heading "previous heading" :color red)
-  ("<tab>" org-cycle "cycle" :color red)
-  ("r" (scimax-open-hydra scimax-org-ref/body) "org-ref")
-  ("t" (scimax-open-hydra scimax-org-toggle/body) "toggle"))
+;; (defhydra scimax-org (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "org-mode"
+;;   ("'" org-edit-special "edit")
+;;   ("a" org-agenda "agenda")
+;;   ("b" (scimax-open-hydra scimax-org-block/body) "block hydra")
+;;   ("cc" org-ctrl-c-ctrl-c "C-c C-c")
+;;   ("sl" scimax-store-link "store link")
+;;   ("il" org-insert-link "insert link")
+;;   ("d" (scimax-open-hydra scimax-org-db/body) "org-db hydra")
+;;   ("e" org-export-dispatch "Export")
+;;   ("E" (scimax-open-hydra hydra-ox/body) "export hydra")
+;;   ("g" org-babel-tangle "tangle")
+;;   ("h" ivy-org-jump-to-heading "jump to heading")
+;;   ("I" org-clock-in "clock in")
+;;   ("O" org-clock-out "clock out")
+;;   ("n" outline-next-heading "next heading" :color red)
+;;   ("p" outline-previous-heading "previous heading" :color red)
+;;   ("<tab>" org-cycle "cycle" :color red)
+;;   ("r" (scimax-open-hydra scimax-org-ref/body) "org-ref")
+;;   ("t" (scimax-open-hydra scimax-org-toggle/body) "toggle"))
 
 
 (defhydra scimax-org-block (:color red :inherit (scimax-base/heads) :columns 3)
@@ -902,34 +902,34 @@ _C-a_ Async export: %`hydra-ox/async-export
 
 ;;** registers/resume/replace
 
-(defhydra scimax-registers (:color blue :inherit (scimax-base/heads) :columns 3)
-  "
-register/resume/replace
-Register                     Resume             Replace
-------------------------------------------------------------------
-_j_: jump to register        _h_: helm resume   _q_: query replace
-_i_: insert register         _v_: ivy resume    _x_: regexp replace
-_c_: copy to register
-_a_: append to register
-_n_: number to register
-_p_: point to register
-_w_: window conf to register
-_f_: frameset to register
-_l_: list registers
-------------------------------------------------------------------"
-  ("a" append-to-register)
-  ("c" copy-to-register)
-  ("f" frameset-to-register)
-  ("h" helm-resume)
-  ("i" insert-register)
-  ("j" jump-to-register)
-  ("l" list-registers)
-  ("n" number-to-register)
-  ("p" point-to-register)
-  ("q" query-replace)
-  ("v" ivy-resume)
-  ("w" window-configuration-to-register)
-  ("x" query-replace-regexp))
+;; (defhydra scimax-registers (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "
+;; register/resume/replace
+;; Register                     Resume             Replace
+;; ------------------------------------------------------------------
+;; _j_: jump to register        _h_: helm resume   _q_: query replace
+;; _i_: insert register         _v_: ivy resume    _x_: regexp replace
+;; _c_: copy to register
+;; _a_: append to register
+;; _n_: number to register
+;; _p_: point to register
+;; _w_: window conf to register
+;; _f_: frameset to register
+;; _l_: list registers
+;; ------------------------------------------------------------------"
+;;   ("a" append-to-register)
+;;   ("c" copy-to-register)
+;;   ("f" frameset-to-register)
+;;   ("h" helm-resume)
+;;   ("i" insert-register)
+;;   ("j" jump-to-register)
+;;   ("l" list-registers)
+;;   ("n" number-to-register)
+;;   ("p" point-to-register)
+;;   ("q" query-replace)
+;;   ("v" ivy-resume)
+;;   ("w" window-configuration-to-register)
+;;   ("x" query-replace-regexp))
 
 
 ;;** search
@@ -948,68 +948,68 @@ _l_: list registers
 
 ;;** text
 
-(defhydra scimax-text (:color blue :inherit (scimax-base/heads) :columns 3)
-  "text"
-  ("A" (mark-whole-buffer) "Select all")
-  ("c" kill-ring-save "Copy")
-  ("C" capitalize-dwim "Capitalize" :color red)
-  ("d" downcase-dwim "Downcase" :color red)
-  ("k" kill-region "Cut")
-  ("l" kill-whole-line "Kill line" :color red)
-  ("m" set-mark-command "Set mark" :color red)
-  ("n" (scimax-open-hydra scimax-narrow/body) "narrow")
-  ("s" (scimax-open-hydra scimax-spellcheck/body) "spell-check")
-  ("S" sentence-case-region "Sentence case" :color red)
-  ("t" (scimax-open-hydra scimax-transpose/body) "transpose")
-  ("u" upcase-dwim "Upcase" :color red)
-  ("v" yank "paste")
-  ("w" count-words "count words")
-  ("y" counsel-yank-pop "yank ring")
-  (";" comment-dwim "comment")
-  (":" uncomment-region "uncomment")
-  ("b" comment-box "comment-box"))
+;; (defhydra scimax-text (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "text"
+;;   ("A" (mark-whole-buffer) "Select all")
+;;   ("c" kill-ring-save "Copy")
+;;   ("C" capitalize-dwim "Capitalize" :color red)
+;;   ("d" downcase-dwim "Downcase" :color red)
+;;   ("k" kill-region "Cut")
+;;   ("l" kill-whole-line "Kill line" :color red)
+;;   ("m" set-mark-command "Set mark" :color red)
+;;   ("n" (scimax-open-hydra scimax-narrow/body) "narrow")
+;;   ("s" (scimax-open-hydra scimax-spellcheck/body) "spell-check")
+;;   ("S" sentence-case-region "Sentence case" :color red)
+;;   ("t" (scimax-open-hydra scimax-transpose/body) "transpose")
+;;   ("u" upcase-dwim "Upcase" :color red)
+;;   ("v" yank "paste")
+;;   ("w" count-words "count words")
+;;   ("y" counsel-yank-pop "yank ring")
+;;   (";" comment-dwim "comment")
+;;   (":" uncomment-region "uncomment")
+;;   ("b" comment-box "comment-box"))
 
 
-(defhydra scimax-kill (:color blue :inherit (scimax-base/heads) :columns 3)
-  "kill"
-  ("c" kill-comment "comment")
-  ("d" scimax-kill-dwim "kill dwim")
-  ("l" kill-whole-line "line")
-  ("p" kill-paragraph "paragraph")
-  ("r" kill-region "region")
-  ("s" kill-sentence "sentence")
-  ("v" kill-visual-line "visual line")
-  ("w" kill-word "word")
-  ("x" kill-sexp "sexp"))
+;; (defhydra scimax-kill (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "kill"
+;;   ("c" kill-comment "comment")
+;;   ("d" scimax-kill-dwim "kill dwim")
+;;   ("l" kill-whole-line "line")
+;;   ("p" kill-paragraph "paragraph")
+;;   ("r" kill-region "region")
+;;   ("s" kill-sentence "sentence")
+;;   ("v" kill-visual-line "visual line")
+;;   ("w" kill-word "word")
+;;   ("x" kill-sexp "sexp"))
 
 
-(defhydra scimax-narrow (:color blue :inherit (scimax-base/heads) :columns 3)
-  "narrow"
-  ("b" org-narrow-to-block "org-block")
-  ("d" narrow-to-defun "defun")
-  ("e" org-narrow-to-element "org element")
-  ("p" narrow-to-page)
-  ("r" narrow-to-region "region")
-  ("s" org-narrow-to-subtree "org subtree")
-  ("w" widen "widen"))
+;; (defhydra scimax-narrow (:color blue :inherit (scimax-base/heads) :columns 3)
+;;   "narrow"
+;;   ("b" org-narrow-to-block "org-block")
+;;   ("d" narrow-to-defun "defun")
+;;   ("e" org-narrow-to-element "org element")
+;;   ("p" narrow-to-page)
+;;   ("r" narrow-to-region "region")
+;;   ("s" org-narrow-to-subtree "org subtree")
+;;   ("w" widen "widen"))
 
 
-(defhydra scimax-spellcheck (:color red :inherit (scimax-base/heads) :columns 3)
-  "spell"
-  ("b" ispell-buffer "buffer")
-  ("p" flyspell-correct-previous-word-generic "previous correct")
-  ("n" flyspell-correct-next-word-generic "next correct")
-  ("w" ispell-word "word"))
+;; (defhydra scimax-spellcheck (:color red :inherit (scimax-base/heads) :columns 3)
+;;   "spell"
+;;   ("b" ispell-buffer "buffer")
+;;   ("p" flyspell-correct-previous-word-generic "previous correct")
+;;   ("n" flyspell-correct-next-word-generic "next correct")
+;;   ("w" ispell-word "word"))
 
 
-(defhydra scimax-transpose (:color red :inherit (scimax-base/heads) :columns 3)
-  "transpose"
-  ("c" transpose-chars "chars")
-  ("l" transpose-lines "lines")
-  ("p" transpose-paragraphs "paragraphs")
-  ("s" transpose-sentences "sentences")
-  ("x" transpose-sexps "sexps")
-  ("w" transpose-words "words"))
+;; (defhydra scimax-transpose (:color red :inherit (scimax-base/heads) :columns 3)
+;;   "transpose"
+;;   ("c" transpose-chars "chars")
+;;   ("l" transpose-lines "lines")
+;;   ("p" transpose-paragraphs "paragraphs")
+;;   ("s" transpose-sentences "sentences")
+;;   ("x" transpose-sexps "sexps")
+;;   ("w" transpose-words "words"))
 
 
 ;;** version control
@@ -1082,38 +1082,38 @@ _z_: Customize scimax   _f_: change font
 ;;** smerge
 ;; https://emacs.stackexchange.com/questions/16469/how-to-merge-git-conflicts-in-emacs
 
-(defhydra scimax-smerge (:color red :inherit (scimax-base/heads) :hint nil)
-  "
-Navigate       Keep               other
-----------------------------------------
-_p_: previous  _c_: current       _e_: ediff
-_n_: next      _m_: mine  <<      _u_: undo
-_j_: up        _o_: other >>      _r_: refine
-_k_: down      _a_: combine
-               _b_: base
-"
-  ("n" smerge-next)
-  ("p" smerge-prev)
-  ("c" smerge-keep-current)
-  ("m" smerge-keep-mine)
-  ("o" smerge-keep-other)
-  ("b" smerge-keep-base)
-  ("a" smerge-keep-all)
-  ("e" smerge-ediff)
-  ("j" previous-line)
-  ("k" forward-line)
-  ("r" smerge-refine)
-  ("u" undo))
+;; (defhydra scimax-smerge (:color red :inherit (scimax-base/heads) :hint nil)
+;;   "
+;; Navigate       Keep               other
+;; ----------------------------------------
+;; _p_: previous  _c_: current       _e_: ediff
+;; _n_: next      _m_: mine  <<      _u_: undo
+;; _j_: up        _o_: other >>      _r_: refine
+;; _k_: down      _a_: combine
+;;                _b_: base
+;; "
+;;   ("n" smerge-next)
+;;   ("p" smerge-prev)
+;;   ("c" smerge-keep-current)
+;;   ("m" smerge-keep-mine)
+;;   ("o" smerge-keep-other)
+;;   ("b" smerge-keep-base)
+;;   ("a" smerge-keep-all)
+;;   ("e" smerge-ediff)
+;;   ("j" previous-line)
+;;   ("k" forward-line)
+;;   ("r" smerge-refine)
+;;   ("u" undo))
 
-(defun my-enable-smerge-maybe ()
-  (when (and buffer-file-name (vc-backend buffer-file-name))
-    (save-excursion
-      (goto-char (point-min))
-      (when (re-search-forward "^<<<<<<< " nil t)
-        (smerge-mode +1)
-	(scimax-smerge/body)))))
+;; (defun my-enable-smerge-maybe ()
+;;   (when (and buffer-file-name (vc-backend buffer-file-name))
+;;     (save-excursion
+;;       (goto-char (point-min))
+;;       (when (re-search-forward "^<<<<<<< " nil t)
+;;         (smerge-mode +1)
+;; 	(scimax-smerge/body)))))
 
-(add-hook 'find-file-hook #'my-enable-smerge-maybe)
+;; (add-hook 'find-file-hook #'my-enable-smerge-maybe)
 ;; (add-hook 'buffer-list-update-hook #'my-enable-smerge-maybe)
 
 
@@ -1499,6 +1499,6 @@ _t_: run tests _m_: magit  _8_: autopep8
 
 ;;* the end
 
-(provide 'scimax-hydra)
+(provide 'ying-hydra)
 
 ;;; scimax-hydra.el ends here

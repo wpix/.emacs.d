@@ -51,6 +51,24 @@
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
 
+(define-abbrev-table 'conf-colon-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-desktop-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-javaprop-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-ppd-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-space-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-toml-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-unix-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-windows-mode-abbrev-table '())
+
+(define-abbrev-table 'conf-xdefaults-mode-abbrev-table '())
+
 (define-abbrev-table 'css-mode-abbrev-table '())
 
 (define-abbrev-table 'debugger-mode-abbrev-table '())
@@ -76,6 +94,12 @@
 (define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'emojify-apropos-mode-abbrev-table '())
+
+(define-abbrev-table 'emojify-description-mode-abbrev-table '())
+
+(define-abbrev-table 'emojify-list-mode-abbrev-table '())
 
 (define-abbrev-table 'epa-info-mode-abbrev-table '())
 
@@ -116,6 +140,14 @@
 (define-abbrev-table 'ess-watch-mode-abbrev-table '())
 
 (define-abbrev-table 'eudc-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-bookmark-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-buffers-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-history-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-mode-abbrev-table '())
 
 (define-abbrev-table 'flymake-diagnostics-buffer-mode-abbrev-table '())
 
@@ -174,7 +206,7 @@
     ("approxiamation" "approximation" nil 0)
     ("ar" "ar" nil 3)
     ("arizona" "Arizona" nil 2)
-    ("arkward" "awkward" nil 0)
+    ("arkward" "awkward" nil 1)
     ("arragne" "Arrange" nil 0)
     ("asnwer" "answer" nil 0)
     ("assignemnts" "assignments" nil 3)
@@ -183,7 +215,7 @@
     ("auhtors" "authors" nil 0)
     ("automative" "automative" nil 0)
     ("availble" "available" nil 3)
-    ("aviable" "viable" nil 0)
+    ("aviable" "viable" nil 1)
     ("aviod" "avoid" nil 0)
     ("backscattered" "Back-scattered" nil 1)
     ("bahaviors" "behaviors" nil 0)
@@ -215,7 +247,7 @@
     ("charactarized" "characterized" nil 0)
     ("characterizaiton" "Characterization" nil 0)
     ("charaterization" "characterization" nil 0)
-    ("chicago" "Chicago" nil 2)
+    ("chicago" "Chicago" nil 4)
     ("chnages" "changes" nil 0)
     ("choives" "choices" nil 0)
     ("christina" "Christina" nil 0)
@@ -245,7 +277,9 @@
     ("concludion" "conclusion" nil 0)
     ("concretization" "concretization" nil 0)
     ("configration" "configuration" nil 0)
+    ("configrations" "configurations" nil 0)
     ("configred" "configured" nil 0)
+    ("configring" "configuring" nil 0)
     ("configuarations" "configurations" nil 0)
     ("congrtulate" "congratulate" nil 0)
     ("conmmunicated" "communicated" nil 0)
@@ -259,6 +293,7 @@
     ("contol" "control" nil 0)
     ("contrcts" "contracts" nil 0)
     ("convenitent" "convenient" nil 0)
+    ("conviently" "conveniently" nil 0)
     ("coporate" "Corporate" nil 0)
     ("correspondense" "correspondence" nil 0)
     ("couldnt" "couldn't" nil 16)
@@ -320,7 +355,7 @@
     ("effetcs" "effects" nil 1)
     ("effictively" "effectively" nil 0)
     ("egineering" "Engineering" nil 1)
-    ("el" "e" nil 0)
+    ("el" "e" nil 7)
     ("elctronic" "electronic" nil 0)
     ("elctronics" "electronics" nil 1)
     ("electrnic" "electric" nil 0)
@@ -350,6 +385,7 @@
     ("essientially" "Essentially" nil 0)
     ("ethat" "that" nil 0)
     ("excluion" "exclusion" nil 0)
+    ("exercute" "execute" nil 0)
     ("exhansted" "exhausted" nil 0)
     ("exisiting" "existing" nil 1)
     ("expanson" "Expansion" nil 0)
@@ -399,6 +435,7 @@
     ("hierachy" "hierarchy" nil 0)
     ("highight" "highlight" nil 0)
     ("highlishts" "highlights" nil 0)
+    ("houndres" "Houndres" nil 0)
     ("hournal" "Journal" nil 0)
     ("humen" "human" nil 2)
     ("idenity" "identity" nil 0)
@@ -453,6 +490,7 @@
     ("interspecimen" "interspecimen" nil 0)
     ("intervenion" "intervention" nil 0)
     ("intiiative" "initiative" nil 0)
+    ("intriggered" "intrigued" nil 0)
     ("intrisically" "intrinsically" nil 0)
     ("inﬂuence" "influence" nil 0)
     ("ipad" "ipad" nil 0)
@@ -616,7 +654,7 @@
     ("resiliene" "resilience" nil 0)
     ("reson" "Reason" nil 0)
     ("responsed" "responded" nil 0)
-    ("resutls" "Results" nil 16)
+    ("resutls" "Results" nil 18)
     ("retailors" "retailers" nil 0)
     ("reviwing" "reviewing" nil 0)
     ("ridicuous" "ridiculous" nil 0)
@@ -640,16 +678,20 @@
     ("shrinked" "shrieked" nil 1)
     ("signiﬁcant" "significant" nil 0)
     ("similarily" "Similarly" nil 3)
+    ("simulatenously" "simultaneously" nil 1)
+    ("simutaneously" "simultaneously" nil 0)
     ("smplicity" "simplicity" nil 0)
     ("sociometric" "sociometric" nil 0)
     ("softwares" "software" nil 0)
     ("sometiems" "sometimes" nil 0)
+    ("sophiscated" "sophisticated" nil 0)
     ("spatical" "spatial" nil 3)
     ("specidic" "specific" nil 0)
     ("specificly" "Specifically" nil 0)
     ("ssumptions" "assumptions" nil 0)
     ("standaline" "standalone" nil 0)
     ("standars" "Standard" nil 0)
+    ("straghit" "Straight" nil 0)
     ("strategie" "strategies" nil 0)
     ("ststems" "systems" nil 0)
     ("studetns" "Students" nil 10)
@@ -659,6 +701,7 @@
     ("subgrains" "subgrain" nil 1)
     ("subsidences" "subsidence" nil 1)
     ("subsites" "subsides" nil 0)
+    ("succecced" "succeeded" nil 0)
     ("sugestions" "suggestions" nil 0)
     ("sumarative" "sumarative" nil 0)
     ("summaritive" "summarize" nil 4)
@@ -739,13 +782,14 @@
     ("vinicity" "vicinity" nil 0)
     ("viriation" "vitiation" nil 1)
     ("visialization" "visualization" nil 1)
+    ("visialize" "visualize" nil 0)
     ("visiualization" "visualization" nil 0)
     ("voltigy" "voltigy" nil 0)
     ("vonluntered" "volunteered" nil 0)
     ("voundaries" "boundaries" nil 0)
     ("voundary" "boundary" nil 0)
     ("vrack" "crack" nil 0)
-    ("waht" "what" nil 0)
+    ("waht" "what" nil 1)
     ("warrents" "warrants" nil 0)
     ("wasnt" "wasn't" nil 0)
     ("wede" "wede" nil 0)
@@ -756,7 +800,7 @@
     ("whisekr" "whisker" nil 1)
     ("whskers" "whiskers" nil 0)
     ("winny" "winy" nil 0)
-    ("wirld" "world" nil 1)
+    ("wirld" "world" nil 2)
     ("worshop" "worshop" nil 0)
     ("wouldnt" "wouldn't" nil 0)
     ("wouuld" "would" nil 0)
@@ -975,6 +1019,8 @@
 (define-abbrev-table 'use-package-statistics-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-bzr-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-dir-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
 
