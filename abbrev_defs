@@ -85,6 +85,8 @@
 
 (define-abbrev-table 'doctex-mode-abbrev-table '())
 
+(define-abbrev-table 'dsssl-mode-abbrev-table '())
+
 (define-abbrev-table 'easy-hugo-mode-abbrev-table '())
 
 (define-abbrev-table 'edebug-eval-mode-abbrev-table '())
@@ -106,6 +108,10 @@
 (define-abbrev-table 'epa-key-list-mode-abbrev-table '())
 
 (define-abbrev-table 'epa-key-mode-abbrev-table '())
+
+(define-abbrev-table 'ert-results-mode-abbrev-table '())
+
+(define-abbrev-table 'ert-simple-view-mode-abbrev-table '())
 
 (define-abbrev-table 'eshell-mode-abbrev-table '())
 
@@ -182,7 +188,9 @@
     ("adcantages" "advantages" nil 0)
     ("additionaly" "Additionally" nil 0)
     ("adter" "after" nil 0)
+    ("advices" "advice" nil 0)
     ("afm" "AFM" nil 7)
+    ("afwully" "awfully" nil 0)
     ("agenst" "agents" nil 0)
     ("airbnb" "airbnb" nil 0)
     ("alabama" "Alabama" nil 1)
@@ -190,7 +198,7 @@
     ("alsredy" "already" nil 0)
     ("altogehter" "altogether" nil 0)
     ("alwasy" "always" nil 0)
-    ("alwyas" "always" nil 2)
+    ("alwyas" "always" nil 3)
     ("amongst" "amongst" nil 0)
     ("anisotropy" "anisotropy" nil 3)
     ("anomynous" "anonymous" nil 0)
@@ -199,6 +207,7 @@
     ("apartmnet" "apartment" nil 0)
     ("apenture" "Aperture" nil 0)
     ("aplogizing" "apologizing" nil 0)
+    ("appearence" "appearance" nil 0)
     ("appendex" "Appendix" nil 0)
     ("apperance" "appearance" nil 1)
     ("apperas" "appears" nil 0)
@@ -253,6 +262,8 @@
     ("christina" "Christina" nil 0)
     ("clusttered" "clustered" nil 0)
     ("colaboration" "collaboration" nil 0)
+    ("coloum" "coloum" nil 1)
+    ("coloumn" "column" nil 1)
     ("coluum" "column" nil 0)
     ("comceptualize" "conceptualize" nil 0)
     ("comfirmed" "confirmed" nil 0)
@@ -274,6 +285,7 @@
     ("compter" "computer" nil 0)
     ("conceptulization" "conceptualization" nil 0)
     ("conciouns" "conscious" nil 0)
+    ("concious" "conscious" nil 0)
     ("concludion" "conclusion" nil 0)
     ("concretization" "concretization" nil 0)
     ("configration" "configuration" nil 0)
@@ -296,7 +308,7 @@
     ("conviently" "conveniently" nil 0)
     ("coporate" "Corporate" nil 0)
     ("correspondense" "correspondence" nil 0)
-    ("couldnt" "couldn't" nil 16)
+    ("couldnt" "couldn't" nil 17)
     ("criticisim" "criticism" nil 0)
     ("crossman" "Crossman" nil 1)
     ("culoum" "culoum" nil 0)
@@ -354,7 +366,7 @@
     ("educaitonal" "educational" nil 0)
     ("effetcs" "effects" nil 1)
     ("effictively" "effectively" nil 0)
-    ("egineering" "Engineering" nil 1)
+    ("egineering" "Engineering" nil 2)
     ("el" "e" nil 7)
     ("elctronic" "electronic" nil 0)
     ("elctronics" "electronics" nil 1)
@@ -366,7 +378,7 @@
     ("emaisl" "emails" nil 1)
     ("embeded" "embedded" nil 4)
     ("emmacs" "emmacs" nil 0)
-    ("encrouraging" "encouraging" nil 0)
+    ("encrouraging" "encouraging" nil 1)
     ("enermies" "enemies" nil 0)
     ("enery" "energy" nil 0)
     ("engery" "energy" nil 0)
@@ -411,11 +423,12 @@
     ("forawrd" "forward" nil 0)
     ("formaiton" "formation" nil 1)
     ("fossile" "fossil" nil 0)
-    ("fpr" "for" nil 2)
+    ("fpr" "for" nil 3)
     ("fractual" "fractual" nil 0)
     ("freamework" "framework" nil 0)
     ("freamwork" "framework" nil 0)
     ("friday" "Friday" nil 5)
+    ("fundation" "Foundation" nil 0)
     ("fundations" "Foundations" nil 0)
     ("funtional" "functional" nil 0)
     ("furing" "during" nil 1)
@@ -447,6 +460,7 @@
     ("importatnce" "importance" nil 0)
     ("importnat" "important" nil 2)
     ("inceases" "increases" nil 0)
+    ("incicnets" "Incidents" nil 0)
     ("inconvient" "inconvenient" nil 0)
     ("incorportating" "incorporating" nil 0)
     ("indendent" "independent" nil 0)
@@ -520,12 +534,13 @@
     ("manufacuring" "manufacturing" nil 1)
     ("manuscrupt" "manuscript" nil 0)
     ("massege" "message" nil 0)
-    ("mateirals" "materials" nil 1)
+    ("mateirals" "materials" nil 2)
     ("measuments" "measurements" nil 0)
     ("measureing" "measuring" nil 0)
     ("measuremnts" "measurements" nil 0)
     ("mecahnism" "mechanistic" nil 0)
     ("mechaims" "mechanisms" nil 0)
+    ("mechannicsms" "mechanisms" nil 0)
     ("mediocore" "mediocre" nil 0)
     ("metallugy" "Metallurgy" nil 0)
     ("methodlogy" "methodology" nil 0)
@@ -617,7 +632,7 @@
     ("profesisonals" "professionals" nil 0)
     ("pronounciation" "pronunciation" nil 0)
     ("prople" "propel" nil 0)
-    ("provess" "process" nil 0)
+    ("provess" "process" nil 1)
     ("pur" "Our" nil 0)
     ("qeuilibration" "qeuilibration" nil 0)
     ("qualtitive" "quantitative" nil 0)
@@ -675,7 +690,7 @@
     ("shalloa" "shallow" nil 0)
     ("shooted" "shooted" nil 0)
     ("shouls" "should" nil 0)
-    ("shrinked" "shrieked" nil 1)
+    ("shrinked" "shrieked" nil 2)
     ("signiﬁcant" "significant" nil 0)
     ("similarily" "Similarly" nil 3)
     ("simulatenously" "simultaneously" nil 1)
@@ -725,7 +740,7 @@
     ("teh" "the" nil 2)
     ("temparature" "temperature" nil 1)
     ("termiology" "terminology" nil 0)
-    ("thats" "T hats" nil 0)
+    ("thats" "T hats" nil 1)
     ("theeir" "their" nil 1)
     ("themal" "thermal" nil 3)
     ("theoy" "theory" nil 0)
@@ -762,7 +777,7 @@
     ("tremedously" "tremendously" nil 0)
     ("triplle" "triple" nil 0)
     ("tuesdat" "Tuesday" nil 0)
-    ("tuesday" "Tuesday" nil 1)
+    ("tuesday" "Tuesday" nil 3)
     ("tules" "rules" nil 0)
     ("turists" "tourists" nil 0)
     ("twmperature" "temperature" nil 0)
@@ -791,9 +806,10 @@
     ("vrack" "crack" nil 0)
     ("waht" "what" nil 1)
     ("warrents" "warrants" nil 0)
-    ("wasnt" "wasn't" nil 0)
+    ("wasnt" "wasn't" nil 1)
+    ("webex" "Web Ex" nil 0)
     ("wede" "wede" nil 0)
-    ("wednesday" "Wednesday" nil 3)
+    ("wednesday" "Wednesday" nil 5)
     ("wenesday" "Wednesday" nil 0)
     ("whatelse" "what else" nil 0)
     ("whikser" "whisker" nil 0)
@@ -814,7 +830,15 @@
 
 (define-abbrev-table 'gnus-article-mode-abbrev-table '())
 
+(define-abbrev-table 'gnus-browse-mode-abbrev-table '())
+
+(define-abbrev-table 'gnus-category-mode-abbrev-table '())
+
+(define-abbrev-table 'gnus-custom-mode-abbrev-table '())
+
 (define-abbrev-table 'gnus-group-mode-abbrev-table '())
+
+(define-abbrev-table 'gnus-score-mode-abbrev-table '())
 
 (define-abbrev-table 'gnus-sticky-article-mode-abbrev-table '())
 
@@ -838,6 +862,8 @@
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
 
+(define-abbrev-table 'inferior-emacs-lisp-mode-abbrev-table '())
+
 (define-abbrev-table 'inferior-ess-julia-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-ess-mode-abbrev-table '())
@@ -847,6 +873,8 @@
 (define-abbrev-table 'inferior-ess-stata-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-julia-mode-abbrev-table '())
+
+(define-abbrev-table 'inferior-lisp-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-python-mode-abbrev-table '())
 
@@ -865,6 +893,8 @@
 (define-abbrev-table 'latex-mode-abbrev-table '())
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'load-path-shadows-mode-abbrev-table '())
 
 (define-abbrev-table 'log-edit-mode-abbrev-table '())
 
@@ -942,6 +972,8 @@
 
 (define-abbrev-table 'org-journal-mode-abbrev-table '())
 
+(define-abbrev-table 'org-journal-search-mode-abbrev-table '())
+
 (define-abbrev-table 'org-mode-abbrev-table '())
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
@@ -962,6 +994,8 @@
 
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'profiler-report-mode-abbrev-table '())
+
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
 (define-abbrev-table 'pyim-dm-mode-abbrev-table '())
@@ -972,6 +1006,10 @@
   '(
    ))
 
+(define-abbrev-table 'reb-lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'reb-mode-abbrev-table '())
+
 (define-abbrev-table 'rmail-summary-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-mode-abbrev-table '())
@@ -979,6 +1017,8 @@
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
 
 (define-abbrev-table 'sas-dir-mode-abbrev-table '())
+
+(define-abbrev-table 'scheme-mode-abbrev-table '())
 
 (define-abbrev-table 'scss-mode-abbrev-table '())
 

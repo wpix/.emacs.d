@@ -21,12 +21,14 @@
 	     "~/.emacs.d/plugins/yasnippet")
 ;; Path
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+;(setq exec-path-from-shell-debug t)
+(setq exec-path-from-shell-check-startup-files nil)
 
 ;;themes and fonts
 (load-theme 'dracula t)
 ;; set transparency
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+(set-frame-parameter (selected-frame) 'alpha '(75 75))
+(add-to-list 'default-frame-alist '(alpha 75 75))
 ;;(set-default-font "Monaco 14")
 ;;(setq-default line-spacing 1)
 ;;(set-language-environment "UTF-8")
@@ -52,7 +54,7 @@
 (require 'init-magit)
 (require 'init-helm)
 (require 'init-ido)
-;(require 'init-chinese)
+(require 'init-chinese)
 (require 'init-browser)
 (require 'init-org)
 
@@ -82,7 +84,6 @@
 (ace-link-setup-default)
 ;;(global-linum-mode 1)
 (delete-selection-mode 1)
-
 (winner-mode 1)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
@@ -199,9 +200,7 @@
       (notmuch-apply-face tag
 			  (quote
 			   (:foreground "gray33")))))))
- '(org-agenda-files
-   (quote
-    ("~/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/theory-ab.org" "~/org/journal/20200101" "/Users/Ying/org/journal/20200201")))
+ '(org-agenda-files nil)
  '(org-directory "~/org")
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "** ")
@@ -211,7 +210,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (helm-org-rifle ace-window emojify markdown-mode anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
+    (citeproc org-super-agenda osx-dictionary helm-org-rifle ace-window emojify markdown-mode anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(projectile-mode t nil (projectile))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
@@ -463,15 +462,19 @@
  '(custom-changed ((t (:background "dark gray" :foreground "white"))))
  '(custom-invalid ((t (:background "dark gray" :foreground "dark red"))))
  '(custom-link ((t (:inherit link :foreground "LightSkyBlue2" :underline nil))))
+ '(dired-directory ((t (:foreground "orchid" :weight semi-bold))))
+ '(dired-flagged ((t (:foreground "light goldenrod"))))
+ '(dired-header ((t (:background "#282a36" :foreground "gray90"))))
  '(dired-mark ((t (:foreground "#f8f8f2" :weight semi-bold))))
  '(dired-marked ((t (:foreground "#ffb86c" :weight semi-bold))))
+ '(dired-symlink ((t (:foreground "thistle4" :slant italic :weight normal))))
  '(epa-field-name ((t (:foreground "PaleTurquoise" :weight semi-bold))))
  '(epa-mark ((t (:foreground "orange" :weight semi-bold))))
  '(error ((t (:foreground "Pink" :weight semi-bold))))
  '(ess-bp-fringe-recover-face ((t (:foreground "DarkOrchid1"))))
  '(ess-debug-blink-ref-not-found-face ((t (:background "dark gray"))))
  '(font-lock-function-name-face ((t (:foreground "orchid1" :weight semi-bold))))
- '(font-lock-keyword-face ((t (:foreground "gray40" :weight normal))))
+ '(font-lock-keyword-face ((t (:foreground "#e872b3" :weight semi-bold))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit demibold))))
  '(font-lock-regexp-grouping-construct ((t (:inherit demibold))))
  '(gnus-button ((t (:weight semi-bold))))
@@ -484,6 +487,7 @@
  '(helm-ff-directory ((t (:background "#282a36" :foreground "plum1" :weight semi-bold))))
  '(helm-ff-invalid-symlink ((t (:background "#282a36" :foreground "#ff79c6" :weight semi-bold))))
  '(helm-ff-symlink ((t (:background "#282a36" :foreground "#ff79c6" :weight semi-bold))))
+ '(helm-non-file-buffer ((t (:inherit italic :foreground "gray"))))
  '(helm-source-header ((t (:background "#282a36" :foreground "#ff79c6" :underline nil :weight semi-bold))))
  '(hydra-face-red ((t (:foreground "HotPink1" :weight bold))))
  '(ido-first-match ((t (:foreground "#ff79c6" :weight semi-bold))))
@@ -534,7 +538,7 @@
  '(org-level-4 ((t (:foreground "plum" :weight normal))))
  '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
  '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
- '(org-link ((t (:foreground "gray23" :box (:line-width 1 :color "gray60" :style pressed-button) :underline nil))))
+ '(org-link ((t (:foreground "#bdcebe" :box (:line-width 1 :color "gray50" :style pressed-button) :underline nil))))
  '(org-list-dt ((t (:weight semi-bold))))
  '(org-quote ((t (:inherit org-tag :foreground "lavender"))))
  '(org-ref-acronym-face ((t (:inherit org-link :foreground "thistle1"))))

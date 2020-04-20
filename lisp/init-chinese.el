@@ -4,40 +4,36 @@
 (require 'use-package)
 (use-package pyim
     :ensure nil
-    :demand nil
+    :demand t
     :config
-    ;(setq default-input-method "pyim")
-    (setq pyim-page-length 5)
+    (setq default-input-method "pyim")
+    (setq pyim-page-length 9)
     (setq pyim-page-style 'one-line)
     :bind
     (:map pyim-mode-map
           ("." . pyim-page-next-page)
           ("," . pyim-page-previous-page)))
+
+;(setq default-input-method "pyim")
+(global-set-key (kbd "C-\\") 'toggle-input-method)
 ;;("-" . pyim-self-insert-command)
-;;("=" . pyim-self-insert-command)) 
-
-;; (add-hook 'emacs-startup-hook
-;;           #'(lambda () (pyim-restart-1 t)))
-
-;; (pyim-isearch-mode nil)
-;; (setq-default pyim-english-input-switch-functions
-;;               '(pyim-probe-isearch-mode))
+;;("=" . pyim-self-insert-command))
 
 ;; (add-to-list 'load-path "~/liberime/build/")
-;; ;;(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
-;; (require 'liberime)
+(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
+(require 'liberime)
 ;; (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" (file-truename "~/.emacs.d/pyim/rime/"))
-
 ;;(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
 (setq load-path (cons (file-truename "~/.emacs.d/pyim/") load-path))
 ;; (use-package liberime
-;;     ;;:load-path "~/.emacs.d/pyim/"
+;;     :load-path "~/.emacs.d/pyim/"
 ;;     :config
 ;;     (liberime-start (expand-file-name "~/Library/Rime/")
 ;;                     (expand-file-name "~/.emacs.d/pyim/rime"))
 ;;     (liberime-select-schema "double_pinyin_flypy")
-;;     (setq pyim-default-scheme 'rime)
-;;     )
+;;     (setq pyim-default-scheme 'rime))
+(let ((liberime-auto-build t))
+  (require 'liberime nil t))
 ;;===================================================
 ;;                   IMPORTANT
 ;;https://placeless.net/blog/uncommon-chinese-character-in-rime
@@ -46,15 +42,16 @@
 ;;https://emacs-china.org/t/mac-emacs-rime/10063/26
 ;;look for wd1's answer 
 ;;===================================================
+;;(module-load "~/.emacs.d/pyim/liberime.so")
 (use-package liberime
   :config
-  (liberime-start (expand-file-name "~/Library/Rime")
-		  (file-truename "~/.emacs.d/pyim/rime/"))
+  (liberime-start "/Users/Ying/Library/Rime/" (file-truename "/Users/Ying/.emacs.d/pyim/rime/"))
   (liberime-select-schema "double_pinyin_flypy")
   (setq pyim-default-scheme 'rime))
-;;===================================================
-
+;;(add-hook 'after-init-hook #'liberime-sync)
+;;================================================== 
 (liberime-get-schema-list)
+;;(liberime-deploy) 
 ;;`pyim-create-Ncchar-word-at-point 这是一组命令，从光标前提取N个汉字字符组成字符串，并将其加入
 ;;`pyim-translate-trigger-char' 以默认设置为例：在“我爱吃红烧肉”后输入“5v” 可以将“爱吃红烧肉”这个词条保存到用户个人词库。
 ;;`pyim-create-word-from-selection', 选择一个词条，运行这个命令后，就可以将这个词条添加到个人词库。
@@ -95,8 +92,6 @@
 ;;=====================================================
 ;;             dictionary setting
 ;;=====================================================
-
-
 ;; (require 'cnfonts)
 ;; (cnfonts-enable)
 ;; (cnfonts-set-spacemacs-fallback-fonts)
@@ -115,4 +110,4 @@
 ;;               :slant 'normal
 ;;               :size 15.0)))
 
-;; (provide 'init-chinese)
+(provide 'init-chinese)
