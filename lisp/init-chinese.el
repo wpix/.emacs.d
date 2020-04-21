@@ -3,59 +3,51 @@
 ;;----------------------------------------------------
 (require 'use-package)
 (use-package pyim
-    :ensure nil
     :demand t
     :config
     (setq default-input-method "pyim")
     (setq pyim-page-length 9)
     (setq pyim-page-style 'one-line)
+    (setq pyim-dcache-auto-update nil)
     :bind
     (:map pyim-mode-map
           ("." . pyim-page-next-page)
           ("," . pyim-page-previous-page)))
 
 ;(setq default-input-method "pyim")
-(global-set-key (kbd "C-\\") 'toggle-input-method)
+;; (global-set-key (kbd "C-\\") 'toggle-input-method)
 ;;("-" . pyim-self-insert-command)
 ;;("=" . pyim-self-insert-command))
 
-;; (add-to-list 'load-path "~/liberime/build/")
-(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
-(require 'liberime)
-;; (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" (file-truename "~/.emacs.d/pyim/rime/"))
+(add-to-list 'load-path "~/.emacs.d/pyim/liberime/build/")
 ;;(module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
+;; (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" (file-truename "~/.emacs.d/pyim/rime/"))
+
 (setq load-path (cons (file-truename "~/.emacs.d/pyim/") load-path))
-;; (use-package liberime
-;;     :load-path "~/.emacs.d/pyim/"
-;;     :config
-;;     (liberime-start (expand-file-name "~/Library/Rime/")
-;;                     (expand-file-name "~/.emacs.d/pyim/rime"))
-;;     (liberime-select-schema "double_pinyin_flypy")
-;;     (setq pyim-default-scheme 'rime))
-(let ((liberime-auto-build t))
-  (require 'liberime nil t))
+(use-package liberime
+    :load-path "~/.emacs.d/pyim/liberime/build/"
+    :config
+    (liberime-start (expand-file-name "/Library/Input Methods/Squirrel.app/Contents/SharedSupport/")
+                    (file-truename "~/.emacs.d/pyim/rime"))
+    (liberime-select-schema "double_pinyin_flypy")
+    (setq pyim-default-scheme 'rime))
+;;(let ((liberime-auto-build t))
+  ;;(require 'liberime nil t))
 ;;===================================================
 ;;                   IMPORTANT
 ;;https://placeless.net/blog/uncommon-chinese-character-in-rime
-;;https://placeless.net
-;;
-;;https://emacs-china.org/t/mac-emacs-rime/10063/26
-;;look for wd1's answer 
+;;https://emacs-china.org/t/mac-emacs-rime/10063/26  (look for wd1's answer) 
 ;;===================================================
-;;(module-load "~/.emacs.d/pyim/liberime.so")
-(use-package liberime
-  :config
-  (liberime-start "/Users/Ying/Library/Rime/" (file-truename "/Users/Ying/.emacs.d/pyim/rime/"))
-  (liberime-select-schema "double_pinyin_flypy")
-  (setq pyim-default-scheme 'rime))
+;; ;;(module-load "~/.emacs.d/pyim/liberime.so")
+;; (module-load "/Users/Ying/.emacs.d/pyim/liberime.so")
+;; (use-package liberime
+;;   (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport/" (file-truename "~/.emacs.d/pyim/rime/"))
+;;   (liberime-select-schema "double_pinyin_flypy")
+;;   (setq pyim-default-scheme 'rime))
 ;;(add-hook 'after-init-hook #'liberime-sync)
 ;;================================================== 
 (liberime-get-schema-list)
 ;;(liberime-deploy) 
-;;`pyim-create-Ncchar-word-at-point 这是一组命令，从光标前提取N个汉字字符组成字符串，并将其加入
-;;`pyim-translate-trigger-char' 以默认设置为例：在“我爱吃红烧肉”后输入“5v” 可以将“爱吃红烧肉”这个词条保存到用户个人词库。
-;;`pyim-create-word-from-selection', 选择一个词条，运行这个命令后，就可以将这个词条添加到个人词库。
-;;`pyim-delete-word' 从个人词库中删除当前高亮选择的词条。就是词库还是很小就是了 h
 
 ;;(fboundp 'module-load)
 ;;=====================================================

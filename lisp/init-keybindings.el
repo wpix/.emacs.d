@@ -5,13 +5,18 @@
 (global-set-key (kbd "C-M-SPC") 'mark-sexp)
 (global-set-key (kbd "C-M-u") 'sp-up-sexp)
 
+
+
+;;====================== o r g  ===============================
+(global-set-key (kbd "<f7>") 'org-mark-ring-push)
+(global-set-key (kbd "C-<f7>") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+(define-key global-map "\C-cc" 'org-capture)
+
 ;;===================== Helm =======================
-(global-set-key (kbd "M-i") 'helm-imenu)
-(global-set-key (kbd "C-x c y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x c b") 'helm-mini)
-(global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
 
 ;;===================== ido/ibuffer.imenu ====================
 ;; (global-set-key (kbd "M-SPC") #'imenu-anywhere)
@@ -55,7 +60,7 @@
 (global-set-key (kbd "M-.") 'multi-occur-in-this-mode)
 
 
-
+;;================= w i n d o w =================
 (global-set-key (kbd "M-SPC") 'other-window)
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 
@@ -88,18 +93,16 @@ Version 2017-06-02"
 	  (3 (eq major-mode 'pdf-view-mode) green-face)
 	  (3 (eq major-mode 'bibtex-mode) dim-face)
 	  (4 (eq major-mode 'dired-mode) dired-face)
-
-	  (5 (eq major-mode 'fundamental-mode) dim-face)
+	  (5 (eq major-mode 'fundamental-mode) purple-face)
 	  (5 (eq major-mode 'help-mode) dim-face)
 	  (5 (eq major-mode 'Custom-mode) dim-face)))
-
 
 (defface pink-face '((t :foreground "hot pink")) "")
 (defface purple-face '((t :foreground "#d6cbd3")) "")
 (defface green-face '((t :foreground "light green")) "")
 (defface dim-face '((t :foreground "#ada397")) "")
 (defface highlight-face '((t :foreground "yellow")) "")
-
+(defface dired-face '((t :foreground "black" :background "lavender")) "")
 
 ;; Use human readable Size column instead of original one
 (define-ibuffer-column size-h

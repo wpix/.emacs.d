@@ -16,3 +16,8 @@ export $PATH
 goku
 which dot
 pandoc --columns=78 -f docx -t markdown online-syllabus.docx  -o syllabus.org  
+goku  
+goku  
+goku  
+goku  
+goku  

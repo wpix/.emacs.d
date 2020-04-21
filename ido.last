@@ -19,9 +19,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Ying/.emacs.d/lisp/"
+ "/Users/Ying/org/journal/"
  "/Users/Ying/org/notes/"
  "/Applications/Emacs.app/Contents/Resources/lisp/emacs-lisp/"
- "/Users/Ying/.emacs.d/lisp/"
  "/Users/Ying/org/"
  "/Users/Ying/.emacs.d/"
  "/Users/Ying/Documents/"
@@ -62,15 +63,19 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/Ying/.emacs.d/lisp/" (24222 24156 163211 261000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "init-keybindings.el" "org-note.el" "org-babel.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" ".#org-note.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".DS_Store" "../" "./")
+
+ ("/Users/Ying/.emacs.d/" (24222 21774 166740 756000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "recentf~" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "org-journal.cache" "../" "./")
+
+ ("/Users/Ying/.emacs.d/elpa/org-noter-20191020.1212/" (24206 48005 515478 995000) "org-noter-autoloads.el" "org-noter.elc" "org-noter-pkg.el" "org-noter.el" "../" "./")
+
+ ("/Users/Ying/org/" (24221 48479 364128 459000) "reveal.js/" ".git/" ".#book-mastering-emacs.org" "bookmarks.org" ".gitignore" "notes/" ".#notes.org" "notes.html" "publications/" "notes.org" "bibliography/" "archive/" ".DS_Store" "lab.org" "recrystallization.org" "journal/" "../" "./")
+
+ ("/Users/Ying/org/journal/" (24221 48305 462690 205000) "20200201" "fiction-seasons.org" "20190901.org" "20200101" "20200420" "20190801.org" "2019_goal_example" "complains.org" "20190902" "20190601.org" "2019_acrhive" ".DS_Store" "../" "./")
+
  ("/Users/Ying/org/notes/" (24221 18370 475877 714000) "book-mastering-emacs.org" "course-MTEX-texture.org" "note-ASEE2019.org" "../" "./")
 
- ("/Users/Ying/org/" (24221 31038 86041 404000) "reveal.js/" ".git/" ".#book-mastering-emacs.org" "bookmarks.org" "resistance.org" "lab-log.org" ".gitignore" "notes/" "notes.html" "publications/" "notes.org" "bibliography/" "archive/" ".DS_Store" "recrystallization.org" "journal/" "../" "./")
-
  ("/Users/Ying/" (24221 27427 944086 511000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" "liberime/" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" "librime/" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" "go/" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
-
- ("/Users/Ying/.emacs.d/" (24221 31075 935190 370000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "../" "./")
-
- ("/Users/Ying/.emacs.d/lisp/" (24221 31062 848832 915000) "config-hugo.el" "init-org.el" "config-elfeed.el" "init-helm.el" "ying-hydra.el" "init-magit.el" "init-keybindings.el" "init-company.el" "scimax-hydra.el" "ox-word.el" "ying-babel.el" "init-chinese.el" ".#init-keybindings.el" "init-spelling.el" "ying-papers.el" "init-browser.el" ".DS_Store" "init-ido.el" "ying-hydra copy.el" "config-notmuch.el" "ying-projectile.el" "../" "./")
 
  ("/Applications/Emacs.app/Contents/Resources/lisp/emacs-lisp/" (23916 48731 0 0) "find-func.elc" "macroexp.el.gz" "ert.elc" "cconv.elc" "bindat.el.gz" "byte-run.elc" "eieio-speedbar.el.gz" "cl-preloaded.elc" "eieio-opt.elc" "cl-indent.elc" "ert-x.el.gz" "elint.el.gz" "re-builder.elc" "testcover.el.gz" "edebug.el.gz" "pp.el.gz" "generator.el.gz" "tq.el.gz" "thunk.elc" "eieio-base.el.gz" "cl-preloaded.el.gz" "benchmark.el.gz" "autoload.el.gz" "cursor-sensor.elc" "warnings.elc" "tcover-ses.elc" "disass.elc" "regexp-opt.el.gz" "eieio-core.el.gz" "cl-print.el.gz" "cl-lib.el.gz" "package-x.elc" "generator.elc" "ert.el.gz" "cl-macs.elc" "shadow.elc" "elint.elc" "eieio-opt.el.gz" "thunk.el.gz" "inline.elc" "timer.el.gz" "eieio-loaddefs.el" "cl-generic.elc" "unsafep.el.gz" "lisp-mnt.el.gz" "regi.el.gz" "cconv.el.gz" "lisp-mode.elc" "elp.elc" "tabulated-list.elc" "timer-list.elc" "avl-tree.elc" "helper.elc" "elp.el.gz" "checkdoc.el.gz" "benchmark.elc" "seq.elc" "eieio-speedbar.elc" "package-x.el.gz" "generic.elc" "easy-mmode.elc" "lisp-mnt.elc" "backquote.el.gz" "timer.elc" "cl-macs.el.gz" "eieio-custom.elc" "rmc.el.gz" "easy-mmode.el.gz" "byte-run.el.gz" "trace.elc" "check-declare.el.gz" "copyright.el.gz" "rx.elc" "pp.elc" "ring.elc" "cl-print.elc" "let-alist.elc" "byte-opt.elc" "map-ynp.elc" "subr-x.el.gz" "derived.elc" "cl-indent.el.gz" "chart.elc" "easymenu.elc" "eieio-compat.elc" "crm.el.gz" "lisp.el.gz" "disass.el.gz" "copyright.elc" "tabulated-list.el.gz" "warnings.el.gz" "nadvice.el.gz" "cl-extra.el.gz" "tcover-unsafep.el.gz" "package.el.gz" "radix-tree.el.gz" "eieio-compat.el.gz" "bindat.elc" "gv.elc" "advice.el.gz" "gv.el.gz" "debug.elc" "ert-x.elc" "eieio-core.elc" "check-declare.elc" "seq.el.gz" "smie.el.gz" "cl.el.gz" "cl-generic.el.gz" "cl-extra.elc" "map.elc" "eldoc.el.gz" "smie.elc" "shadow.el.gz" "eldoc.elc" "eieio.elc" "chart.el.gz" "lisp.elc" "let-alist.el.gz" "cursor-sensor.el.gz" "float-sup.el.gz" "rmc.elc" "ewoc.elc" "easymenu.el.gz" "advice.elc" "ring.el.gz" "cl-seq.el.gz" "tcover-unsafep.elc" "bytecomp.elc" "testcover.elc" "syntax.el.gz" "inline.el.gz" "edebug.elc" "radix-tree.elc" "derived.el.gz" "bytecomp.el.gz" "generic.el.gz" "backquote.elc" "crm.elc" "cl-lib.elc" "cl-loaddefs.el" "nadvice.elc" "macroexp.elc" "eieio-datadebug.el.gz" "lisp-mode.el.gz" "find-func.el.gz" "timer-list.el.gz" "pcase.el.gz" "eieio-base.elc" "cl-seq.elc" "regi.elc" "eieio-custom.el.gz" "package.elc" "trace.el.gz" "debug.el.gz" "subr-x.elc" "tq.elc" "autoload.elc" "syntax.elc" "rx.el.gz" "byte-opt.el.gz" "eieio.el.gz" "map.el.gz" "eieio-datadebug.elc" "helper.el.gz" "checkdoc.elc" "map-ynp.el.gz" "pcase.elc" "cl.elc" "regexp-opt.elc" "tcover-ses.el.gz" "ewoc.el.gz" "unsafep.elc" "avl-tree.el.gz" "re-builder.el.gz" "float-sup.elc" "../" "./")
 

@@ -1,7 +1,27 @@
+# default.custom.yaml
+# Rime default settings
+# encoding: utf-8
+
 patch:
-     schema_list:
-       - schema: double_pinyin_flypy
-     "menu/page_size": 100
-     "speller/auto_select": false
-     "speller/auto_select_unique_candidate": false
-     "switches/@2/reset" : 1
+  menu/page_size: 9
+  schema_list:
+    - schema: double_pinyin_flypy
+  punctuator:
+    import_preset: alternative
+  key_binder:
+    import_preset: alternative
+
+  ascii_composer/good_old_caps_lock: false
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Shift_L: noop
+    Shift_R: noop
+    Control_L: noop
+    Control_R: noop
+
+recognizer:
+    import_preset: alternative
+    patterns:
+      email: "^[a-z][-_.0-9a-z]@.$"
+      url: "^(www[.]|https?:|ftp:|mailto:).$"
+      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
