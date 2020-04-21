@@ -39,10 +39,6 @@
         (("s-Y" . org-download-screenshot)
          ("s-y" . org-download-yank))))
 
-
-
-
-
 ;;================= p d f v i e w =========================
 (defun my/org-ref-open-pdf-at-point ()
   "Open the pdf for bibtex key under point if it exists."
@@ -133,5 +129,6 @@
 ;;   (org-journal-dir "~/org/wiki/")
 ;;   (org-journal-file-type 'daily)
 ;;   (org-journal-date-format "%A, %d %B %Y"))
+
 
 (provide 'org-note)

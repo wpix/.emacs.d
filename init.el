@@ -44,13 +44,13 @@
 (require 'org-paper)
 (require 'org-babel)
 (require 'org-note)
+(require 'org-drill)
 
 (require 'init-keybindings)
 (require 'init-spelling)
 (require 'init-company)
 (require 'init-hai)
 (require 'init-chinese)
-(require 'init-browser)
 
 ;(require 'ying-hydra)
 (require 'ying-yas)

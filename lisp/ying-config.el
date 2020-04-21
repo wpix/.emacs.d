@@ -213,6 +213,34 @@
 ;;M-x easy-hugo-magit
 ;;Netlify just press M and commit to GitHub.
 
+;;========================================================
+;;                w 3 m b r o w s e r
+;;========================================================
+(add-to-list 'load-path "/Users/Ying/.emacs.d/site-lisp/emacs-w3m/")
+(require 'w3m-load)
+;(require 'mime-w3m)
+(setq w3m-coding-system 'utf-8
+      w3m-file-coding-system 'utf-8
+      w3m-file-name-coding-system 'utf-8
+      w3m-input-coding-system 'utf-8
+      w3m-output-coding-system 'utf-8
+      w3m-terminal-coding-system 'utf-8)
+(setq browse-url-browser-function 'w3m-browse-url)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+(global-set-key (kbd "C-M-;") 'browse-url-at-point)
+
+;; q 	Quit w3m
+;; S 	Open google search
+;; R 	Reload page
+;; B 	Go to previous page
+;; N 	Go to next page
+;; a 	Add page to bookmark
+;; v 	Show bookmark
+;; [ 	Go to next edit box
+;; ] 	Go to prev edit box
+;; c 	Show URL
+;; E 	Edit URL
+;; G 	Open URL with new session 
 
 
 (provide 'ying-config)

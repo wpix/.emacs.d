@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("resistance diagonostic"
+(("w3m basic keybindings"
+ (filename . "~/.emacs.d/lisp/ying-config.el")
+ (front-context-string . ";; G 	Open URL w")
+ (rear-context-string . "\n;; E 	Edit URL\n")
+ (position . 8922))
+("resistance diagonostic"
  (filename . "~/org/journal/20200401")
  (front-context-string . "\n**** Example Re")
  (rear-context-string . "nostic analysis ")

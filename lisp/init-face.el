@@ -1,6 +1,9 @@
 ;;========================================================
 ;;                     d e f a u l t
 ;;========================================================
+(require 'disable-mouse)
+(global-disable-mouse-mode)
+
 (when window-system
   (blink-cursor-mode 0)                           ; Disable the cursor blinking
   (scroll-bar-mode 0)                             ; Disable the scroll bar
@@ -8,16 +11,8 @@
   (tooltip-mode 0))                               ; Disable the tooltips
 
 (setq-default
- ad-redefinition-action 'accept                   ; Silence warnings for redefinition
- auto-window-vscroll nil                          ; Lighten vertical scroll
- confirm-kill-emacs 'yes-or-no-p                  ; Confirm before exiting Emacs
- cursor-in-non-selected-windows nil               ; Hide the cursor in inactive windows
- delete-by-moving-to-trash t                      ; Delete files to trash
- display-time-default-load-average nil            ; Don't display load average
- display-time-format "%H:%M"                      ; Format the time string
  fill-column 80                                   ; Set width for automatic line breaks
  help-window-select t                             ; Focus new help windows when opened
- indent-tabs-mode nil                             ; Stop using tabs to indent
  inhibit-startup-screen t                         ; Disable start-up screen
  initial-scratch-message ""                       ; Empty the initial *scratch* buffer
  mouse-yank-at-point t                            ; Yank at point rather than pointer
@@ -27,14 +22,12 @@
  scroll-margin 10                                 ; Add a margin when scrolling vertically
  select-enable-clipboard t                        ; Merge system's and Emacs' clipboard
  sentence-end-double-space nil                    ; End a sentence after a dot and a space
- show-help-function nil                           ; Disable help messages
  show-trailing-whitespace nil                     ; Display trailing whitespaces
  split-height-threshold nil                       ; Disable vertical window splitting
  split-width-threshold nil                        ; Disable horizontal window splitting
  tab-width 4                                      ; Set width for tabs
  uniquify-buffer-name-style 'forward              ; Uniquify buffer names
- window-combination-resize t                      ; Resize windows proportionally
- x-stretch-cursor t)                              ; Stretch cursor to the glyph width
+ window-combination-resize t)                      ; Resize windows proportionally
 (cd "~/")                                         ; Move to the user directory
 (delete-selection-mode 1)                         ; Replace region when inserting text
 (display-time-mode 1)                             ; Enable time in the mode-line
@@ -42,8 +35,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)                     ; Replace yes/no prompts with y/n
 (global-subword-mode 1)                           ; Iterate through CamelCase words
 (menu-bar-mode 0)                                 ; Disable the menu bar
-(mouse-avoidance-mode 'banish)                    ; Avoid collision of mouse with point
-(put 'downcase-region 'disabled nil)              ; Enable downcase-region
 (put 'upcase-region 'disabled nil)                ; Enable upcase-region
 (set-default-coding-systems 'utf-8)               ; Default to utf-8 encoding
 
@@ -77,8 +68,8 @@
 ;;   (setq sml/theme 'atom-one-dark)
 ;;   (sml/setup))
 ;; set transparency
-(set-frame-parameter (selected-frame) 'alpha '(75 75))
-(add-to-list 'default-frame-alist '(alpha 75 75))
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))
 ;;========================================================
 ;;                     f o n t
 ;;========================================================
@@ -142,6 +133,11 @@
  '(custom-safe-themes
    (quote
     ("855eb24c0ea67e3b64d5d07730b96908bac6f4cd1e5a5986493cbac45e9d9636" default)))
+ '(deft-default-extension "org" t)
+ '(deft-directory "~/org/" t)
+ '(deft-recursive t t)
+ '(deft-use-filter-string-for-filename t t)
+ '(ibuffer-never-show-predicates (quote ("^\\\\*Messages" "^\\\\*Completions")) nil (ibuf-ext))
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "#+TITLE: ")
  '(org-journal-dir "~/org/wiki/")
@@ -150,7 +146,7 @@
  '(org-roam-directory "~/org/wiki/")
  '(package-selected-packages
    (quote
-    (org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode magit langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases))))
+    (org-drill disable-mouse org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode magit langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases))))
  '(exec-path-from-shell-check-startup-files nil)
  '(flyspell-use-global-abbrev-table-p t)
  '(gnus-treat-hide-citation-maybe t)
