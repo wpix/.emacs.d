@@ -56,6 +56,7 @@
 ;;                     t h e m e s
 ;;========================================================
 ;;themes and fonts
+(display-time-mode 0)
 (use-package doom-themes
   :config
   ;; Global settings (defaults)
@@ -68,22 +69,31 @@
   :ensure t
   :init (doom-modeline-mode 1)
   :config
+  (doom-modeline-def-modeline 'my-simple-line
+	'(bar matches buffer-info)
+	'(major-mode))
+;; Add to `doom-modeline-mode-hook` or other hooks
+  (defun setup-custom-doom-modeline ()
+	(doom-modeline-set-modeline 'my-simple-line 'default))
+  (add-hook 'doom-modeline-mode-hook 'setup-custom-doom-modeline)
   (setq doom-modeline-buffer-file-name-style 'file-name
-		doom-modeline-major-mode-icon nil
-		doom-modeline-major-mode-color-icon nil
-		doom-modeline-buffer-state-icon nil
-		doom-modeline-buffer-modification-icon nil
-		doom-modeline-enable-word-count t
-		inhibit-compacting-font-caches t
-        ;;doom-modeline-continuous-word-count-modes 'org-mode
-		doom-modeline-indent-info nil
-		doom-modeline-minor-modes nil
-		doom-modeline-buffer-encoding nil
-		doom-modeline-checker-simple-format t
-		doom-modeline-lsp nil
-		doom-modeline-modal-icon nil
-		doom-modeline-bar-width 3
-		doom-modeline-height 15))
+  		mode-line-percent-position nil
+		doom-modeline-vcs nil
+  		doom-modeline-major-mode-icon nil
+  		doom-modeline-major-mode-color-icon nil
+  		doom-modeline-buffer-state-icon nil
+  		doom-modeline-buffer-modification-icon t
+  		doom-modeline-enable-word-count nil
+  		inhibit-compacting-font-caches t
+        doom-modeline-continuous-word-count-modes 'org-mode
+  		doom-modeline-indent-info nil
+  		doom-modeline-minor-modes t
+  		doom-modeline-buffer-encoding nil
+  		doom-modeline-checker-simple-format t
+  		doom-modeline-lsp nil
+  		doom-modeline-modal-icon nil
+  		doom-modeline-bar-width 3
+  		doom-modeline-height 15))
 
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
