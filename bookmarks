@@ -49,8 +49,8 @@
  (url . #1#)
  (handler . bookmark-w3m-bookmark-jump))
 ("org-capture-last-stored"
- (filename . "~/org-notes/notes.org")
- (front-context-string . "** ** ** TODOan’")
- (rear-context-string)
- (position . 16))
+ (filename . "~/org/archive/contacts.org")
+ (front-context-string . "* Brent K Jesiek")
+ (rear-context-string . "\n:NOTE: \n:END:\n\n")
+ (position . 530))
 )

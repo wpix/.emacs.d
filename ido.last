@@ -2,7 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/Users/Ying/org/" . "notes/")
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/" . "2020 ENE Faculty/")
+ ("/Users/Ying/org/" . "wiki/")
  ("/Users/Ying/org-notes/" . "publications/")
  ("/Users/Ying/OneDrive - purdue.edu/Publications/2019 slip-cracking/" . "drafts/")
  ("/Users/Ying/OneDrive - purdue.edu/Publications/2019 crack-initiation/" . "drafts/")
@@ -19,12 +20,17 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Ying/org/wiki/"
  "/Users/Ying/.emacs.d/lisp/"
+ "/Users/Ying/org/techo/"
+ "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/assignment-compile/"
+ "/Users/Ying/org/bibliography/"
+ "/Users/Ying/org/"
+ "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Faculty/"
+ "/Users/Ying/.emacs.d/"
  "/Users/Ying/org/journal/"
  "/Users/Ying/org/notes/"
  "/Applications/Emacs.app/Contents/Resources/lisp/emacs-lisp/"
- "/Users/Ying/org/"
- "/Users/Ying/.emacs.d/"
  "/Users/Ying/Documents/"
  "/Users/Ying/Downloads/"
  "/Users/Ying/.config/"
@@ -63,19 +69,35 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Ying/.emacs.d/lisp/" (24222 24156 163211 261000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "init-keybindings.el" "org-note.el" "org-babel.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" ".#org-note.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".DS_Store" "../" "./")
+ ("/Users/Ying/org/wiki/" (24226 28151 156590 503000) "B-mastering-emacs.org" "C-ene-theory-AB.org" "S-2020tms.org" "C-mtex-texture.org" "nameheader.txt" "L-french.org" "L-japanese.org" "C-ene-faculty-notes.org" "S-2019asee.org" "C-ene-theory.org" "C-ene-faculty.org" "S-2020box.org" ".DS_Store" "R-lab-log.org" "../" "./")
 
- ("/Users/Ying/.emacs.d/" (24222 21774 166740 756000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "recentf~" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "org-journal.cache" "../" "./")
+ ("/Users/Ying/org/" (24226 28613 481813 268000) "reveal.js/" ".git/" "bookmarks.org" "techo/" "bib/" "ABs/" ".gitignore" "org-roam.db" "wiki/" "notes.org" "archive/" ".DS_Store" "paper/" "../" "./")
+
+ ("/Users/Ying/org/techo/" (24226 28627 58266 820000) "20200201" "motivator.org" "20190901.org" "20200101" "20200420" "20190801.org" "yearly.org" ".#habit.org" "2019_goal_example" "20190902" "20190601.org" "2019_acrhive" "habit.org" "fiction.org" ".DS_Store" "weekly.org" "monthly.org" "../" "./")
+
+ ("/Users/Ying/" (24226 25352 979175 3000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" "go/" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" ".orhc-bibtex-cache" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
+
+ ("/Users/Ying/.emacs.d/" (24226 21564 20111 126000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "recentf~" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "org-journal.cache" "../" "./")
+
+ ("/Users/Ying/.emacs.d/lisp/" (24226 24045 548183 165000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "org-drill.el" "init-keybindings.el" "org-note.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" "init-ivy.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".#init-hai.el" ".DS_Store" "../" "./")
+
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/assignment-compile/" (24225 52726 0 0) "biblatex-apa6/" "apa6/" "ene-theory-notes.org" "ene-theory-notes.pdf" "theory-ab.odt" "biblatex-apa/" "theory-ab.tex" ".#theory-ab 2.org" "TF ENE theory.png" "theory-ab.bbl" "theory-ab.org" ".DS_Store" "ene-theory-ab.bib" "theory-ab.pdf" "../" "./")
+
+ ("/Users/Ying/org/bibliography/" (24225 49771 619163 783000) "test.md" "annotated.tex" "annotated.pdf" "annotated.org" "helm-bibtex-notes/" "annotated.bbl" "asee-motivation.bib" "mserefs.bib" "annotated.html" ".DS_Store" "inquiry-review.bib" "enerefs.bib" "test.docx" "../" "./")
+
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Faculty/" (24216 32854 0 0) "Discussion/" "syllabus.org" "diversity-statement.pdf" "ene-faculty-assignments-blx.bib" "revised-syllabus.org" "portfolio/" "online-syllabus.docx" "Notes/" "ene-faculty-assignments.bbl" "ene-faculty-assignments.org" "ene-faculty.bib" "ene-faculty-assignments.pdf" "ene-faculty-assignments.tex" "ene-faculty-notes.org" ".DS_Store" "Revised Syllabus.docx" ".#ene-faculty-assignments.org" "../" "./")
+
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/" (24222 21725 0 0) "2017 Kinetics of Materials/" "ene_phd_requirements_v2.pdf" "2017 Crystal defects & TEM.zip" "2019 ENE CAP/" "phd_requirements_v2_2-2.pdf" "2019 ENE Inquiry/" "2018 LCA/" "2019 Texture Seminars/" "2017 Dislocation Dynamics/" "2018 Deformation mechanisms /" "ENE offer letter.pdf" "2020 ENE Theories/" "textbooks/" "2017 Selected work from Cahn/" "2020 ENE Faculty/" "2019 ENE EduMethods in Eng/" ".DS_Store" "2019 Mentored Teaching/" "2017 MSE230 TA/" "2017 Defects in Solids/" "../" "./")
+
+ ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/" (24222 21725 0 0) "vygotsky/" "major assignments/" "spatial & adaptive/" "dewey/" "engineering deisgn/" "APA/" "Learning-goals-plan.pdf" "ENE 505 Syllabus Spring 2020_v2_online only.pdf" "ENE 505 Syllabus Spring 2020_v1.pdf" "piaget/" ".DS_Store" "bruner/" "class discussion/" "assignment-compile/" "../" "./")
+
+ ("/Users/Ying/.config/" (24222 33982 271029 620000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "neomutt/" "menus/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "../" "./")
 
  ("/Users/Ying/.emacs.d/elpa/org-noter-20191020.1212/" (24206 48005 515478 995000) "org-noter-autoloads.el" "org-noter.elc" "org-noter-pkg.el" "org-noter.el" "../" "./")
-
- ("/Users/Ying/org/" (24221 48479 364128 459000) "reveal.js/" ".git/" ".#book-mastering-emacs.org" "bookmarks.org" ".gitignore" "notes/" ".#notes.org" "notes.html" "publications/" "notes.org" "bibliography/" "archive/" ".DS_Store" "lab.org" "recrystallization.org" "journal/" "../" "./")
 
  ("/Users/Ying/org/journal/" (24221 48305 462690 205000) "20200201" "fiction-seasons.org" "20190901.org" "20200101" "20200420" "20190801.org" "2019_goal_example" "complains.org" "20190902" "20190601.org" "2019_acrhive" ".DS_Store" "../" "./")
 
  ("/Users/Ying/org/notes/" (24221 18370 475877 714000) "book-mastering-emacs.org" "course-MTEX-texture.org" "note-ASEE2019.org" "../" "./")
-
- ("/Users/Ying/" (24221 27427 944086 511000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" "liberime/" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" "librime/" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" "go/" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
 
  ("/Applications/Emacs.app/Contents/Resources/lisp/emacs-lisp/" (23916 48731 0 0) "find-func.elc" "macroexp.el.gz" "ert.elc" "cconv.elc" "bindat.el.gz" "byte-run.elc" "eieio-speedbar.el.gz" "cl-preloaded.elc" "eieio-opt.elc" "cl-indent.elc" "ert-x.el.gz" "elint.el.gz" "re-builder.elc" "testcover.el.gz" "edebug.el.gz" "pp.el.gz" "generator.el.gz" "tq.el.gz" "thunk.elc" "eieio-base.el.gz" "cl-preloaded.el.gz" "benchmark.el.gz" "autoload.el.gz" "cursor-sensor.elc" "warnings.elc" "tcover-ses.elc" "disass.elc" "regexp-opt.el.gz" "eieio-core.el.gz" "cl-print.el.gz" "cl-lib.el.gz" "package-x.elc" "generator.elc" "ert.el.gz" "cl-macs.elc" "shadow.elc" "elint.elc" "eieio-opt.el.gz" "thunk.el.gz" "inline.elc" "timer.el.gz" "eieio-loaddefs.el" "cl-generic.elc" "unsafep.el.gz" "lisp-mnt.el.gz" "regi.el.gz" "cconv.el.gz" "lisp-mode.elc" "elp.elc" "tabulated-list.elc" "timer-list.elc" "avl-tree.elc" "helper.elc" "elp.el.gz" "checkdoc.el.gz" "benchmark.elc" "seq.elc" "eieio-speedbar.elc" "package-x.el.gz" "generic.elc" "easy-mmode.elc" "lisp-mnt.elc" "backquote.el.gz" "timer.elc" "cl-macs.el.gz" "eieio-custom.elc" "rmc.el.gz" "easy-mmode.el.gz" "byte-run.el.gz" "trace.elc" "check-declare.el.gz" "copyright.el.gz" "rx.elc" "pp.elc" "ring.elc" "cl-print.elc" "let-alist.elc" "byte-opt.elc" "map-ynp.elc" "subr-x.el.gz" "derived.elc" "cl-indent.el.gz" "chart.elc" "easymenu.elc" "eieio-compat.elc" "crm.el.gz" "lisp.el.gz" "disass.el.gz" "copyright.elc" "tabulated-list.el.gz" "warnings.el.gz" "nadvice.el.gz" "cl-extra.el.gz" "tcover-unsafep.el.gz" "package.el.gz" "radix-tree.el.gz" "eieio-compat.el.gz" "bindat.elc" "gv.elc" "advice.el.gz" "gv.el.gz" "debug.elc" "ert-x.elc" "eieio-core.elc" "check-declare.elc" "seq.el.gz" "smie.el.gz" "cl.el.gz" "cl-generic.el.gz" "cl-extra.elc" "map.elc" "eldoc.el.gz" "smie.elc" "shadow.el.gz" "eldoc.elc" "eieio.elc" "chart.el.gz" "lisp.elc" "let-alist.el.gz" "cursor-sensor.el.gz" "float-sup.el.gz" "rmc.elc" "ewoc.elc" "easymenu.el.gz" "advice.elc" "ring.el.gz" "cl-seq.el.gz" "tcover-unsafep.elc" "bytecomp.elc" "testcover.elc" "syntax.el.gz" "inline.el.gz" "edebug.elc" "radix-tree.elc" "derived.el.gz" "bytecomp.el.gz" "generic.el.gz" "backquote.elc" "crm.elc" "cl-lib.elc" "cl-loaddefs.el" "nadvice.elc" "macroexp.elc" "eieio-datadebug.el.gz" "lisp-mode.el.gz" "find-func.el.gz" "timer-list.el.gz" "pcase.el.gz" "eieio-base.elc" "cl-seq.elc" "regi.elc" "eieio-custom.el.gz" "package.elc" "trace.el.gz" "debug.el.gz" "subr-x.elc" "tq.elc" "autoload.elc" "syntax.elc" "rx.el.gz" "byte-opt.el.gz" "eieio.el.gz" "map.el.gz" "eieio-datadebug.elc" "helper.el.gz" "checkdoc.elc" "map-ynp.el.gz" "pcase.elc" "cl.elc" "regexp-opt.elc" "tcover-ses.el.gz" "ewoc.el.gz" "unsafep.elc" "avl-tree.el.gz" "re-builder.el.gz" "float-sup.elc" "../" "./")
 
@@ -86,8 +108,6 @@
  ("/Users/Ying/.emacs.d/elpa/" (24206 52202 835939 291000) "academic-phrases-20180723.1021/" "company-readme.txt" "define-word-20191031.1736/" "ht-20200217.2331/" "exec-path-from-shell-20191229.112/" "gnupg/" "s-20180406.808/" "elfeed-20200209.1942/" "ebib-20200327.1040/" "use-package-20200322.2110/" "request-20200219.2257/" "easy-hugo-20200209.743/" "pdf-tools-20190413.2018/" "projectile-20200329.1908/" "ox-pandoc-20180510.1338/" "lv-20200227.1301/" "org-pdftools-20200330.806/" "yasnippet-snippets-20200403.1026/" "pos-tip-20191227.1356/" "parsebib-20200303.2324/" "ox-reveal-20200327.1636/" "org-ref-20200330.1218/" "imenu-anywhere-20190512.1939/" "ace-popup-menu-20190713.1337/" "helm-bibtex-20191028.1313/" "xr-1.18/" "company-20200324.2145/" "magit-20200408.2341/" "whole-line-or-region-20200305.221/" "org-noter-20191020.1212/" "bind-key-20191110.416/" "hydra-20200306.913/" "helm-core-20200306.1417/" "google-translate-20190620.1416/" "toc-org-20190902.1055/" "wc-goal-mode-20140829.1359/" "queue-0.2/" "ace-link-20190716.920/" "ess-readme.txt" "highlight-indentation-20181204.839/" "biblio-20200331.2013/" "avy-20200311.1106/" "bbdb-20200102.403/" "helm-20200331.1151/" "flx-20191115.659/" "popup-20160709.1429/" "anki-editor-20190922.1223/" "ess-smart-underscore-20190309.101/" "f-20191110.1357/" "pyvenv-20191202.1039/" "pyim-basedict-20190719.1252/" "helm-org-rifle-20190809.1831/" "archives/" "flx-ido-20180117.1519/" "emojify-20200309.553/" "cnfonts-20200327.101/" "transient-20200226.1612/" "elpy-20200329.1830/" "citeproc-org-0.2.2/" "cmake-mode-20190710.1319/" "key-chord-20160227.1238/" "focus-20191209.2210/" "biblio-core-20200331.2013/" "epl-20180205.2049/" "tablist-20200227.1918/" "company-statistics-20170210.1933/" "ob-ipython-20180224.953/" "packed-20180318.1729/" "pkg-info-20150517.1143/" "avy-menu-20190713.1348/" "julia-mode-20200331.1658/" "yasnippet-20200405.47/" "pyim-20200403.520/" "smartparens-20200324.2147/" "auto-compile-20191020.1040/" "org-20200406/" "string-inflection-20180827.1301/" "dracula-theme-20200404.1413/" "w3m-20200325.2226/" ".DS_Store" "ess-20200408.2126/" "org-brain-20200408.744/" "htmlize-20191111.2130/" "ob-translate-20170720.1919/" "dash-20200119.2310/" "ess-smart-underscore-readme.txt" "async-20200113.1745/" "ivy-20200319.1247/" "langtool-20200117.441/" "dash-functional-20191109.1327/" "git-commit-20200207.1819/" "org-journal-20200407.1040/" "markdown-mode-20191230.1055/" "../" "./")
 
  ("/Users/Ying/.emacs.d/elpa/org-pdftools-20200330.806/" (24206 51385 444453 777000) "org-pdftools-pkg.el" "org-pdftools-autoloads.el" "org-pdftools.el" "../" "./")
-
- ("/Users/Ying/.config/" (24206 716 243698 874000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "neomutt/" "menus/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/" (24125 33996 0 0) "theory-ab-blx.bib" "ene-theory-notes.org" ".#theory-ab.org" "theory-ab.tex" "theory-ab.bbl" "theory-ab.org" "apacite.dtx" "ene-theory-ab.bib" "theory-ab.pdf" "apacite.ins" "../" "./")
 
@@ -110,8 +130,6 @@
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/7 Meetings/Purdue Group /My Presentation/2019-10 polycrystal deformation/" (23980 33484 0 0) "purduelogo.png" "polycrystal-deformation.org" "#polycrystal-deformation.org#" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/" (23975 21433 0 0) "11 Workflows/" "10 Personal/" "Meetings/" "9 Individual Development/" "4 IGERT/" "1 Images/" "2 Thesis/" "5 References/" "Publications/" ".localized" "7 Experiments/" ".DS_Store" "6 Conferences/" ".com.apple.timemachine.supported" "8 Notes/" "self-intro.pptx" "3 Courses/" "../" "./")
-
- ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/" (23975 21433 0 0) "2017 Kinetics of Materials/" "2017 Crystal defects & TEM.zip" "2019 ENE CAP/" "2019 ENE Inquiry/" "2018 LCA/" "2017 Dislocation Dynamics/" "2018 Deformation mechanisms /" "ENE offer letter.pdf" "2019 EduMethods in Eng/" "2017 Selected work from Cahn/" "2019 Texture Courses/" ".DS_Store" "2019 Mentored Teaching/" "2017 MSE230 TA/" "2017 Defects in Solids/" "faculty/" "../" "./")
 
  ("/Users/Ying/Documents/Bookends/" (23913 30751 0 0) "Attachments/" ".DS_Store" "../" "./")
 

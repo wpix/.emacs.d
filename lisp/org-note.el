@@ -3,19 +3,18 @@
       :hook
       (after-init . org-roam-mode)
       :custom
-      (org-roam-directory "~/org/wiki/")
+      (org-roam-directory "~/org")
       :bind (:map org-roam-mode-map
               (("C-c n r" . org-roam)
                ("C-c n f" . org-roam-find-file)
                ("C-c n b" . org-roam-switch-to-buffer)
                ("C-c n g" . org-roam-graph))
               :map org-mode-map
-              (("C-c n i" . org-roam-insert))))
-
-(setq org-roam-link-title-format "R:%s")
-
-(require 'company-org-roam)
-(push 'company-org-roam company-backends)
+              (("C-c n i" . org-roam-insert)))
+      :config
+      (setq org-roam-link-title-format "R:%s")
+      (use-package company-org-roam
+        :config (push 'company-org-roam company-backends)))
 
 ;;===================== d e f t ========================
 (use-package deft
@@ -29,7 +28,6 @@
   (deft-directory "~/org/"))
 
 (global-set-key (kbd "C-x C-g") 'deft-find-file)
-
 
 ;================= other ecosystem =====================
 (use-package org-download
@@ -64,7 +62,13 @@
 ;; 				   (org-pdfview-open link))))))
 
 ;;=========================== pdf-tool setting=================
-(require 'pdf-tools)
+(use-package pdf-tools
+  :ensure t
+  :init 
+  (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo")
+  (setenv "PKG_CONFIG_PATH" "/usr/local/lib/pkgconfig:/usr/local/Cellar/libffi/3.2.1/lib/pkgconfig")
+  (setenv "PKG_CONFIG_PATH" "/usr/local/lib/pkgconfig:/usr/local/Cellar/zlib/1.2.11/lib/pkgconfig")
+  (pdf-tools-install))
 ;; (require 'pdf-occur)
 ;; (require 'pdf-history)
 ;; (require 'pdf-links)
@@ -79,10 +83,6 @@
 ;;; pdf-tools package using Emacs package system. If things get messed
 ;;; up, just do 'brew uninstall pdf-tools', wipe out the elpa
 ;;; pdf-tools package and reinstall both as at the start.
-(setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo")
-(setenv "PKG_CONFIG_PATH" "/usr/local/lib/pkgconfig:/usr/local/Cellar/libffi/3.2.1/lib/pkgconfig")
-(setenv "PKG_CONFIG_PATH" "/usr/local/lib/pkgconfig:/usr/local/Cellar/zlib/1.2.11/lib/pkgconfig")
-(pdf-tools-install)
 
 ;; (use-package pdf-tools
 ;;   ;;https://emacs.stackexchange.com/questions/13314/install-pdf-tools-on-emacs-macosx
@@ -109,12 +109,12 @@
                 org-pdftools-search-string-separator "??")
   :after org
   :config
-    (org-link-set-parameters "pdftools"
-                             :follow #'org-pdftools-open
-                             :complete #'org-pdftools-complete-link
-                             :store #'org-pdftools-store-link
-                             :export #'org-pdftools-export)
-    (add-hook 'org-store-link-functions 'org-pdftools-store-link))
+  (org-link-set-parameters "pdftools"
+                           :follow #'org-pdftools-open
+                           :complete #'org-pdftools-complete-link
+                           :store #'org-pdftools-store-link
+                           :export #'org-pdftools-export)
+  (add-hook 'org-store-link-functions 'org-pdftools-store-link))
 
 ;; (use-package org-noter-pdftools
 ;;   :after org-noter)

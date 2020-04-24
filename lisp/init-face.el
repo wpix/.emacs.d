@@ -27,14 +27,11 @@
  split-width-threshold nil                        ; Disable horizontal window splitting
  tab-width 4                                      ; Set width for tabs
  uniquify-buffer-name-style 'forward              ; Uniquify buffer names
- window-combination-resize t)                      ; Resize windows proportionally
+ window-combination-resize t)                     ; Resize windows proportionally
 (cd "~/")                                         ; Move to the user directory
 (delete-selection-mode 1)                         ; Replace region when inserting text
-(display-time-mode 1)                             ; Enable time in the mode-line
-(fringe-mode 0)                                   ; Disable fringes
+(fringe-mode 1)                                   ; Disable fringes
 (fset 'yes-or-no-p 'y-or-n-p)                     ; Replace yes/no prompts with y/n
-(global-subword-mode 1)                           ; Iterate through CamelCase words
-(menu-bar-mode 0)                                 ; Disable the menu bar
 (put 'upcase-region 'disabled nil)                ; Enable upcase-region
 (set-default-coding-systems 'utf-8)               ; Default to utf-8 encoding
 
@@ -45,16 +42,13 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-(setq tooltip-use-echo-area t)
-(setq inhibit-startup-message t
+(setq tooltip-use-echo-area t
       inhibit-startup-echo-area-message t)
-(fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
 	kill-buffer-query-functions))
 (setq inhibit-startup-echo-area-message "your$USER")
-
 ;;How to remove a confirmation question with 'M-x revert-buffer' ?
 (setq revert-without-query '(".*"))
 
@@ -62,11 +56,35 @@
 ;;                     t h e m e s
 ;;========================================================
 ;;themes and fonts
-(load-theme 'dracula t)
-;; (use-package smart-mode-line
-;;   :config
-;;   (setq sml/theme 'atom-one-dark)
-;;   (sml/setup))
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-one t)
+  (doom-themes-org-config))
+;;(load-theme 'dracula t)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-buffer-file-name-style 'file-name
+		doom-modeline-major-mode-icon nil
+		doom-modeline-major-mode-color-icon nil
+		doom-modeline-buffer-state-icon nil
+		doom-modeline-buffer-modification-icon nil
+		doom-modeline-enable-word-count t
+		inhibit-compacting-font-caches t
+        ;;doom-modeline-continuous-word-count-modes 'org-mode
+		doom-modeline-indent-info nil
+		doom-modeline-minor-modes nil
+		doom-modeline-buffer-encoding nil
+		doom-modeline-checker-simple-format t
+		doom-modeline-lsp nil
+		doom-modeline-modal-icon nil
+		doom-modeline-bar-width 3
+		doom-modeline-height 15))
+
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
@@ -123,8 +141,6 @@
 ;;========================================================
 ;;                     e m a c s 
 ;;========================================================
-(put 'set-goal-column 'disabled nil)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -132,21 +148,38 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("855eb24c0ea67e3b64d5d07730b96908bac6f4cd1e5a5986493cbac45e9d9636" default)))
+	("855eb24c0ea67e3b64d5d07730b96908bac6f4cd1e5a5986493cbac45e9d9636" default)))
  '(deft-default-extension "org" t)
  '(deft-directory "~/org/" t)
  '(deft-recursive t t)
  '(deft-use-filter-string-for-filename t t)
  '(ibuffer-never-show-predicates (quote ("^\\\\*Messages" "^\\\\*Completions")) nil (ibuf-ext))
+ '(org-agenda-files
+   (quote
+	("~/org/notes.org" "/Users/Ying/org/wiki/B-mastering-emacs.org" "/Users/Ying/org/wiki/C-ene-faculty-notes.org" "/Users/Ying/org/wiki/C-ene-faculty.org" "/Users/Ying/org/wiki/C-ene-theory-AB.org" "/Users/Ying/org/wiki/C-ene-theory.org" "/Users/Ying/org/wiki/C-mtex-texture.org" "/Users/Ying/org/wiki/L-french.org" "/Users/Ying/org/wiki/L-japanese.org" "/Users/Ying/org/wiki/R-lab-log.org" "/Users/Ying/org/wiki/S-2019asee.org" "/Users/Ying/org/wiki/S-2020box.org" "/Users/Ying/org/wiki/S-2020tms.org")))
+ '(org-capture-templates
+   (quote
+	(("c" "Contact" entry
+	  (file "~/org/archive/contacts.org")
+	  "* %(org-contacts-template-name)
+:PROPERTIES:
+:TEL: %^{TEL}
+:EMAIL: %(org-contacts-template-email)
+:COMPANY: %^{COMPANY}
+:END:" :empty-lines 1))))
+ '(org-contacts-files (quote ("~/org/archive/contacts.org")))
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "#+TITLE: ")
  '(org-journal-dir "~/org/wiki/")
  '(org-journal-file-format "%Y-%m-%d.org")
  '(org-journal-file-type (quote daily))
  '(org-roam-directory "~/org/wiki/")
+ '(org-roam-mode t nil (org-roam))
+ '(org-use-fast-todo-selection (quote expert))
  '(package-selected-packages
    (quote
-    (org-drill disable-mouse org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode magit langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases))))
+	(org-capture transpose-frame gus-art diminish org-plus-contrib treemacs doom-modeline doom-themes org-drill disable-mouse org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases)))
+ '(user-mail-address "wang3294@purdue.edu"))
  '(exec-path-from-shell-check-startup-files nil)
  '(flyspell-use-global-abbrev-table-p t)
  '(gnus-treat-hide-citation-maybe t)
@@ -459,18 +492,19 @@
  '(info-title-4 ((t (:inherit variable-pitch :weight semi-bold))))
  '(isearch ((t (:background "#464752" :foreground "#ffb86c" :weight semi-bold))))
  '(langtool-correction-face ((t (:background "dark red" :foreground "DarkGoldenrod3" :weight semi-bold))))
- '(message-cited-text ((t (:background "seashell" :foreground "gray10"))))
- '(message-header-cc ((t (:foreground "orchid1"))))
+ '(message-cited-text ((t (:background "selectedContentBackgroundColor" :foreground "gray10"))))
+ '(message-header-cc ((t (:inherit message-header-to :foreground "#bdcebe"))))
  '(message-header-name ((t (:foreground "plum1"))))
  '(message-header-newsgroups ((t (:foreground "yellow" :slant italic :weight semi-bold))))
- '(message-header-other ((t (:foreground "gray61"))))
+ '(message-header-other ((t (:foreground "thistle"))))
  '(message-header-subject ((t (:foreground "light green" :underline t))))
- '(message-header-to ((t (:foreground "olive drab"))))
- '(message-mml ((t (:foreground "gray50" :weight normal))))
+ '(message-header-to ((t (:foreground "#bdcebe" :weight normal))))
+ '(message-mml ((t (:foreground "gray50" :slant italic :weight normal))))
  '(message-separator ((t (:background "dark gray" :foreground "red4"))))
  '(minibuffer-prompt ((t (:foreground "#ff79c6" :weight semi-bold))))
  '(mode-line-buffer-id ((t (:weight semi-bold))))
  '(mode-line-emphasis ((t (:weight semi-bold))))
+ '(notmuch-message-summary-face ((t (:foreground "#51afef"))))
  '(notmuch-search-count ((t (:inherit default :foreground "gray30"))))
  '(notmuch-search-date ((t (:inherit default :foreground "gray45"))))
  '(notmuch-search-flagged-face ((t (:background "lemon chiffon" :foreground "black"))))
@@ -484,6 +518,8 @@
  '(notmuch-tree-match-author-face ((t (:foreground "gray76"))))
  '(notmuch-tree-match-tag-face ((t (:foreground "plum"))))
  '(notmuch-wash-toggle-button ((t (:inherit font-lock-comment-face :foreground "selectedControlColor" :box (:line-width 1 :color "gray85" :style pressed-button)))))
+ '(org-agenda-calendar-event ((t (:inherit default :underline "plum"))))
+ '(org-agenda-current-time ((t (:inherit org-time-grid :background "controlColor" :foreground "yellow"))))
  '(org-agenda-date ((t (:foreground "plum1" :underline nil))))
  '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight semi-bold))))
  '(org-agenda-date-weekend ((t (:inherit org-agenda-date))))
@@ -497,9 +533,9 @@
  '(org-drawer ((t (:foreground "unemphasizedSelectedTextBackgroundColor"))))
  '(org-footnote ((t (:foreground "MediumPurple4"))))
  '(org-level-1 ((t (:inherit bold :foreground "orchid" :height 1.2))))
- '(org-level-2 ((t (:inherit bold :foreground "sky blue" :height 1.1))))
+ '(org-level-2 ((t (:inherit bold :foreground "plum" :height 1.1))))
  '(org-level-3 ((t (:foreground "#bd93f9" :weight normal :height 1.05))))
- '(org-level-4 ((t (:foreground "plum" :weight normal))))
+ '(org-level-4 ((t (:foreground "#F1C1C1" :weight normal))))
  '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
  '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
  '(org-link ((t (:foreground "#bdcebe" :box (:line-width 1 :color "gray50" :style pressed-button) :underline nil))))
@@ -509,8 +545,8 @@
  '(org-ref-cite-face ((t (:inherit org-link :foreground "gray50"))))
  '(org-ref-label-face ((t (:inherit org-link :foreground "light green"))))
  '(org-ref-ref-face ((t (:inherit org-link :foreground "orchid3"))))
- '(org-scheduled-today ((t (:foreground "VioletRed3"))))
- '(org-tag ((t (:background "#373844" :foreground "#ff79c6" :weight normal))))
+ '(org-scheduled-today ((t (:foreground "LightGoldenrod2"))))
+ '(org-tag ((t (:background "#373844" :foreground "sky blue" :weight normal))))
  '(org-todo ((t (:background "#373844" :foreground "#ffb86c" :weight semi-bold))))
  '(org-warning ((t (:foreground "#ff79c6" :weight semi-bold))))
  '(popup-tip-face ((t (:background "gray20" :foreground "gray95"))))
