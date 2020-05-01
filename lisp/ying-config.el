@@ -3,17 +3,19 @@
 ;;========================================================
 (setq elfeed-feeds
       '(("https://irreal.org/blog/?feed=rss2" emacs)
-        ("https://www.ying-ish.com/index.xml")
+        ("https://www.ying-ish.com/index.xml" me)
         ("https://mini.ying-ish.com/index.xml" photo)
         ("https://patthomson.net/feed/" writing academic)
         ("https://www.rousette.org.uk/index.xml" people academic)
-        ("https://blindwith.science/index.xml" people)
+        ("https://blindwith.science/index.xml" people chinese)
         ("http://endlessparentheses.com/atom.xml" emacs)
         ("http://kitchingroup.cheme.cmu.edu/blog/feed/index.xml" academic emacs)
         ("http://cachestocaches.com/feed" academic emacs)
         ("https://necromuralist.github.io/rss.xml" emacs)
         ("http://ergoemacs.org/emacs/blog.xml" emacs)
         ("https://blog.aaronbieber.com/posts/index.xml" emacs)
+		("https://www.badykov.com/feed.xml" fun emacs)
+		("https://daryl.wakatara.com/rss.xml" fun emacs)
         ("http://blog.udn.com/rss.jsp?uid=MengyuanWang")))
 
 (setq-default elfeed-search-filter "@2-week-ago +unread ")
@@ -37,6 +39,7 @@
         message-kill-buffer-on-exit t
         mail-specify-envelope-from t
         sendmail-program "/usr/local/bin/msmtp"
+		notmuch-fcc-dirs "sent"
         mail-specify-envelope-from t
         mail-envelope-from 'header
         message-sendmail-envelope-from 'header)
@@ -49,14 +52,28 @@
         notmuch-show-indent-messages-width 4
         notmuch-saved-searches
         '((:name "inbox" :query "tag:inbox and not from:wang3294@purdue.edu" :key "i")
+		  (:name "todo" :query "tag:todo or tag:flagged" :key "t")
+		  (:name "next" :query "tag:next" :key "n")
           (:name "unread" :query "tag:unread" :key "u")
-          (:name "sent" :query "from:wang3294@purdue.edu" :key "s")
-          (:name "todo" :query "tag:todo/now or tag:todo/wait or tag:flagged" :key "t")
-          (:name "Carol" :query "to:carolh@purdue.edu or from:carolh@purdue.edu")))
+          (:name "Sent Items" :query "from:wang3294@purdue.edu" :key "s")
+          
+          (:name "Carol" :query "to:carolh@purdue.edu or from:carolh@purdue.edu" :key "c")))
 
-  ;; (setq notmuch-address-selection-function
-  ;;       (lambda (prompt collection initial-input)
-  ;;         (completing-read prompt (cons initial-input collection) nil t nil 'notmuch-address-history)))
+  (defun color-inbox-if-unread () (interactive)
+		 (save-excursion
+		   (goto-char (point-min))
+		   (let ((cnt (car (process-lines "notmuch" "count" "tag:inbox and tag:unread"))))
+			 (when (> (string-to-number cnt) 0)
+			   (save-excursion
+				 (when (search-forward "inbox" (point-max) t)
+				   (let* ((overlays (overlays-in (match-beginning 0) (match-end 0)))
+						  (overlay (car overlays)))
+					 (when overlay
+					   (overlay-put overlay 'face '((:inherit bold) (:foreground "green")))))))))))
+
+  (setq notmuch-address-selection-function
+        (lambda (prompt collection initial-input)
+          (completing-read prompt (cons initial-input collection) nil t nil 'notmuch-address-history)))
 
 
   (defun notmuch-show-tag-spam ()
@@ -90,21 +107,21 @@
           (notmuch-search-tag '("-spam"))
         (notmuch-search-tag '("+spam" "-unread" "-inbox")))))
 
+  (define-key notmuch-search-mode-map "t"
+    (lambda ()
+      "toggle deleted tag for thread"
+      (interactive)
+      (if (member "todo" (notmuch-search-get-tags))
+          (notmuch-search-tag '("-todo"))
+        (notmuch-search-tag '("+todo" "-unread" "-archive")))))
+
   (define-key notmuch-search-mode-map "n"
     (lambda ()
       "toggle deleted tag for thread"
       (interactive)
-      (if (member "todo/now" (notmuch-search-get-tags))
-          (notmuch-search-tag '("-todo/now"))
-        (notmuch-search-tag '("+todo/now" "-unread" "-todo/wait" "-archive")))))
-
-  (define-key notmuch-search-mode-map "w"
-    (lambda ()
-      "toggle deleted tag for thread"
-      (interactive)
-      (if (member "todo/wait" (notmuch-search-get-tags))
-          (notmuch-search-tag '("-todo/wait"))
-        (notmuch-search-tag '("+todo/wait" "-unread" "-todo/now" "-archive")))))
+      (if (member "next" (notmuch-search-get-tags))
+          (notmuch-search-tag '("-next"))
+        (notmuch-search-tag '("+next" "-unread" "-archive")))))
 
   (define-key notmuch-search-mode-map "y"
     (lambda ()

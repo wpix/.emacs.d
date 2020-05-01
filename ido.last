@@ -15,13 +15,14 @@
  ("/Users/" . "Ying/")
  ("/" . "Users/")
  ("/Users/Ying/.emacs.d/" . "lisp/")
- ("/Users/Ying/" . "org/")
+ ("/Users/Ying/" . ".config/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/Ying/org/wiki/"
  "/Users/Ying/.emacs.d/lisp/"
+ "/Users/Ying/.config/"
+ "/Users/Ying/org/wiki/"
  "/Users/Ying/org/techo/"
  "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/assignment-compile/"
  "/Users/Ying/org/bibliography/"
@@ -33,7 +34,6 @@
  "/Applications/Emacs.app/Contents/Resources/lisp/emacs-lisp/"
  "/Users/Ying/Documents/"
  "/Users/Ying/Downloads/"
- "/Users/Ying/.config/"
  "/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/working-org/"
  "/Users/Ying/Documents/Publications/ASEEs/2019 IGERT-india-PR/drafts/"
  "/Users/Ying/Documents/Publications/2019 Sn-MST/drafts/"
@@ -69,17 +69,19 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Ying/org/wiki/" (24226 28151 156590 503000) "B-mastering-emacs.org" "C-ene-theory-AB.org" "S-2020tms.org" "C-mtex-texture.org" "nameheader.txt" "L-french.org" "L-japanese.org" "C-ene-faculty-notes.org" "S-2019asee.org" "C-ene-theory.org" "C-ene-faculty.org" "S-2020box.org" ".DS_Store" "R-lab-log.org" "../" "./")
+ ("/Users/Ying/.emacs.d/lisp/" (24230 28815 485276 459000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "org-drill.el" "init-keybindings.el" "org-note.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" "init-ivy.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".DS_Store" "../" "./")
 
- ("/Users/Ying/org/" (24226 28613 481813 268000) "reveal.js/" ".git/" "bookmarks.org" "techo/" "bib/" "ABs/" ".gitignore" "org-roam.db" "wiki/" "notes.org" "archive/" ".DS_Store" "paper/" "../" "./")
+ ("/Users/Ying/.config/" (24229 22854 126954 719000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "menus/" "systemd/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "ocr.sh" "../" "./")
+
+ ("/Users/Ying/" (24229 21091 349667 84000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" "go/" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" "Databases/" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" ".orhc-bibtex-cache" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
+
+ ("/Users/Ying/org/wiki/" (24227 45688 308694 202000) "B-mastering-emacs.org" "L-linguist.org" "C-ene-theory-AB.org" "S-2020tms.org" "C-mtex-texture.org" "org-roam.db" "nameheader.txt" "C-ene-faculty-notes.org" "S-2019asee.org" "C-ene-theory.org" "C-ene-faculty.org" ".#L-linguist.org" "S-2020box.org" ".DS_Store" "R-lab-log.org" "../" "./")
+
+ ("/Users/Ying/org/" (24227 42963 339058 206000) "reveal.js/" ".git/" "bookmarks.org" "techo/" "bib/" "ABs/" ".gitignore" "org-roam.db" "wiki/" "notes.org" "archive/" ".DS_Store" "paper/" "../" "./")
 
  ("/Users/Ying/org/techo/" (24226 28627 58266 820000) "20200201" "motivator.org" "20190901.org" "20200101" "20200420" "20190801.org" "yearly.org" ".#habit.org" "2019_goal_example" "20190902" "20190601.org" "2019_acrhive" "habit.org" "fiction.org" ".DS_Store" "weekly.org" "monthly.org" "../" "./")
 
- ("/Users/Ying/" (24226 25352 979175 3000) ".zlogout" ".bnd2/" ".cmake/" ".bnd/" ".zlogin" ".npm-global/" ".bash_history" "jupyter/" "gems/" ".gitconfig" ".zcompdump.zwc" ".cache/" ".python_history" "Downloads/" ".BZG/" ".gem/" ".bash_profile" ".lacona-npm/" ".git/" ".rstudio-desktop/" ".newsrc-dribble" ".501879.padl" ".pyenv/" "Documents/" ".npm/" ".backups/" ".zprezto/" ".zcompdump" ".jupyter/" ".ipynb_checkpoints/" ".zoomus/" "config.log" ".Trash/" ".Rapp.history" "Dropbox/" ".profile" "Applications/" "Movies/" ".ssh/" "Users/" ".msmtprc" ".RData" ".cisco/" ".chunkwmrc" ".idlerc/" ".zshenv" ".hunspell_en_US" ".dropbox/" "Public/" ".mplayer/" "Google Drive/" ".DDPreview/" ".bash_sessions/" "Sites/" ".cups/" ".android/" ".elfeed/" ".nix-defexpr/" ".emacs.d/" ".msmtp.log" ".spyder-py3/" ".mbsyncrc" ".skhdrc" ".oracle_jre_usage/" ".globusonline/" "OneDrive - purdue.edu/" ".lesshst" ".mkshrc" ".matplotlib/" ".npmrc" "org-mode/" "Library/" ".zhistory" "Desktop/" ".rvm/" "plum/" ".ipython/" ".nix-profile/" ".rnd" ".bundle/" ".nvm/" ".qe-editor" ".authinfo" ".zprofile" ".notes" "Pictures/" "Gallery/" ".local/" "org/" ".zshrc" ".chunkwmrc~" ".cpanm/" ".bashrc" ".subversion/" ".wget-hsts" ".Rprofile" ".w3m/" ".CFUserTextEncoding" ".qloptions" "dotfiles/" "hugo/" ".gnupg/" ".emacs.keyfreq" ".DS_Store" "go/" ".notmuch-config" ".vim/" ".mail/" ".anyconnect" ".spyder/" ".chunkwm_plugins/" ".surfraw.conf" ".bash_profile-anaconda.bak" ".orhc-bibtex-cache" "Music/" ".config/" ".zpreztorc" ".Rhistory" ".s3cfg" ".nix-channels" "../" "./")
-
  ("/Users/Ying/.emacs.d/" (24226 21564 20111 126000) "company-statistics-cache.el" ".git/" "emojis/" "readme.org" "elpa/" "recentf" "site-lisp/" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "notes" "init.el" "url/" "auto-save-list/" "cnfonts/" "recentf~" "transient/" "pyim/" "projectile-bookmarks.eld" "ido.last~" "abbrev_defs" "eshell/" ".DS_Store" "lisp/" "ido.last" "snippets/" "misc/" "bbdb" "org-journal.cache" "../" "./")
-
- ("/Users/Ying/.emacs.d/lisp/" (24226 24045 548183 165000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "org-drill.el" "init-keybindings.el" "org-note.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" "init-ivy.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".#init-hai.el" ".DS_Store" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/assignment-compile/" (24225 52726 0 0) "biblatex-apa6/" "apa6/" "ene-theory-notes.org" "ene-theory-notes.pdf" "theory-ab.odt" "biblatex-apa/" "theory-ab.tex" ".#theory-ab 2.org" "TF ENE theory.png" "theory-ab.bbl" "theory-ab.org" ".DS_Store" "ene-theory-ab.bib" "theory-ab.pdf" "../" "./")
 
@@ -90,8 +92,6 @@
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/" (24222 21725 0 0) "2017 Kinetics of Materials/" "ene_phd_requirements_v2.pdf" "2017 Crystal defects & TEM.zip" "2019 ENE CAP/" "phd_requirements_v2_2-2.pdf" "2019 ENE Inquiry/" "2018 LCA/" "2019 Texture Seminars/" "2017 Dislocation Dynamics/" "2018 Deformation mechanisms /" "ENE offer letter.pdf" "2020 ENE Theories/" "textbooks/" "2017 Selected work from Cahn/" "2020 ENE Faculty/" "2019 ENE EduMethods in Eng/" ".DS_Store" "2019 Mentored Teaching/" "2017 MSE230 TA/" "2017 Defects in Solids/" "../" "./")
 
  ("/Users/Ying/Documents/Documents - Congying’s MacBook Pro/3 Courses/2020 ENE Theories/" (24222 21725 0 0) "vygotsky/" "major assignments/" "spatial & adaptive/" "dewey/" "engineering deisgn/" "APA/" "Learning-goals-plan.pdf" "ENE 505 Syllabus Spring 2020_v2_online only.pdf" "ENE 505 Syllabus Spring 2020_v1.pdf" "piaget/" ".DS_Store" "bruner/" "class discussion/" "assignment-compile/" "../" "./")
-
- ("/Users/Ying/.config/" (24222 33982 271029 620000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "neomutt/" "menus/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "../" "./")
 
  ("/Users/Ying/.emacs.d/elpa/org-noter-20191020.1212/" (24206 48005 515478 995000) "org-noter-autoloads.el" "org-noter.elc" "org-noter-pkg.el" "org-noter.el" "../" "./")
 

@@ -78,7 +78,7 @@
   (add-hook 'doom-modeline-mode-hook 'setup-custom-doom-modeline)
   (setq doom-modeline-buffer-file-name-style 'file-name
   		mode-line-percent-position nil
-		doom-modeline-vcs nil
+		doom-modeline-vcs-max-length 3
   		doom-modeline-major-mode-icon nil
   		doom-modeline-major-mode-color-icon nil
   		doom-modeline-buffer-state-icon nil
@@ -87,8 +87,8 @@
   		inhibit-compacting-font-caches t
         doom-modeline-continuous-word-count-modes 'org-mode
   		doom-modeline-indent-info nil
-  		doom-modeline-minor-modes t
-  		doom-modeline-buffer-encoding nil
+  		doom-modeline-minor-modes nil
+  		doom-modeline-buffer-encoding t
   		doom-modeline-checker-simple-format t
   		doom-modeline-lsp nil
   		doom-modeline-modal-icon nil
@@ -163,10 +163,13 @@
  '(deft-directory "~/org/" t)
  '(deft-recursive t t)
  '(deft-use-filter-string-for-filename t t)
+ '(ebib-file-associations (quote (("pdf") ("ps" . "gv"))))
+ '(ebib-keywords-file "ebib-keywords.txt")
+ '(ebib-notes-show-note-method nil)
+ '(ebib-timestamp-format " %Y-%m-%d")
  '(ibuffer-never-show-predicates (quote ("^\\\\*Messages" "^\\\\*Completions")) nil (ibuf-ext))
- '(org-agenda-files
-   (quote
-	("~/org/notes.org" "/Users/Ying/org/wiki/B-mastering-emacs.org" "/Users/Ying/org/wiki/C-ene-faculty-notes.org" "/Users/Ying/org/wiki/C-ene-faculty.org" "/Users/Ying/org/wiki/C-ene-theory-AB.org" "/Users/Ying/org/wiki/C-ene-theory.org" "/Users/Ying/org/wiki/C-mtex-texture.org" "/Users/Ying/org/wiki/L-french.org" "/Users/Ying/org/wiki/L-japanese.org" "/Users/Ying/org/wiki/R-lab-log.org" "/Users/Ying/org/wiki/S-2019asee.org" "/Users/Ying/org/wiki/S-2020box.org" "/Users/Ying/org/wiki/S-2020tms.org")))
+ '(org-agenda-block-separator nil)
+ '(org-agenda-files (quote ("~/org")))
  '(org-capture-templates
    (quote
 	(("c" "Contact" entry
@@ -185,6 +188,13 @@
  '(org-journal-file-type (quote daily))
  '(org-roam-directory "~/org/wiki/")
  '(org-roam-mode t nil (org-roam))
+ '(org-stuck-projects
+   (quote
+	("+LEVEL=2/-DONE"
+	 ("TODO" "NEXT")
+	 ("assignment")
+	 "")))
+ '(org-super-agenda-mode t)
  '(org-use-fast-todo-selection (quote expert))
  '(package-selected-packages
    (quote
@@ -528,12 +538,13 @@
  '(notmuch-tree-match-author-face ((t (:foreground "gray76"))))
  '(notmuch-tree-match-tag-face ((t (:foreground "plum"))))
  '(notmuch-wash-toggle-button ((t (:inherit font-lock-comment-face :foreground "selectedControlColor" :box (:line-width 1 :color "gray85" :style pressed-button)))))
- '(org-agenda-calendar-event ((t (:inherit default :underline "plum"))))
+ '(org-agenda-calendar-event ((t (:inherit default))))
  '(org-agenda-current-time ((t (:inherit org-time-grid :background "controlColor" :foreground "yellow"))))
- '(org-agenda-date ((t (:foreground "plum1" :underline nil))))
+ '(org-agenda-date ((t (:foreground "grey50" :underline nil :weight ultra-bold))))
  '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight semi-bold))))
  '(org-agenda-date-weekend ((t (:inherit org-agenda-date))))
  '(org-agenda-done ((t (:foreground "DarkOliveGreen3"))))
+ '(org-agenda-structure ((t (:foreground "MediumPurple1" :weight ultra-bold))))
  '(org-block ((t (:background "#373844" :foreground "gray70"))))
  '(org-block-begin-line ((t (:inherit org-meta-line :foreground "olive drab"))))
  '(org-block-end-line ((t (:inherit org-block-begin-line :foreground "olive drab"))))
@@ -555,8 +566,9 @@
  '(org-ref-cite-face ((t (:inherit org-link :foreground "gray50"))))
  '(org-ref-label-face ((t (:inherit org-link :foreground "light green"))))
  '(org-ref-ref-face ((t (:inherit org-link :foreground "orchid3"))))
- '(org-scheduled-today ((t (:foreground "LightGoldenrod2"))))
- '(org-tag ((t (:background "#373844" :foreground "sky blue" :weight normal))))
+ '(org-scheduled-previously ((t (:foreground "#DFDFDF" :weight semi-bold))))
+ '(org-scheduled-today ((t (:foreground "#bdcebe"))))
+ '(org-tag ((t (:background "#373844" :foreground "black" :weight normal :height 0.85 :width normal))))
  '(org-todo ((t (:background "#373844" :foreground "#ffb86c" :weight semi-bold))))
  '(org-warning ((t (:foreground "#ff79c6" :weight semi-bold))))
  '(popup-tip-face ((t (:background "gray20" :foreground "gray95"))))

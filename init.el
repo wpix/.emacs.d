@@ -59,8 +59,9 @@ locate PACKAGE."
 ;; (require 'org-protocol-capture-html)
 (require 'org)
 (require 'org-paper)
+(require 'org-drill)
 (require 'org-note)
-;(require 'org-drill)
+(require 'org-ebib)
 
 (require 'init-keybindings)
 (require 'init-spelling)

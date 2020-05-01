@@ -25,7 +25,9 @@
 
 (define-abbrev-table 'array-mode-abbrev-table '())
 
-(define-abbrev-table 'awk-mode-abbrev-table '())
+(define-abbrev-table 'awk-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'bbdb-mode-abbrev-table '())
 
@@ -37,9 +39,13 @@
 
 (define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
 
-(define-abbrev-table 'c++-mode-abbrev-table '())
+(define-abbrev-table 'c++-mode-abbrev-table
+  '(
+   ))
 
-(define-abbrev-table 'c-mode-abbrev-table '())
+(define-abbrev-table 'c-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'calc-trail-mode-abbrev-table '())
 
@@ -90,6 +96,14 @@
 (define-abbrev-table 'dsssl-mode-abbrev-table '())
 
 (define-abbrev-table 'easy-hugo-mode-abbrev-table '())
+
+(define-abbrev-table 'ebib-entry-mode-abbrev-table '())
+
+(define-abbrev-table 'ebib-index-mode-abbrev-table '())
+
+(define-abbrev-table 'ebib-log-mode-abbrev-table '())
+
+(define-abbrev-table 'ebib-strings-mode-abbrev-table '())
 
 (define-abbrev-table 'edebug-eval-mode-abbrev-table '())
 
@@ -224,6 +238,7 @@
     ("asnwer" "answer" nil 0)
     ("assignemnts" "assignments" nil 3)
     ("assisstant" "assistant" nil 1)
+    ("atleast" "at least" nil 0)
     ("atomistic" "atomistic" nil 1)
     ("auhtors" "authors" nil 0)
     ("automative" "automative" nil 0)
@@ -252,9 +267,9 @@
     ("bwtween" "between" nil 0)
     ("caiculated" "calculated" nil 0)
     ("callee" "caller" nil 0)
-    ("cancelled" "CANCELED" nil 0)
+    ("cancelled" "CANCELED" nil 1)
     ("causalation" "causalation" nil 0)
-    ("challengies" "challenges" nil 7)
+    ("challengies" "challenges" nil 8)
     ("chapracterizable" "characterization" nil 0)
     ("characerization" "characterization" nil 0)
     ("charactarized" "characterized" nil 0)
@@ -317,7 +332,7 @@
     ("crossman" "Crossman" nil 1)
     ("culoum" "culoum" nil 0)
     ("cultture" "culture" nil 0)
-    ("defaul" "default" nil 0)
+    ("defaul" "default" nil 1)
     ("defcts" "defects" nil 0)
     ("deformatin" "deformation" nil 1)
     ("defromation" "deformation" nil 1)
@@ -358,7 +373,7 @@
     ("doesnt" "doesn't" nil 4)
     ("doifferent" "different" nil 0)
     ("dominanted" "dominated" nil 0)
-    ("dont" "don't" nil 14)
+    ("dont" "don't" nil 15)
     ("dur" "due" nil 4)
     ("ealrier" "earlier" nil 0)
     ("easist" "easiest" nil 0)
@@ -389,7 +404,7 @@
     ("enery" "energy" nil 0)
     ("engery" "energy" nil 0)
     ("engineerings" "engineering" nil 0)
-    ("enginerring" "engineering" nil 0)
+    ("enginerring" "engineering" nil 1)
     ("english" "English" nil 0)
     ("enought" "enough" nil 0)
     ("entrership" "entrership" nil 0)
@@ -434,7 +449,7 @@
     ("framewrok" "Framework" nil 0)
     ("freamework" "framework" nil 0)
     ("freamwork" "framework" nil 0)
-    ("friday" "Friday" nil 5)
+    ("friday" "Friday" nil 6)
     ("fundation" "Foundation" nil 0)
     ("fundations" "Foundations" nil 0)
     ("funtional" "functional" nil 0)
@@ -482,6 +497,7 @@
     ("inerlinked" "interlinked" nil 0)
     ("informaiton" "information" nil 1)
     ("ingibited" "inhibited" nil 0)
+    ("inhisical" "inhisical" nil 0)
     ("insited" "insisted" nil 0)
     ("insteaf" "instead" nil 0)
     ("institudes" "institutes" nil 2)
@@ -517,8 +533,8 @@
     ("ipad" "ipad" nil 0)
     ("itnercultural" "intercultural" nil 0)
     ("itnerviewees" "interviewees" nil 0)
-    ("ive" "I've" nil 5)
-    ("japanese" "Japanese" nil 0)
+    ("ive" "I've" nil 6)
+    ("japanese" "Japanese" nil 4)
     ("jounral" "journal" nil 7)
     ("jounrals" "journals" nil 1)
     ("jounrnal" "Journal" nil 0)
@@ -529,8 +545,9 @@
     ("latested" "latested" nil 0)
     ("leaners" "learners" nil 0)
     ("learend" "learned" nil 0)
-    ("learnig" "learning" nil 0)
+    ("learnig" "learning" nil 1)
     ("leat" "least" nil 0)
+    ("legistic" "legistic" nil 0)
     ("litaraure" "literature" nil 0)
     ("literatre" "literature" nil 0)
     ("loadings" "loading" nil 0)
@@ -562,7 +579,7 @@
     ("miorientation" "misorientation" nil 1)
     ("misoreintation" "misorientation" nil 0)
     ("mmotivation" "motivation" nil 0)
-    ("monday" "Monday" nil 6)
+    ("monday" "Monday" nil 10)
     ("morophlogy" "Morphology" nil 0)
     ("moterm" "moterm" nil 0)
     ("motications" "motivations" nil 0)
@@ -606,7 +623,9 @@
     ("perferential" "Preferential" nil 0)
     ("perfoemance" "performance" nil 0)
     ("perpencity" "perpencity" nil 0)
+    ("perspetives" "perspectives" nil 0)
     ("perspextives" "perspectives" nil 0)
+    ("persprctives" "perspectives" nil 0)
     ("phisically" "physically" nil 0)
     ("pineer" "pioneer" nil 0)
     ("pjysical" "physical" nil 0)
@@ -616,7 +635,7 @@
     ("polycrystalline" "polycrystalline" nil 0)
     ("polysrystalline" "crystalline" nil 0)
     ("populatio" "population" nil 0)
-    ("portofolio" "portfolio" nil 0)
+    ("portofolio" "portfolio" nil 1)
     ("positionality" "Positionality" nil 0)
     ("potentail" "potential" nil 1)
     ("potental" "potential" nil 0)
@@ -639,6 +658,7 @@
     ("profesisonals" "professionals" nil 0)
     ("pronounciation" "pronunciation" nil 0)
     ("prople" "propel" nil 0)
+    ("prosessional" "professional" nil 0)
     ("provess" "process" nil 1)
     ("pur" "Our" nil 0)
     ("qeuilibration" "qeuilibration" nil 0)
@@ -657,7 +677,7 @@
     ("reewing" "reewing" nil 0)
     ("refered" "refereed" nil 1)
     ("regidly" "rigidly" nil 0)
-    ("registratio" "registration" nil 0)
+    ("registratio" "registration" nil 1)
     ("reivew" "review" nil 2)
     ("relacation" "relaxation" nil 4)
     ("relaitonships" "relationships" nil 0)
@@ -677,6 +697,7 @@
     ("resiliene" "resilience" nil 0)
     ("reson" "reason" nil 0)
     ("responsed" "responded" nil 0)
+    ("responsing" "responding" nil 0)
     ("retailors" "retailers" nil 0)
     ("reviwing" "reviewing" nil 0)
     ("ridicuous" "ridiculous" nil 0)
@@ -697,8 +718,11 @@
     ("shalloa" "shallow" nil 0)
     ("shcedule" "schedule" nil 0)
     ("shooted" "shooted" nil 0)
+    ("shouldnt" "shouldn't" nil 0)
+    ("shouldve" "should've" nil 1)
     ("shouls" "should" nil 0)
     ("shrinked" "shrieked" nil 2)
+    ("sicences" "sciences" nil 1)
     ("signiture" "signature" nil 0)
     ("signiﬁcant" "significant" nil 0)
     ("similarily" "similarly" nil 3)
@@ -706,7 +730,7 @@
     ("simutaneously" "simultaneously" nil 0)
     ("smplicity" "simplicity" nil 0)
     ("sociometric" "sociometric" nil 0)
-    ("softwares" "software" nil 0)
+    ("softwares" "software" nil 1)
     ("sometiems" "sometimes" nil 0)
     ("sophiscated" "sophisticated" nil 0)
     ("spatical" "spatial" nil 3)
@@ -749,11 +773,10 @@
     ("teh" "the" nil 2)
     ("temparature" "temperature" nil 1)
     ("termiology" "terminology" nil 0)
-    ("z" "the" nil 21)
     ("theeir" "their" nil 1)
     ("themal" "thermal" nil 3)
     ("theoreical" "theoretical" nil 0)
-    ("theoretical" "Theoretical" nil 0)
+    ("theoretical" "Theoretical" nil 1)
     ("theoy" "theory" nil 0)
     ("theral" "thermal" nil 0)
     ("theraml" "thermal" nil 0)
@@ -790,7 +813,7 @@
     ("tremedously" "tremendously" nil 0)
     ("triplle" "triple" nil 0)
     ("tuesdat" "Tuesday" nil 0)
-    ("tuesday" "Tuesday" nil 3)
+    ("tuesday" "Tuesday" nil 5)
     ("tules" "rules" nil 0)
     ("turists" "tourists" nil 0)
     ("twmperature" "temperature" nil 0)
@@ -822,7 +845,7 @@
     ("wasnt" "wasn't" nil 1)
     ("webex" "Web Ex" nil 0)
     ("wede" "wede" nil 0)
-    ("wednesday" "Wednesday" nil 6)
+    ("wednesday" "Wednesday" nil 7)
     ("wenesday" "Wednesday" nil 0)
     ("whatelse" "what else" nil 0)
     ("whikser" "whisker" nil 0)
@@ -836,6 +859,8 @@
     ("wrokshop" "workshop" nil 0)
     ("yelds" "yields" nil 0)
     ("youre" "you're" nil 0)
+    ("youve" "you've" nil 0)
+    ("z" "the" nil 21)
     ("ﬁlms" "ﬁlms" nil 0)
    ))
 
@@ -895,7 +920,9 @@
 
 (define-abbrev-table 'ivy-occur-mode-abbrev-table '())
 
-(define-abbrev-table 'java-mode-abbrev-table '())
+(define-abbrev-table 'java-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'js-jsx-mode-abbrev-table '())
 
@@ -973,7 +1000,9 @@
 
 (define-abbrev-table 'nxml-mode-abbrev-table '())
 
-(define-abbrev-table 'objc-mode-abbrev-table '())
+(define-abbrev-table 'objc-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -989,7 +1018,11 @@
 
 (define-abbrev-table 'org-journal-search-mode-abbrev-table '())
 
+(define-abbrev-table 'org-lint--report-mode-abbrev-table '())
+
 (define-abbrev-table 'org-mode-abbrev-table '())
+
+(define-abbrev-table 'osx-dictionary-mode-abbrev-table '())
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
 
@@ -1001,7 +1034,9 @@
 
 (define-abbrev-table 'pdf-outline-buffer-mode-abbrev-table '())
 
-(define-abbrev-table 'pike-mode-abbrev-table '())
+(define-abbrev-table 'pike-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'plain-tex-mode-abbrev-table '())
 

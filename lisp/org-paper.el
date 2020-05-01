@@ -1,11 +1,10 @@
+(require 'org-ref)
 ;;======================== Org-ref setting ===========================
 (use-package org-ref
   :ensure t
   :after org
   :init
   ;;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
-  (setq org-ref-default-citation-link "cite"
-        bibtex-dialect 'bibtex)
   (add-hook 'org-ref-clean-bibtex-entry-hook 'org-ref-replace-nonascii)
   :config
   (require 'doi-utils)
@@ -17,7 +16,7 @@
                                         ;(require 'org-ref-pubmed)
                                         ;(require 'org-ref-arxiv)
                                         ;(require 'org-ref-sci-id)
-  (setq org-ref-completion-library 'org-ref-ivy-cite
+  (setq org-ref-completion-library 'org-ref-helm-cite
         org-ref-show-citation-on-enter nil
         org-ref-show-broken-links t
         org-latex-prefer-user-labels t)
@@ -62,6 +61,7 @@
   )
 
 ;;==================== l a t e x ========================
+(require 'ox-latex)
 (setq org-latex-pdf-process
       '("pdflatex -interaction nonstopmode -output-directory %o %f"
         "bibtex %b"
@@ -77,75 +77,43 @@
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
 
-;; letter class, for formal letters
-(add-to-list 'org-export-latex-classes
-  '("letter"
-     "\\documentclass[10pt]{letter}\n
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{color}"
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-(add-to-list 'org-export-latex-classes
- ;; beamer class, for presentations
-  '("beamer"
-     "\\documentclass[10pt]{beamer}\n
-      \\mode<{{{beamermode}}}>\n
-      \\usetheme{{{{beamertheme}}}}\n
-      \\usecolortheme{{{{beamercolortheme}}}}\n
-      \\beamertemplateballitem\n
-      \\setbeameroption{show notes}
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{hyperref}\n
-      \\usepackage{color}
-      \\usepackage{listings}
-      \\lstset{numbers=none,language=[ISO]C++,tabsize=4,
-  frame=single,
-  basicstyle=\\small,
-  showspaces=false,showstringspaces=false,
-  showtabs=false,
-  keywordstyle=\\color{blue}\\bfseries,
-  commentstyle=\\color{red},
-  }\n
-      \\usepackage{verbatim}\n
-      \\institute{{{{beamerinstitute}}}}\n          
-       \\subject{{{{beamersubject}}}}\n"
-
-     ("\\section{%s}" . "\\section*{%s}")
-     
-     ("\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}"
-       "\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}")))
-
-(add-to-list 'org-latex-classes
-             '("koma-article"
-               "\\documentclass{scrartcl}
+(with-eval-after-load "ox-latex"
+  (add-to-list 'org-latex-classes
+               '(("article" "\\documentclass{scrartcl}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+	       ("beamer"
+		"\\documentclass\[presentation\]\{beamer\}"
+		("\\section\{%s\}" . "\\section*\{%s\}")
+		("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+		("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}"))
+	       ("apa6"
+		"\\documentclass{apa6}"
+		("\\section{%s}" . "\\section*{%s}")
+		("\\subsection{%s}" . "\\subsection*{%s}")
+		("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+		("\\paragraph{%s}" . "\\paragraph*{%s}")
+		("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+	       ("koma-article" 
+		"\\documentclass{scrartcl}
                 \\usepackage{microtype}
                 \\usepackage{tgtermes}
                 \\usepackage[scale=.9]{tgheros}
                 \\usepackage{tgcursor}
                 \\usepackage{paralist}
                 \\newcommand{\\rc}{$^{14}C$}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+		("\\section{%s}" . "\\section*{%s}")
+		("\\subsection{%s}" . "\\subsection*{%s}")
+		("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+		("\\paragraph{%s}" . "\\paragraph*{%s}")
+		("\\subparagraph{%s}" . "\\subparagraph*{%s}")))))
 
-(add-to-list 'org-latex-classes
-			 '("apa6"
-			   "\\documentclass{apa6}"
-			   ("\\section{%s}" . "\\section*{%s}")
-			   ("\\subsection{%s}" . "\\subsection*{%s}")
-			   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-			   ("\\paragraph{%s}" . "\\paragraph*{%s}")
-			   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+
+
 
 ;;=================== org pandoc ====================================
 ;; https://kitchingroup.cheme.cmu.edu/blog/2015/06/11/ox-pandoc-org-mode-+-org-ref-to-docx-with-bibliographies/

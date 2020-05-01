@@ -20,13 +20,12 @@
 (setq org-default-notes-file "~/org/notes.org")
 
 ; Set default column view headings: Task Effort Clock_Summary
-(setq org-columns-default-format "%50ITEM(Task) %10Effort(Effort){:} %10CLOCKSUM %16TIMESTAMP_IA")
+(setq org-columns-default-format "%50ITEM %20TAGS %10PRIORITY %20TODO")
 
 
 ;;================ todo  ======================
 (setq org-todo-keywords
       '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "|" "DONE(d)")
-		(sequence "RESISTANCE(r)" "MOTIVATOR(m)")
 		(sequence "WAITING(w@/!)" "INACTIVE(i)" "SOMEDAY(s)" "|" "CANCELLED(c@/!)")))
 
 (setq org-todo-keyword-faces
@@ -34,8 +33,8 @@
         ("NEXT" :foreground "sky blue" :weight bold)
         ("PROJ" :foreground "yellow" :weight bold)
         ("DONE" :foreground "forest green" :weight bold)
-        ("RESISTANCE" :foreground "#bdcebe" :weight bold)
-        ("MOTIVATOR" :foreground "#eca1a6" :weight bold)
+        ;; ("HABIT" :foreground "#bdcebe" :weight bold)
+        ;; ("MOTIVATOR" :foreground "#eca1a6" :weight bold)
         ("WAITING" :foreground "#5C888B" :weight bold)
         ("INACTIVE" :foreground "gray50" :weight bold)
         ("SOMEDAY" :foreground "#ada397" :weight bold)
@@ -47,27 +46,87 @@
   (mapcar #'(lambda (c) (if (equal c ?\[) ?\( (if (equal c ?\]) ?\) c))) string-to-transform)))
 
 (setq org-capture-templates
-      '(("t" "todo" entry (file+headline org-default-notes-file "Task")
+      '(("c" "clocknow" entry (file+headline org-default-notes-file "Task")
 	  "* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
-	 ("o" "inbox" entry (file+headkube org-default-notes-file "Inbox")
-	  "* %?\n%u")
 	 ("m" "Minutes" entry (file org-default-notes-file)
-	  "* Meeting with %? :MEETING:\n" :clock-in t :clock-resume t)
+	  "* Meeting with %? :meeting:\n" :clock-in t :clock-resume t)
 	 ;; ("l" "Lab" entry (file "~/org/lab-log.org")
 	 ;;  "* %? :IDEA: \n%u" :clock-in t :clock-resume t)
-	 ("n" "Next Task" entry (file+headline org-default-notes-file)
-	  "** NEXT %? \nDEADLINE: %t")
+	 ("j" "Journal" entry (file+olp+datetree "~/org/monthly.org") "* %?" :tree-type week)
 	 ("w" "Web site" entry (file+olp "~/org/notes.org" "Web")
  "* %c :website:\n%U %?%:initial")
 	 ))
 
 
 
-
   ;;============= a g e n d a ===================
-(setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
-(setq org-agenda-files '("~/org"))
-(setq org-deadline-warning-days 10)
+(setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'"
+      org-agenda-files '("~/org/"))
+
+;; (load-library "find-lisp")
+;; (setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))
+
+
+;;https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
+;;https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
+(setq org-agenda-custom-commands
+      '(("p" "Persona Y"
+         ((tags "PRIORITY=\"A\""
+                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 (org-agenda-overriding-header "Velvet Room:"))
+				)
+          (agenda "" ((org-agenda-span 3))
+				  (org-deadline-warning-days 7)
+				  (org-agenda-time-grid t)
+				  (org-agenda-start-on-weekday nil)
+				  )
+          (todo "TODO"
+                   ((org-agenda-skip-function
+					 '(or (air-org-skip-subtree-if-priority ?A)
+						  (air-org-skip-subtree-if-habit)
+                          (org-agenda-skip-if nil '(scheduled deadline))))
+                    (org-agenda-overriding-header "Tartarus:"))
+				   )
+		  (alltodo ""
+                   ((org-agenda-skip-function
+					 '(or (air-org-skip-subtree-if-priority ?A)
+						  (org-agenda-skip-entry-if 'todo 'done)
+                          (org-agenda-skip-if nil '(scheduled deadline))))
+                    (org-agenda-overriding-header "Midnight Chanel:"))
+				   )
+		  ))
+		("w" "Weekly Review"
+         ((agenda "" ((org-agenda-span 7))); review upcoming deadlines and appointments
+										; type "l" in the agenda to review logged items 
+          (stuck "") ; review stuck projects as designated by org-stuck-projects
+          (todo "PROJ") ; review all projects (assuming you use todo keywords to designate projects)
+          (todo "MAYBE") ; review someday/maybe items
+          (todo "WAITING")
+		  )) ; review waiting items
+         ;; ...other commands here
+		))
+
+(defun air-org-skip-subtree-if-habit ()
+  "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
+  (let ((subtree-end (save-excursion (org-end-of-subtree t))))
+    (if (string= (org-entry-get nil "STYLE") "habit")
+        subtree-end
+      nil)))
+
+(defun air-org-skip-subtree-if-priority (priority)
+  "Skip an agenda subtree if it has a priority of PRIORITY.
+PRIORITY may be one of the characters ?A, ?B, or ?C."
+  (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+        (pri-value (* 1000 (- org-lowest-priority priority)))
+        (pri-current (org-get-priority (thing-at-point 'line t))))
+    (if (= pri-value pri-current)
+        subtree-end
+      nil)))
+
+(setq org-agenda-window-setup 'current-window
+	  org-deadline-warning-days 7
+	  org-agenda-structural-header nil)
+
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
