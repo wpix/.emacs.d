@@ -57,7 +57,7 @@ locate PACKAGE."
 ;; (require 'org-protocol)
 ;; (require 's)
 ;; (require 'org-protocol-capture-html)
-(require 'org)
+(require 'org-default)
 (require 'org-paper)
 (require 'org-drill)
 (require 'org-note)

@@ -3,7 +3,7 @@
       :hook
       (after-init . org-roam-mode)
       :custom
-      (org-roam-directory "~/org")
+      (org-roam-directory "~/Dropbox/y/org/wiki/")
       :bind (:map org-roam-mode-map
               (("C-c n r" . org-roam)
                ("C-c n f" . org-roam-find-file)
@@ -12,7 +12,30 @@
               :map org-mode-map
               (("C-c n i" . org-roam-insert)))
       :config
-      (setq org-roam-link-title-format "R:%s")
+	  (setq org-roam-capture-templates
+			'(("d" "default" plain #'org-roam--capture-get-point "%?"
+		 :file-name "%<%Y%m%d>-${slug}"
+		 :head "#+TITLE: ${title}"
+		 :unnarrowed t)))
+      (setq org-roam-link-title-format "%s")
+	  (defun my/org-roam--backlinks-list (file)
+		(if (org-roam--org-roam-file-p file)
+			(--reduce-from
+			 (concat acc (format "- [[file:%s][↩%s]]\n"
+								 (file-relative-name (car it) org-roam-directory)
+                                 (org-roam--get-title-or-slug (car it))))
+			 "" (org-roam-db-query [:select [from] :from links :where (= to $s1)] file))
+		  ""))
+
+	  (defun my/org-export-preprocessor (backend)
+		(let ((links (my/org-roam--backlinks-list (buffer-file-name))))
+		  (unless (string= links "")
+			(save-excursion
+			  (goto-char (point-max))
+			  (insert (concat "\n* Backlinks\n") links)))))
+
+	  (add-hook 'org-export-before-processing-hook 'my/org-export-preprocessor)
+
       (use-package company-org-roam
         :config (push 'company-org-roam company-backends)))
 
@@ -25,7 +48,7 @@
   (deft-recursive t)
   (deft-use-filter-string-for-filename t)
   (deft-default-extension "org")
-  (deft-directory "~/org/"))
+  (deft-directory "~/Dropbox/y/org/wiki/"))
 
 (global-set-key (kbd "C-x C-g") 'deft-find-file)
 
@@ -105,7 +128,7 @@
 ;; (pdf-tools-install)
 
 (use-package org-pdftools
-  :init (setq org-pdftools-root-dir "~/Documents/Bookends/Attachment"
+  :init (setq org-pdftools-root-dir "~/Dropbox/y/library"
                 org-pdftools-search-string-separator "??")
   :after org
   :config
@@ -119,16 +142,20 @@
 ;; (use-package org-noter-pdftools
 ;;   :after org-noter)
 
-;;========================o r g j o u r n a l ==============================
-;; (use-package org-journal
-;;   :bind
-;;   ("C-c n j" . org-journal-new-entry)
-;;   :custom
-;;   (org-journal-date-prefix "#+TITLE: ")
-;;   (org-journal-file-format "%Y-%m-%d.org")
-;;   (org-journal-dir "~/org/wiki/")
-;;   (org-journal-file-type 'daily)
-;;   (org-journal-date-format "%A, %d %B %Y"))
+
+;;================= comment exporter ================
+;; remove comments from org document for use with export hook
+;; https://emacs.stackexchange.com/questions/22574/orgmode-export-how-to-prevent-a-new-line-for-comment-lines
+(defun delete-org-comments (backend)
+  (loop for comment in (reverse (org-element-map (org-element-parse-buffer)
+                    'comment 'identity))
+    do
+    (setf (buffer-substring (org-element-property :begin comment)
+                (org-element-property :end comment))
+          "")))
+
+;; add to export hook
+(add-hook 'org-export-before-processing-hook 'delete-org-comments)
 
 
 (provide 'org-note)

@@ -2,9 +2,7 @@
 ;;                     e l f e e d
 ;;========================================================
 (setq elfeed-feeds
-      '(("https://irreal.org/blog/?feed=rss2" emacs)
-        ("https://www.ying-ish.com/index.xml" me)
-        ("https://mini.ying-ish.com/index.xml" photo)
+      '(
         ("https://patthomson.net/feed/" writing academic)
         ("https://www.rousette.org.uk/index.xml" people academic)
         ("https://blindwith.science/index.xml" people chinese)
@@ -170,18 +168,19 @@
 ;;                     h u g o
 ;;========================================================
 (use-package easy-hugo
-  :config
+  :init
   (setq easy-hugo-default-ext ".org"
         easy-hugo-server-flags "-D")
+  (setq easy-hugo-basedir "~/hugo/swnsa/"
+        easy-hugo-url "http://ying-ish.com"
+        easy-hugo-postdir "content/essay/")
+	  
   (setq easy-hugo-bloglist
-	;; blog
-      '(((easy-hugo-basedir . "~/hugo/swnsa/")
-         (easy-hugo-url . "http://ying-ish.com")
-         (easy-hugo-postdir "content/essay/"))
 	;; blog2 for photos
-        ((easy-hugo-basedir . "~/hugo/mini/")
-         (easy-hugo-url . "https://mini.ying-ish.com")
-         (easy-hugo-postdir "content/photo/")))))
+        '(((easy-hugo-basedir . "~/hugo/mini/")
+		  (easy-hugo-url . "https://ying-ish.com")
+		  (easy-hugo-sshdomain . "mini")
+		  (easy-hugo-postdir . "content/post/")))))
 
 ;;========================================================
 ;;                w 3 m b r o w s e r

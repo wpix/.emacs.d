@@ -56,12 +56,12 @@
 ;;                     t h e m e s
 ;;========================================================
 ;;themes and fonts
-(display-time-mode 0)
+(display-time-mode 1)
 (use-package doom-themes
-  :config
+  :init
   ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (setq doom-themes-enable-bold t    ;if nil, bold is universally disabled
+        doom-themes-enable-italic t);if nil, italics is universally disabled
   (load-theme 'doom-one t)
   (doom-themes-org-config))
 ;;(load-theme 'dracula t)
@@ -98,6 +98,9 @@
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
+
+;;set org faces
+(setq org-tags-column 0)
 ;;========================================================
 ;;                     f o n t
 ;;========================================================
@@ -163,13 +166,19 @@
  '(deft-directory "~/org/" t)
  '(deft-recursive t t)
  '(deft-use-filter-string-for-filename t t)
+ '(ebib-citation-commands
+   (quote
+	((any
+	  (("cite" "\\cite%<[%A]%>{%K}")))
+	 (org-mode
+	  (("orgcite" "[[cite:%K][%A;%A]]"))))))
  '(ebib-file-associations (quote (("pdf") ("ps" . "gv"))))
  '(ebib-keywords-file "ebib-keywords.txt")
  '(ebib-notes-show-note-method nil)
  '(ebib-timestamp-format " %Y-%m-%d")
  '(ibuffer-never-show-predicates (quote ("^\\\\*Messages" "^\\\\*Completions")) nil (ibuf-ext))
  '(org-agenda-block-separator nil)
- '(org-agenda-files (quote ("~/org")))
+ '(org-agenda-files (quote ("\"~/Dropbox/y/org\"")))
  '(org-capture-templates
    (quote
 	(("c" "Contact" entry
@@ -181,12 +190,13 @@
 :COMPANY: %^{COMPANY}
 :END:" :empty-lines 1))))
  '(org-contacts-files (quote ("~/org/archive/contacts.org")))
+ '(org-directory "~/Dropbox/y/org")
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-date-prefix "#+TITLE: ")
  '(org-journal-dir "~/org/wiki/")
  '(org-journal-file-format "%Y-%m-%d.org")
  '(org-journal-file-type (quote daily))
- '(org-roam-directory "~/org/wiki/")
+ '(org-roam-directory "~/Dropbox/y/org/wiki/")
  '(org-roam-mode t nil (org-roam))
  '(org-stuck-projects
    (quote
@@ -553,19 +563,20 @@
  '(org-document-title ((t (:foreground "#ffb86c" :weight semi-bold :height 1.3))))
  '(org-drawer ((t (:foreground "unemphasizedSelectedTextBackgroundColor"))))
  '(org-footnote ((t (:foreground "MediumPurple4"))))
- '(org-level-1 ((t (:inherit bold :foreground "orchid" :height 1.2))))
+ '(org-level-1 ((t (:inherit bold :foreground "orchid" :height 1.1))))
  '(org-level-2 ((t (:inherit bold :foreground "plum" :height 1.1))))
  '(org-level-3 ((t (:foreground "#bd93f9" :weight normal :height 1.05))))
- '(org-level-4 ((t (:foreground "#F1C1C1" :weight normal))))
- '(org-level-5 ((t (:foreground "#ffb86c" :weight normal))))
- '(org-level-6 ((t (:foreground "sienna1" :weight normal))))
- '(org-link ((t (:foreground "#bdcebe" :box (:line-width 1 :color "gray50" :style pressed-button) :underline nil))))
+ '(org-level-4 ((t (:foreground "orchid1" :weight normal))))
+ '(org-level-5 ((t (:foreground "plum" :weight normal))))
+ '(org-level-6 ((t (:foreground "MediumPurple1" :weight normal))))
+ '(org-link ((t (:inherit link))))
  '(org-list-dt ((t (:weight semi-bold))))
  '(org-quote ((t (:inherit org-tag :foreground "lavender"))))
  '(org-ref-acronym-face ((t (:inherit org-link :foreground "thistle1"))))
  '(org-ref-cite-face ((t (:inherit org-link :foreground "gray50"))))
  '(org-ref-label-face ((t (:inherit org-link :foreground "light green"))))
  '(org-ref-ref-face ((t (:inherit org-link :foreground "orchid3"))))
+ '(org-roam-link ((t (:inherit org-link))))
  '(org-scheduled-previously ((t (:foreground "#DFDFDF" :weight semi-bold))))
  '(org-scheduled-today ((t (:foreground "#bdcebe"))))
  '(org-tag ((t (:background "#373844" :foreground "black" :weight normal :height 0.85 :width normal))))

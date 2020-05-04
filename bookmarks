@@ -50,7 +50,7 @@
  (handler . bookmark-w3m-bookmark-jump))
 ("org-capture-last-stored"
  (filename . "~/org/monthly.org")
- (front-context-string . "**** W17 review ")
- (rear-context-string . "erence options \n")
- (position . 1095))
+ (front-context-string . "**** cancel drop")
+ (rear-context-string . "20-05-01 Friday\n")
+ (position . 5249))
 )

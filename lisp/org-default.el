@@ -6,6 +6,7 @@
 ;(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 
 (require 'org)
+(require 'org-habit)
 (require 'org-loaddefs)
 (require 'ox-extra)
 (with-eval-after-load 'org       
@@ -16,8 +17,8 @@
 
 ;;===================== Org-TODO/Capture setting ===================
 
-(setq org-directory "~/org")
-(setq org-default-notes-file "~/org/notes.org")
+(setq org-directory "~/Dropbox/y/org")
+(setq org-default-notes-file "~/Dropbox/y/org/notes.org")
 
 ; Set default column view headings: Task Effort Clock_Summary
 (setq org-columns-default-format "%50ITEM %20TAGS %10PRIORITY %20TODO")
@@ -48,12 +49,15 @@
 (setq org-capture-templates
       '(("c" "clocknow" entry (file+headline org-default-notes-file "Task")
 	  "* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
-	 ("m" "Minutes" entry (file org-default-notes-file)
+		("d" "default" plain (function org-roam--capture-get-point)
+		 "%?"
+		 :file-name "%(format-time-string \"%Y-%m-%d--${slug}\" (current-time) t)"
+		 :head "#+TITLE: ${title}\n"
+		 :unnarrowed t)
+		("m" "Minutes" entry (file org-default-notes-file)
 	  "* Meeting with %? :meeting:\n" :clock-in t :clock-resume t)
-	 ;; ("l" "Lab" entry (file "~/org/lab-log.org")
-	 ;;  "* %? :IDEA: \n%u" :clock-in t :clock-resume t)
-	 ("j" "Journal" entry (file+olp+datetree "~/org/monthly.org") "* %?" :tree-type week)
-	 ("w" "Web site" entry (file+olp "~/org/notes.org" "Web")
+	 ("j" "Journal" entry (file+olp+datetree "~/Dropbox/y/org/monthly.org") "* %?" :tree-type week)
+	 ("w" "Web site" entry (file+olp "~/Dropbox/y/org/notes.org" "Web")
  "* %c :website:\n%U %?%:initial")
 	 ))
 
@@ -61,7 +65,7 @@
 
   ;;============= a g e n d a ===================
 (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'"
-      org-agenda-files '("~/org/"))
+      org-agenda-files '("~/Dropbox/y/org/"))
 
 ;; (load-library "find-lisp")
 ;; (setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))
@@ -76,8 +80,8 @@
                  (org-agenda-overriding-header "Velvet Room:"))
 				)
           (agenda "" ((org-agenda-span 3))
-				  (org-deadline-warning-days 7)
-				  (org-agenda-time-grid t)
+				  (org-agenda-skip-function
+				   '(air-org-skip-subtree-if-habit))
 				  (org-agenda-start-on-weekday nil)
 				  )
           (todo "TODO"
@@ -85,26 +89,28 @@
 					 '(or (air-org-skip-subtree-if-priority ?A)
 						  (air-org-skip-subtree-if-habit)
                           (org-agenda-skip-if nil '(scheduled deadline))))
-                    (org-agenda-overriding-header "Tartarus:"))
+                    (org-agenda-overriding-header "Midnight Channel:"))
 				   )
-		  (alltodo ""
-                   ((org-agenda-skip-function
-					 '(or (air-org-skip-subtree-if-priority ?A)
-						  (org-agenda-skip-entry-if 'todo 'done)
-                          (org-agenda-skip-if nil '(scheduled deadline))))
-                    (org-agenda-overriding-header "Midnight Chanel:"))
-				   )
+		  ;; (alltodo ""
+          ;;          ((org-agenda-skip-function
+		  ;; 			 '(or (air-org-skip-subtree-if-priority ?A)
+		  ;; 				  (org-agenda-skip-entry-if 'todo 'done)
+          ;;                 (org-agenda-skip-if nil '(scheduled deadline))))
+          ;;           (org-agenda-overriding-header "Midnight Chanel:"))
+		  ;; 		   )
 		  ))
-		("w" "Weekly Review"
+		("w" "Idle & Habit view"
          ((agenda "" ((org-agenda-span 7))); review upcoming deadlines and appointments
-										; type "l" in the agenda to review logged items 
-          (stuck "") ; review stuck projects as designated by org-stuck-projects
-          (todo "PROJ") ; review all projects (assuming you use todo keywords to designate projects)
-          (todo "MAYBE") ; review someday/maybe items
-          (todo "WAITING")
+
+		  (stuck "") ; review stuck projects as designated by org-stuck-projects
+          (todo "SOMEDAY") ; review someday/maybe items
+		  (todo "INACTIVE")
+		  (todo "WAITING")
 		  )) ; review waiting items
          ;; ...other commands here
 		))
+
+(setq org-habit-show-habits-only-for-today t)
 
 (defun air-org-skip-subtree-if-habit ()
   "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
@@ -187,10 +193,4 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
   (setq org-babel-R-command "/usr/local/bin/R --no-save")
 
 
-;;==================== c o n t a c t s ====================
-(use-package org-contacts
-  :ensure nil
-  :after org
-  :custom (org-contacts-files '("~/org/archive/contacts.org")))
-
-(provide 'org)
+(provide 'org-default)

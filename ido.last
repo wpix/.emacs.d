@@ -69,7 +69,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Ying/.emacs.d/lisp/" (24230 28815 485276 459000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "org-drill.el" "init-keybindings.el" "org-note.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" "init-ivy.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".DS_Store" "../" "./")
+ ("/Users/Ying/.emacs.d/lisp/" (24230 46033 455105 328000) "init-hai.el" "org-paper.el~" "init-face.el" "ying-hydra.el" "org-drill.el" "init-keybindings.el" "org-note.el" "init-company.el" "ying-yas.el" "org-note.el~" "org-paper.el" "init-ivy.el" "org.el" "init-chinese.el" "ying-proj-magit.el" "init-spelling.el" "ying-config.el" ".DS_Store" "../" "./")
 
  ("/Users/Ying/.config/" (24229 22854 126954 719000) "karabiner.edn~" "karabiner.edn" "karabiner/" ".mono/" "BaiduPCS-Go/" "menus/" "systemd/" "configstore/" ".DS_Store" ".karabiner.edn.swp" "ocr.sh" "../" "./")
 
