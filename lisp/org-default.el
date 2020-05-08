@@ -26,7 +26,7 @@
 
 ;;================ todo  ======================
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "|" "DONE(d)")
+      '((sequence "TODO(t)" "NEXT(n)" "PRyOJ(p)" "|" "DONE(d)")
 		(sequence "WAITING(w@/!)" "INACTIVE(i)" "SOMEDAY(s)" "|" "CANCELLED(c@/!)")))
 
 (setq org-todo-keyword-faces
@@ -47,25 +47,21 @@
   (mapcar #'(lambda (c) (if (equal c ?\[) ?\( (if (equal c ?\]) ?\) c))) string-to-transform)))
 
 (setq org-capture-templates
-      '(("c" "clocknow" entry (file+headline org-default-notes-file "Task")
-	  "* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
-		("d" "default" plain (function org-roam--capture-get-point)
-		 "%?"
-		 :file-name "%(format-time-string \"%Y-%m-%d--${slug}\" (current-time) t)"
-		 :head "#+TITLE: ${title}\n"
-		 :unnarrowed t)
+      '(;("c" "clocknow" entry (file+headline org-default-notes-file "Task")
+										;"* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
+		("d" "Dump" entry (file+headline "~/Dropbox/y/org/wiki/Zettelkasten.org" "Undeveloped Ideas") "** %? %^{DATE}p %^{LOCATION}p")
 		("m" "Minutes" entry (file org-default-notes-file)
 	  "* Meeting with %? :meeting:\n" :clock-in t :clock-resume t)
-	 ("j" "Journal" entry (file+olp+datetree "~/Dropbox/y/org/monthly.org") "* %?" :tree-type week)
-	 ("w" "Web site" entry (file+olp "~/Dropbox/y/org/notes.org" "Web")
- "* %c :website:\n%U %?%:initial")
+		("j" "Journal" entry (file+olp+datetree "~/Dropbox/y/org/monthly.org") "* %? %^g" :tree-type week)
+		("w" "Web site" entry (file+olp "~/Dropbox/y/org/notes.org" "Web")
+		 "* %c :website:\n%U %?%:initial")
 	 ))
 
 
 
   ;;============= a g e n d a ===================
 (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'"
-      org-agenda-files '("~/Dropbox/y/org/"))
+      org-agenda-files '("~/Dropbox/y/org"))
 
 ;; (load-library "find-lisp")
 ;; (setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))

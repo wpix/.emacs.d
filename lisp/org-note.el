@@ -39,6 +39,32 @@
       (use-package company-org-roam
         :config (push 'company-org-roam company-backends)))
 
+
+;=================== h e l m b i b t e x ===================
+(use-package helm-bibtex
+	:preface
+	(autoload 'helm-bibtex "helm-bibtex" "" t)
+	:bind ("C-c C-x" . 'helm-bibtex)
+	:init 
+	:config
+	(setq bibtex-completion-bibliography
+		  '("~/Dropbox/y/org/bib/mserefs.bib"
+			"~/Dropbox/y/org/bib/enerefs.bib"))
+	(setq bibtex-completion-library-path
+		  '("~/Dropbox/y/org/library")
+		  bibtex-completion-notes-path '"~/Dropbox/y/org/wiki"
+		  bibtex-completion-pdf-symbol "⌘"
+		  bibtex-completion-notes-symbol "✎")
+	(setq bibtex-completion-format-citation-functions
+		  '((org-mode      . bibtex-completion-format-citation-cite)
+			(default       . bibtex-completion-format-citation-default))))
+
+;;============== r o a m b i b t e x ===================
+;; (use-package org-roam-bibtex
+;;   :hook (org-roam-mode . org-roam-bibtex-mode)
+;;   :bind (:map org-mode-map
+;;          (("C-c n a" . orb-note-actions))))
+
 ;;===================== d e f t ========================
 (use-package deft
   :after org

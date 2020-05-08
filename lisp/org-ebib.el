@@ -12,7 +12,7 @@
   :init 
   :config
   (setq ebib-default-directory "~/Dropbox/y/org/bib/"
-		ebib-preload-bib-file "~/Dropbox/y/org/bib/mserefs.bib"
+		ebib-preload-bib-file "~/Dropbox/y/org/bib/enerefs.bib"
 		ebib-notes-directory "~/Dropbox/y/org/wiki/"
 		ebib-file-search-directory "~/Dropbox/y/org/library/"
 		ebib-use-timestamp t

@@ -18,10 +18,10 @@
  (rear-context-string . ":!Tx :r :b]] ;he")
  (position . 17050))
 ("org-refile-last-stored"
- (filename . "~/org/monthly.org")
- (front-context-string . "*** TODO Check c")
- (rear-context-string . "on 09:30-10:30>\n")
- (position . 3220))
+ (filename . "~/Dropbox/y/org/drill.org")
+ (front-context-string . "*** The act of [")
+ (rear-context-string . "a \n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+ (position . 2708))
 ("org capture elements"
  (front-context-string . "\n9.1.3.1 Templat")
  (rear-context-string . "pture templates\n")
@@ -49,8 +49,8 @@
  (url . #1#)
  (handler . bookmark-w3m-bookmark-jump))
 ("org-capture-last-stored"
- (filename . "~/org/monthly.org")
- (front-context-string . "**** cancel drop")
- (rear-context-string . "20-05-01 Friday\n")
- (position . 5249))
+ (filename . "~/Dropbox/y/org/monthly.org")
+ (front-context-string . "**** Zhang Yifan")
+ (rear-context-string . "-05-07 Thursday\n")
+ (position . 12353))
 )

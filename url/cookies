@@ -2,13 +2,20 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".google.com"
-  [url-cookie "NID" "190=eRFuiaBjJtn78cEqtxXNkkZgchuARoEr8LjWL2JuPV5To9oribX_V1nXFtbXThRflCUe71yUOWgzYs8DX-7DSihDWpm_ecG_-OYFcOJ9HoDasX8khCzL2O_36yyNIXinwYMJE9x5y5Iqg8LPb6UfRFgEj8Je82Wqt5v5Vxugpp0" "Tue, 05-May-2020 18:57:41 GMT" "/" ".google.com" nil])
+ '(("www.jstor.org"
+  [url-cookie "UUID" "f911084f-0f1e-41c5-ae1e-316a077e088d" "Sun May 07 14:06:42 2023 GMT" "/" "www.jstor.org" nil]
+  [url-cookie "_pxhd" "43f772c0578b07eaabf24cc1202e941ba73df1828f43128f7fb1f6ea4367c1b2:80f093a0-908d-11ea-a24b-1379cd861528" "Fri, 01 Jan 2021 00:00:00 GMT" "/" "www.jstor.org" nil])
+ ("my.apa.org"
+  [url-cookie "AWSALB" "NNwBDfbeVTVooHK0cvQirTCHF5F8kTux/I+JYRnFM5GRjtwoS7seTVcHKztmtX6Uc3LtORQFc2+A/ybywAdeupt5PO4/zi5jMziMw9SoNeD5cpn/d0zLcdGbmLec" "Thu, 14 May 2020 18:37:32 GMT" "/" "my.apa.org" nil])
  (".doi.org"
   [url-cookie "__cfduid" "d30a228292741d086be0be5f891bbe4f01571263174" "Thu, 15-Oct-20 21:59:34 GMT" "/" ".doi.org" nil]))
 )
 (setq url-cookie-secure-storage
- '((".google.com"
+ '(("www.jstor.org"
+  [url-cookie "csrftoken" "evV3DdOpITrVJt36nGpty2Ehef1EmuedapViG2c8xV9FXRMO6lCFTWhOpOjbqTDA" "Thu May 06 18:06:44 2021 GMT" "/" "www.jstor.org" t])
+ ("my.apa.org"
+  [url-cookie "AWSALBCORS" "NNwBDfbeVTVooHK0cvQirTCHF5F8kTux/I+JYRnFM5GRjtwoS7seTVcHKztmtX6Uc3LtORQFc2+A/ybywAdeupt5PO4/zi5jMziMw9SoNeD5cpn/d0zLcdGbmLec" "Thu, 14 May 2020 18:37:32 GMT" "/" "my.apa.org" t])
+ (".google.com"
   [url-cookie "1P_JAR" "2020-04-10-07" "Sun, 10-May-2020 07:50:11 GMT" "/" ".google.com" t]))
 )
 

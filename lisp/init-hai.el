@@ -52,7 +52,6 @@
 (global-set-key (kbd "C-c C-j") 'avy-resume)
 
 
-
 ;;================ h e l m ========================
 (use-package helm
   :demand t

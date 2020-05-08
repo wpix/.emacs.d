@@ -163,7 +163,6 @@
    (quote
 	("855eb24c0ea67e3b64d5d07730b96908bac6f4cd1e5a5986493cbac45e9d9636" default)))
  '(deft-default-extension "org" t)
- '(deft-directory "~/org/" t)
  '(deft-recursive t t)
  '(deft-use-filter-string-for-filename t t)
  '(ebib-citation-commands
@@ -178,7 +177,7 @@
  '(ebib-timestamp-format " %Y-%m-%d")
  '(ibuffer-never-show-predicates (quote ("^\\\\*Messages" "^\\\\*Completions")) nil (ibuf-ext))
  '(org-agenda-block-separator nil)
- '(org-agenda-files (quote ("\"~/Dropbox/y/org\"")))
+ '(org-agenda-files nil)
  '(org-capture-templates
    (quote
 	(("c" "Contact" entry
@@ -196,6 +195,7 @@
  '(org-journal-dir "~/org/wiki/")
  '(org-journal-file-format "%Y-%m-%d.org")
  '(org-journal-file-type (quote daily))
+ '(org-roam-bibtex-mode nil)
  '(org-roam-directory "~/Dropbox/y/org/wiki/")
  '(org-roam-mode t nil (org-roam))
  '(org-stuck-projects
@@ -208,7 +208,7 @@
  '(org-use-fast-todo-selection (quote expert))
  '(package-selected-packages
    (quote
-	(org-capture transpose-frame gus-art diminish org-plus-contrib treemacs doom-modeline doom-themes org-drill disable-mouse org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases)))
+	(org-roam-bibtex org-capture transpose-frame gus-art diminish org-plus-contrib treemacs doom-modeline doom-themes org-drill disable-mouse org-download deft yasnippet-snippets whole-line-or-region wc-goal-mode w3m use-package toc-org smartparens smart-mode-line-atom-one-dark-theme pyim projectile pos-tip ox-reveal ox-pandoc osx-dictionary org-super-agenda org-pdftools org-journal org-brain ob-translate ob-ipython markdown-mode langtool imenu-anywhere helm-org-rifle focus flx-ido exec-path-from-shell ess-smart-underscore emojify elpy elfeed ebib easy-hugo dracula-theme define-word counsel company-statistics company-org-roam cnfonts cmake-mode citeproc-org bbdb auto-compile anki-editor ace-window ace-popup-menu ace-link academic-phrases)))
  '(user-mail-address "wang3294@purdue.edu"))
  '(exec-path-from-shell-check-startup-files nil)
  '(flyspell-use-global-abbrev-table-p t)
@@ -242,8 +242,7 @@
 			   (:foreground "gray33")))))))
  '(package-selected-packages
    (quote
-    (swiper citeproc org-super-agenda osx-dictionary helm-org-rifle ace-window emojify markdown-mode anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe yasnippet-snippets flx-ido projectile elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org org-tracktable academic-phrases org-journal bbdb ess magit ox-reveal imenu-anywhere org-ref org-brain org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
- '(projectile-mode t nil (projectile))
+    (citeproc osx-dictionary helm-org-rifle ace-window emojify markdown-mode anki-editor focus ox-pandoc ebib wc-goal-mode auto-compile use-package cnfonts posframe yasnippet-snippets flx-ido elpy ob-ipython ob-translate cmake-mode ess-smart-underscore exec-path-from-shell citeproc-org academic-phrases ess magit ox-reveal imenu-anywhere org-ref org-noter ace-popup-menu pdf-tools define-word ace-link toc-org hydra easy-hugo elfeed yasnippet company-statistics pos-tip w3m smartparens whole-line-or-region doom-themes langtool company dracula-theme helm)))
  '(pyim-default-scheme (quote rime))
  '(pyim-dicts
    (quote
@@ -500,6 +499,7 @@
  '(error ((t (:foreground "Pink" :weight semi-bold))))
  '(ess-bp-fringe-recover-face ((t (:foreground "DarkOrchid1"))))
  '(ess-debug-blink-ref-not-found-face ((t (:background "dark gray"))))
+ '(font-lock-comment-face ((t (:foreground "light slate gray"))))
  '(font-lock-function-name-face ((t (:foreground "orchid1" :weight semi-bold))))
  '(font-lock-keyword-face ((t (:foreground "#e872b3" :weight semi-bold))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit demibold))))
@@ -571,9 +571,10 @@
  '(org-level-6 ((t (:foreground "MediumPurple1" :weight normal))))
  '(org-link ((t (:inherit link))))
  '(org-list-dt ((t (:weight semi-bold))))
+ '(org-meta-line ((t (:foreground "#6272a4"))))
  '(org-quote ((t (:inherit org-tag :foreground "lavender"))))
  '(org-ref-acronym-face ((t (:inherit org-link :foreground "thistle1"))))
- '(org-ref-cite-face ((t (:inherit org-link :foreground "gray50"))))
+ '(org-ref-cite-face ((t (:inherit org-link :foreground "#f1fa8c" :underline t :weight light))))
  '(org-ref-label-face ((t (:inherit org-link :foreground "light green"))))
  '(org-ref-ref-face ((t (:inherit org-link :foreground "orchid3"))))
  '(org-roam-link ((t (:inherit org-link))))
