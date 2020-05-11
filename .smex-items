@@ -1,0 +1,61 @@
+
+;; ----- smex-history -----
+(
+ ebib-set-dialect
+ eval-buffer
+ make-frame
+ ebib-insert-citation
+ ebib-import
+ ebib-index-default-sort
+ paredit-mode
+)
+
+;; ----- smex-data -----
+(
+ (package-install . 14)
+ (helm-M-x . 1)
+ (helm-recentf . 1)
+ (undo . 1)
+ (eval-buffer . 121)
+ (select-frame . 1)
+ (crossref-lookup . 11)
+ (make-frame . 3)
+ (org-ref-insert-ref-link . 1)
+ (org-ref . 1)
+ (imenu-anywhere . 9)
+ (ebib . 1)
+ (doi-add-bibtex-entry . 1)
+ (multi-occur . 1)
+ (occur . 1)
+ (describe-function . 1)
+ (repeat . 2)
+ (light . 12)
+ (package-refresh-contents . 2)
+ (dark . 10)
+ (mixed-pitch-mode . 3)
+ (whitespace-mode . 2)
+ (code . 2)
+ (nord . 1)
+ (poet . 2)
+ (solitaire . 1)
+ (solarized . 1)
+ (customize-group . 1)
+ (package-reinstall . 3)
+ (ivy-bibtex . 2)
+ (paredit-mode . 3)
+ (global-unset-key . 4)
+ (counsel-recentf . 1)
+ (write-file . 1)
+ (font-lock-mode . 2)
+ (notmuch . 4)
+ (notmuch-show-save-attachments . 1)
+ (compile . 1)
+ (tex-compile . 6)
+ (query-replace . 4)
+ (read-only-mode . 1)
+ (transpose-frame . 1)
+ (ebib-insert-citation . 13)
+ (ebib-import . 5)
+ (ebib-index-default-sort . 1)
+ (ebib-set-dialect . 1)
+)

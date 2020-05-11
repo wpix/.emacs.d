@@ -3,13 +3,12 @@
 (add-to-list 'load-path "~/org-mode/contrib/lisp" t)
 (add-to-list 'load-path "~/org-mode/site-lisp")
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-;(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 
 (require 'org)
 (require 'org-habit)
 (require 'org-loaddefs)
 (require 'ox-extra)
-(with-eval-after-load 'org       
+(with-eval-after-load 'org
   (setq org-startup-indented t) ; Enable `org-indent-mode' by default
   (add-hook 'org-mode-hook #'visual-line-mode))
 
@@ -20,14 +19,14 @@
 (setq org-directory "~/Dropbox/y/org")
 (setq org-default-notes-file "~/Dropbox/y/org/notes.org")
 
-; Set default column view headings: Task Effort Clock_Summary
+                                        ; Set default column view headings: Task Effort Clock_Summary
 (setq org-columns-default-format "%50ITEM %20TAGS %10PRIORITY %20TODO")
 
 
 ;;================ todo  ======================
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "NEXT(n)" "PRyOJ(p)" "|" "DONE(d)")
-		(sequence "WAITING(w@/!)" "INACTIVE(i)" "SOMEDAY(s)" "|" "CANCELLED(c@/!)")))
+      '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "|" "DONE(d)")
+        (sequence "WAITING(w@/!)" "INACTIVE(i)" "SOMEDAY(s)" "|" "CANCELLED(c@/!)")))
 
 (setq org-todo-keyword-faces
       '(("TODO" :foreground "orange" :weight bold)
@@ -48,25 +47,21 @@
 
 (setq org-capture-templates
       '(;("c" "clocknow" entry (file+headline org-default-notes-file "Task")
-										;"* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
-		("d" "Dump" entry (file+headline "~/Dropbox/y/org/wiki/Zettelkasten.org" "Undeveloped Ideas") "** %? %^{DATE}p %^{LOCATION}p")
-		("m" "Minutes" entry (file org-default-notes-file)
-	  "* Meeting with %? :meeting:\n" :clock-in t :clock-resume t)
-		("j" "Journal" entry (file+olp+datetree "~/Dropbox/y/org/monthly.org") "* %? %^g" :tree-type week)
-		("w" "Web site" entry (file+olp "~/Dropbox/y/org/notes.org" "Web")
-		 "* %c :website:\n%U %?%:initial")
-	 ))
+                                        ;"* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
+        ("d" "Dump" entry (file+headline "~/Dropbox/y/org/wiki/Zettelkasten.org" "Undeveloped Ideas") "** %? %^{DATE}p %^{LOCATION}p")
+        ("m" "Minutes" entry (file org-default-notes-file)
+         "* Meeting with %? :meeting:\n" :clock-in t :clock-resume t)
+        ("j" "Journal" entry (file+olp+datetree "~/Dropbox/y/org/monthly.org") "* %? %^g" :tree-type week)
+        ("w" "Web site" entry (file+olp "~/Dropbox/y/org/notes.org" "Web")
+         "* %c :website:\n%U %?%:initial")
+        ))
 
-
-
-  ;;============= a g e n d a ===================
+;;============= a g e n d a ===================
 (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'"
       org-agenda-files '("~/Dropbox/y/org"))
 
 ;; (load-library "find-lisp")
 ;; (setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))
-
-
 ;;https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
 ;;https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
 (setq org-agenda-custom-commands
@@ -74,37 +69,37 @@
          ((tags "PRIORITY=\"A\""
                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
                  (org-agenda-overriding-header "Velvet Room:"))
-				)
+                )
           (agenda "" ((org-agenda-span 3))
-				  (org-agenda-skip-function
-				   '(air-org-skip-subtree-if-habit))
-				  (org-agenda-start-on-weekday nil)
-				  )
+                  (org-agenda-skip-function
+                   '(air-org-skip-subtree-if-habit))
+                  (org-agenda-start-on-weekday nil)
+                  )
           (todo "TODO"
-                   ((org-agenda-skip-function
-					 '(or (air-org-skip-subtree-if-priority ?A)
-						  (air-org-skip-subtree-if-habit)
-                          (org-agenda-skip-if nil '(scheduled deadline))))
-                    (org-agenda-overriding-header "Midnight Channel:"))
-				   )
-		  ;; (alltodo ""
+                ((org-agenda-skip-function
+                  '(or (air-org-skip-subtree-if-priority ?A)
+                       (air-org-skip-subtree-if-habit)
+                       (org-agenda-skip-if nil '(scheduled deadline))))
+                 (org-agenda-overriding-header "Midnight Channel:"))
+                )
+          ;; (alltodo ""
           ;;          ((org-agenda-skip-function
-		  ;; 			 '(or (air-org-skip-subtree-if-priority ?A)
-		  ;; 				  (org-agenda-skip-entry-if 'todo 'done)
+          ;; 			 '(or (air-org-skip-subtree-if-priority ?A)
+          ;; 				  (org-agenda-skip-entry-if 'todo 'done)
           ;;                 (org-agenda-skip-if nil '(scheduled deadline))))
           ;;           (org-agenda-overriding-header "Midnight Chanel:"))
-		  ;; 		   )
-		  ))
-		("w" "Idle & Habit view"
+          ;; 		   )
+          ))
+        ("w" "Idle & Habit view"
          ((agenda "" ((org-agenda-span 7))); review upcoming deadlines and appointments
 
-		  (stuck "") ; review stuck projects as designated by org-stuck-projects
+          (stuck "") ; review stuck projects as designated by org-stuck-projects
           (todo "SOMEDAY") ; review someday/maybe items
-		  (todo "INACTIVE")
-		  (todo "WAITING")
-		  )) ; review waiting items
-         ;; ...other commands here
-		))
+          (todo "INACTIVE")
+          (todo "WAITING")
+          )) ; review waiting items
+        ;; ...other commands here
+        ))
 
 (setq org-habit-show-habits-only-for-today t)
 

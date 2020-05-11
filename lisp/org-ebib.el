@@ -1,14 +1,14 @@
 (use-package ebib
   :preface
-  ;(autoload 'helm-bibtex "helm-bibtex" "" t)
+                                        ;(autoload 'helm-bibtex "helm-bibtex" "" t)
   :bind
   (("C-c e" . 'ebib)
-  :map org-mode-map
-  ("C-c b" . 'ebib-insert-citation)
-  :map ebib-multiline-mode-map
-  ("C-c C-c" . 'ebib-quit-multiline-buffer-and-save)
-  ("C-c C-q" . 'ebib-cancel-multiline-buffer)
-  ("C-c C-s" . 'ebib-save-from-multiline-buffer))
+                                        ;   :map org-mode-map
+                                        ;   ("C-c b" . 'ebib-insert-citation)
+   :map ebib-multiline-mode-map
+   ("C-c C-c" . 'ebib-quit-multiline-buffer-and-save)
+   ("C-c C-q" . 'ebib-cancel-multiline-buffer)
+   ("C-c C-s" . 'ebib-save-from-multiline-buffer))
   :init 
   :config
   (setq ebib-default-directory "~/Dropbox/y/org/bib/"

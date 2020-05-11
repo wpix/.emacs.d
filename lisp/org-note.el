@@ -98,7 +98,6 @@
       (message "No PDF found for %s" key))))
 
 (setq org-ref-open-pdf-function 'my/org-ref-open-pdf-at-point)
-
 ;; (with-eval-after-load "pdf-tools"
 ;;   (use-package org-pdfview
 ;;     :config

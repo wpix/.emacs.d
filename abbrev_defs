@@ -9,9 +9,7 @@
 
 (define-abbrev-table 'Rd-mode-abbrev-table '())
 
-(define-abbrev-table 'Rd-mode-skeleton-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'Rd-mode-skeleton-abbrev-table '())
 
 (define-abbrev-table 'S+-transcript-mode-abbrev-table '())
 
@@ -37,6 +35,8 @@
 
 (define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
 
+(define-abbrev-table 'brewfile-mode-abbrev-table '())
+
 (define-abbrev-table 'c++-mode-abbrev-table '())
 
 (define-abbrev-table 'c-mode-abbrev-table '())
@@ -48,6 +48,12 @@
 (define-abbrev-table 'change-log-mode-abbrev-table '())
 
 (define-abbrev-table 'checkdoc-output-mode-abbrev-table '())
+
+(define-abbrev-table 'clojure-mode-abbrev-table '())
+
+(define-abbrev-table 'clojurec-mode-abbrev-table '())
+
+(define-abbrev-table 'clojurescript-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
 
@@ -164,6 +170,12 @@
 (define-abbrev-table 'eww-history-mode-abbrev-table '())
 
 (define-abbrev-table 'eww-mode-abbrev-table '())
+
+(define-abbrev-table 'finder-mode-abbrev-table '())
+
+(define-abbrev-table 'flycheck-error-list-mode-abbrev-table '())
+
+(define-abbrev-table 'flycheck-error-message-mode-abbrev-table '())
 
 (define-abbrev-table 'flymake-diagnostics-buffer-mode-abbrev-table '())
 
@@ -463,6 +475,7 @@
     ("experiemnts" "experiments" nil 3)
     ("expertises" "expertise" nil 0)
     ("expextations" "expectations" nil 0)
+    ("explainations" "explanations" nil 0)
     ("explict" "explicit" nil 0)
     ("expriences" "experiences" nil 2)
     ("exsiting" "existing" nil 0)
@@ -564,7 +577,7 @@
     ("interdiscciplinary" "interdisciplinary" nil 0)
     ("interdiscipinary" "interdisciplinary" nil 0)
     ("interdisciplianry" "interdisciplinary" nil 0)
-    ("interdisciplinaty" "interdisciplinary" nil 4)
+    ("interdisciplinaty" "interdisciplinary" nil 5)
     ("interdiscpluiinary" "interdisciplinary" nil 0)
     ("interdisiciplinary" "interdisciplinary" nil 0)
     ("interdisicplinary" "interdisciplinary" nil 0)
@@ -803,6 +816,7 @@
     ("secon" "second" nil 0)
     ("seragated" "segregated" nil 0)
     ("sessio" "session" nil 0)
+    ("sexp" "sex" nil 0)
     ("shalloa" "shallow" nil 0)
     ("shcedule" "schedule" nil 0)
     ("shcool" "school" nil 0)
@@ -875,13 +889,13 @@
     ("theeir" "their" nil 1)
     ("themal" "thermal" nil 3)
     ("theoreical" "theoretical" nil 0)
-    ("theoretical" "Theoretical" nil 12)
+    ("theoretical" "Theoretical" nil 14)
     ("theoy" "theory" nil 1)
     ("theral" "thermal" nil 0)
     ("theraml" "thermal" nil 0)
     ("therere" "Therere" nil 0)
     ("theyre" "they're" nil 0)
-    ("thie" "the" nil 1)
+    ("thie" "the" nil 2)
     ("thoeries" "theories" nil 1)
     ("thorndike" "Thorndike" nil 1)
     ("thoseaids" "those aids" nil 0)
@@ -926,6 +940,7 @@
     ("undergraudate" "undergraduate" nil 0)
     ("understanfing" "understanding" nil 0)
     ("univeristy" "University" nil 1)
+    ("universial" "universal" nil 0)
     ("unrelevant" "Unrelevant" nil 1)
     ("upcomng" "upcoming" nil 0)
     ("vai" "via" nil 0)
@@ -1004,6 +1019,8 @@
 (define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
+
+(define-abbrev-table 'inf-ruby-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-emacs-lisp-mode-abbrev-table '())
 
@@ -1147,13 +1164,19 @@
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
+(define-abbrev-table 'projectile-rails-compilation-mode-abbrev-table '())
+
+(define-abbrev-table 'projectile-rails-generate-mode-abbrev-table '())
+
+(define-abbrev-table 'projectile-rails-server-mode-abbrev-table '())
+
 (define-abbrev-table 'pyim-dm-mode-abbrev-table '())
 
 (define-abbrev-table 'python-mode-abbrev-table '())
 
-(define-abbrev-table 'python-mode-skeleton-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'python-mode-skeleton-abbrev-table '())
+
+(define-abbrev-table 'rake-compilation-mode-abbrev-table '())
 
 (define-abbrev-table 'reb-lisp-mode-abbrev-table '())
 
@@ -1163,11 +1186,17 @@
 
 (define-abbrev-table 'reftex-select-label-mode-abbrev-table '())
 
+(define-abbrev-table 'relint-mode-abbrev-table '())
+
 (define-abbrev-table 'rmail-summary-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
+
+(define-abbrev-table 'ruby-mode-abbrev-table '())
+
+(define-abbrev-table 'sanityinc/require-times-mode-abbrev-table '())
 
 (define-abbrev-table 'sas-dir-mode-abbrev-table '())
 
@@ -1213,6 +1242,8 @@
 
 (define-abbrev-table 'vc-bzr-log-view-mode-abbrev-table '())
 
+(define-abbrev-table 'vc-darcs-log-view-mode-abbrev-table '())
+
 (define-abbrev-table 'vc-dir-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
@@ -1220,6 +1251,10 @@
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-hg-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-mtn-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-svn-log-view-mode-abbrev-table '())
 

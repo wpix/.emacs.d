@@ -1,0 +1,191 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sun May 10 10:04:08 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24248 2520 718672 0) (desktop . "208") "Ying@MacBook-Pro.hsd1.in.comcast.net" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend mac-ct) (font . "-*-Hack-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#444444") (background-color . "#e1d9c2") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (alpha 85 85) (scroll-bar-foreground) (scroll-bar-background) (tool-bar-lines . 0) (title) (inhibit-double-buffering) (menu-bar-lines . 1) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "#333333") (environment) (ns-appearance . light) (ns-transparent-titlebar . t) (frameset--id . "6723-20C0-28F7-E7D0") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "Mac") (explicit-name) (tool-bar-position . top) (company-box-window . "Unprintable entity") (height . 67) (width . 100) (left . 768) (top + -1051)) ((min-height . 4) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 60) (min-pixel-width . 80) (min-pixel-height-ignore . 60) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 15) (min-pixel-width-safe . 16)) leaf (pixel-width . 816) (pixel-height . 990) (total-width . 102) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer "*ENE 695 revised proposal*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))))])
+(setq comint-input-ring nil)
+(setq compile-history nil)
+(setq desktop-missing-file-warning nil)
+(setq dired-regexp-history nil)
+(setq extended-command-history nil)
+(setq face-name-history nil)
+(setq file-name-history '("/Users/Ying/Downloads/notmuch/" "/Users/Ying/Dropbox/y/2020Theories/TF ENE theory.png" "pdf" "/Users/Ying/Dropbox/y/2020Theories/course_theorerical_framework_Ying.pdf" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/nanohub.pdf" "bib" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.bib" "~/Dropbox/y/2020Faculty/career_proposal/draft.bib" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.bib" "n" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/nsf_career_timeline.pdf" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.bib" "~/Dropbox/y/org/wiki/readinglist.org" "~/.emacs.d/custom.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/ying-bib.el" "~/dropbox/y/2020Theories/course_theorerical_framework.org" "~/.emacs.d/lisp/ying-org.el" "~/Dropbox/y/2020Faculty/career_proposal.org" "~/.emacs.d/lisp/ying-latex.el" "~/Dropbox/y/2020Faculty/career_proposal/draft.bib" "~/Dropbox/y/2020Faculty/career_proposal/draft.org" "~/Dropbox/y/org/wiki/skinner68_teach_scien_high_school.org" "~/.orhc-bibtex-cache" "~/.config/karabiner.edn" "~/Dropbox/y/2020Faculty/career_proposal/draft.bib" "~/Dropbox/y/2020Faculty/career_proposal/draft.org" "draf" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.tex" "~/Dropbox/y/2020Faculty/career_proposal/draft.tex" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.bib" "~/Dropbox/y/org/wiki/readinglist.org" "edn" "/Users/Ying/.config/karabiner.edn" "~/Dropbox/y/2020Faculty/career_proposal/draft.tex" "~/Dropbox/y/org/wiki/readinglist.org" "~/.emacs.d/custom.el" "~/.config/karabiner.edn" "~/.emacs.d/init.el" "~/.emacs.d/lisp/ying-themes.el" "~/.emacs.d/lisp/ying-bib.el" "~/Dropbox/y/2020Faculty/career_proposal.org" "~/dropbox/y/2020Theories/course_theorerical_framework.org" "~/Dropbox/y/org/wiki/skinner68_teach_scien_high_school.org" "~/.emacs.d/lisp/ying-org.el" "~/.emacs.d/lisp/org-paper.el" "~/.emacs.d/lisp/org-note.el" "~/.orhc-bibtex-cache" "~/.emacs.d/lisp/ying-latex.el" "~/.emacs.d/lisp/org-note.el" "~/.emacs.d/lisp/org-paper.el" "~/.emacs.d/lisp/ying-org.el" "~/.emacs.d/elpa-26.3/auctex-12.2.1/auctex-autoloads.el" "~/Dropbox/y/2020Faculty/draft.bib" "/Users/Ying/Dropbox/y/2020Faculty/draft.bib" "~/Dropbox/y/2020Faculty/career_proposal_nsf.tex" "career_proposal_nsf.tex" "/Users/Ying/Dropbox/y/2020Faculty/career_proposal_nsf.tex" "/Users/Ying/Dropbox/y/2020Faculty/" "career_proposal_NSF.org" "/Users/Ying/dropbox/y/2020Faculty/career_proposal_NSF.org" "~/Downloads/proposal_template.tex" "/Users/Ying/Dropbox/y/org/bib/ene-asee-motivation.bib" "~/Dropbox/y/org/wiki/readinglist.org" "png" "~/.emacs.d/lisp/ying-themes.el" "~/.emacs.d/lisp/ying-latex.el" "~/.emacs.d/lisp/org-paper.el" "~/.emacs.d/lisp/org-ebib.el" "~/.emacs.d/lisp/org-note.el" "~/dropbox/y/2020Theories/course_theorerical_framework.org" "~/Dropbox/y/2020Faculty/career_proposal.org" "~/Dropbox/y/org/wiki/skinner68_teach_scien_high_school.org" "~/.emacs.d/custom.el" "~/.emacs.d/lisp/ying-bib.el" "~/.config/karabiner.edn" "~/.orhc-bibtex-cache" "~/.emacs.d/init.el" "~/.emacs.d/custom.el" "/Users/Ying/.emacs.d/" "~/.emacs.d/custom.el" "~/.emacs.d/lisp/ying-latex.el" "~/.emacs.d/lisp/org-paper.el" "~/.emacs.d/lisp/org-ebib.el" "~/.emacs.d/lisp/org-note.el" "~/Dropbox/y/2020Faculty/career_proposal.org" "~/dropbox/y/2020Theories/course_theorerical_framework.org" "~/Dropbox/y/org/wiki/skinner68_teach_scien_high_school.org" "~/.emacs.d/init.el" "~/.emacs.d/lisp/ying-bib.el" "~/.orhc-bibtex-cache" "~/.config/karabiner.edn" "/Users/Ying/.config/karabiner.edn" "/Users/Ying/.emacs.d/lisp/" "~/.emacs.d/lisp/ying-bib.el" "~/.orhc-bibtex-cache" "~/.emacs.d/elpa-26.3/org-ref-20200506.1233/org-ref-autoloads.el" "~/.emacs.d/elpa-26.3/helm-bibtex-20200429.1606/helm-bibtex-autoloads.el" "~/.emacs.d/custom.el" "~/.emacs.d/elpa-26.3/helm-20200509.1001/helm-autoloads.el"))
+(setq grep-find-history nil)
+(setq grep-history nil)
+(setq ivy-history '("t" "num" "UNNUMBERED" "inte" "Expected Results (Intellectual Merit)" "Potential and Needed Collaboration among Educational Institu/Broader Impacts" "belg" "  |leysen14:_belgian_waste_recyc_solut| Belgian Waste & Recycling Solutions,  (2014). " "liv" "  |14:_hp_livin_progr_repor| , HP 2014 Living Progress Report" "Misc" "Fabienne L'Hoost" "Nicolas Preillon" "Anneke Leysen" "TechReport" "Background and Motivation" "time" "Relation to Career Goals and Time Management Plan" "ivin" " 1997 Interdisciplinary project work: Practice makes perfect? Ivins, J.R. article Ivins1997179" "ver" " 2002 Fire-Fighting Robot Contest: Interdisciplinary design curricula in college and high school Verner, I.M. and Ahlgren, D.J. article Verner2002355" "BibTeX" "boar" "2000 National Science Board Toward a More Effective NSF Role in International Science and Engineering report board00:_towar_more_effec_nsf_role" "mihe" "  |Mihelcic_2006| Mihelcic, James R., Phillips, Linda D., Watkins, David W., Integrating a Global Perspective into Education and Research: Engineering International Sustainable Development, Environmental Engineering Science (2006). " "arz" "  |Arzberger2010| Arzberger, P., Wienhausen, G., Abramson, D., Galvin, J., Date, S., Lin, F., Nan, K., Shimojo, S., Prime: An integrated and sustainable undergraduate international research program, Advances in Engineering Education (2010). " "  |Arzberger2010| Arzberger, P., Wienhausen, G., Abramson, D., Galvin, J., Date, S., Lin, F., Nan, K., Shimojo, S., Prime: An integrated and sustainable undergraduate international research program, Advances in Engineering Education (2010). " "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2006 Integrating a Global Perspective into Education and Research: Engineering International Sustainable Development Mihelcic, James R. and Phillips, Linda D. and Watkins, David W. article Mihelcic_2006" "  Summary:  Significance of proposed work" "Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "auc" "auctex" "Barron and Chris S. Hulleman inbook barron15" "2015 Expectancy-Value-Cost Model of Motivation Kenneth E. Barron and Chris S. Hulleman inbook barron15_expec_value_cost" "nsf" "2000 National Science Board Toward a More Effective NSF Role in International Science and Engineering report board00:_towar_more_effec_nsf_role" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "/Users/Ying/dropbox/y/2020Theories/course_theorerical_framework.org" "2010 Prime: An integrated and sustainable undergraduate international research program Arzberger, P. and Wienhausen, G. and Abramson, D. and Galvin, J. and Date, S. and Lin, F. and Nan, K. and Shimojo, S. article Arzberger2010" "œò¥Î 1913 Psychology As the Behaviorist Views It. John B. Watson article watson13_psych_as_behaviorist" "bruner" "org-ref" "helm" "org" "ivy b" "ivy-bibtex" "compa" "company-box" "compan box" "company-box" "add-hoo" "add-hook" "poe" "poet-theme" "compa po" "company-posframe" "mixe" "mixed-pitch" "company-m" "company-mode" "ada" "adams63_towar_under_inequit" "br" "Bruner1960" "/Users/Ying/dropbox/y/org/bib/ene-asee-motivation.bib" "Arzberger2010" "hau" "Hausfather1996a" "ecc" "Eccles2002" "de" "Dewey1997" "chi" "Chi2009a" "bra" "Brainerd" "langt" "langtool"))
+(setq minibuffer-history '("Belgian Waste \\& Recycling Solutions" " https://www.hpe.com/ h20195/V2/GetPDF.aspx/c04152740.pdf" "2014" "HP 2014 Living Progress Report" "editor" "http://www.abh- ace.be/sites/default/files/downloads/20140822_ace_brochure_waste_BD.pdf" "2014" "Belgian Waste & Recycling Solutions" "career milestones" "arz" "[]" "Framework" "10.1007/s10648-009-9113-z" "For"))
+(setq org-clock-history (list (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,1561 (get-buffer ,"skinner68_teach_scien_high_school.org")))) mk)))
+(setq org-refile-history nil)
+(setq org-tags-history nil)
+(setq query-replace-history '("\\cite[]" "\\Parencite" "\\cite" "\\Textcite" "cite" "Textcite"))
+(setq read-expression-history nil)
+(setq regexp-history '("international"))
+(setq regexp-search-ring nil)
+(setq register-alist '((48 . "Emerging challenges of sustainability education include the")))
+(setq search-ring '("enginee" "framework" "motivation" "ci" "cite" "delete" "chall" "bib" "bib	" "ren" "rename" "draft" "helm-mod" "alon" "delete_or" "code"))
+(setq shell-command-history nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/Ying/Dropbox/y/2020Faculty/career_proposal/draft.org"
+  "draft.org"
+  'org-mode
+  '(abbrev-mode visual-line-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode counsel-mode company-box-mode buffer-face-mode dimmer-mode anzu-mode org-roam-mode org-indent-mode TeX-PDF-mode)
+  9622
+  '(31502 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (indent-tabs-mode) (buffer-display-time 24248 1341 839116 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (31485 30716 29948 28895 27941 8366 7315 7025 14169 7991 7991 24495 24471 20188 29792 29312))))
+
+(desktop-create-buffer 208
+  "/Users/Ying/Dropbox/y/2020Faculty/career_proposal.org"
+  "career_proposal.org"
+  'org-mode
+  '(abbrev-mode visual-line-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode counsel-mode company-box-mode buffer-face-mode dimmer-mode anzu-mode org-roam-mode org-indent-mode TeX-PDF-mode)
+  4281
+  '(15871 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (indent-tabs-mode) (buffer-display-time 24247 61110 515154 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (14304 14177 4486 9518 6777 6837 6898 6952 6992 7049 7107 7166 7225 7287 6716 77))))
+
+(desktop-create-buffer 208
+  "/Users/Ying/.emacs.d/lisp/ying-latex.el"
+  "ying-latex.el"
+  'emacs-lisp-mode
+  '(abbrev-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode goto-address-prog-mode global-auto-revert-mode immortal-scratch-mode auto-compile-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode bug-reference-prog-mode symbol-overlay-mode rainbow-delimiters-mode aggressive-indent-mode paredit-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode highlight-quoted-mode elisp-slime-nav-mode)
+  791
+  '(458 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (buffer-display-time 24247 31193 289404 0) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (131 1165 1163 2665 2336 4423))))
+
+(desktop-create-buffer 208
+  "/Users/Ying/.emacs.d/lisp/ying-bib.el"
+  "ying-bib.el"
+  'emacs-lisp-mode
+  '(abbrev-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode goto-address-prog-mode global-auto-revert-mode immortal-scratch-mode auto-compile-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode bug-reference-prog-mode symbol-overlay-mode rainbow-delimiters-mode aggressive-indent-mode paredit-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode highlight-quoted-mode elisp-slime-nav-mode)
+  4512
+  '(3368 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (buffer-display-time 24247 31176 222569 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (2838 3340 3221 3326 3246 3190 3221 3221 3221 3221 3221 3221 1456 3220 3196 3191))))
+
+(desktop-create-buffer 208
+  nil
+  "career_proposal"
+  'dired-mode
+  '(abbrev-mode ns-auto-titlebar-mode diredfl-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode beacon-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode diff-hl-dired-mode)
+  481
+  '(nil nil)
+  t
+  '("/Users/Ying/Dropbox/y/2020Faculty/career_proposal/")
+  '((buffer-display-time 24247 29478 496004 148000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/Ying/.emacs.d/lisp/ying-org.el"
+  "ying-org.el"
+  'emacs-lisp-mode
+  '(abbrev-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode goto-address-prog-mode global-auto-revert-mode immortal-scratch-mode auto-compile-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode bug-reference-prog-mode symbol-overlay-mode rainbow-delimiters-mode aggressive-indent-mode paredit-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode highlight-quoted-mode elisp-slime-nav-mode)
+  5598
+  '(290 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (buffer-display-time 24247 10657 746717 540000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (7524))))
+
+(desktop-create-buffer 208
+  nil
+  "lisp"
+  'dired-mode
+  '(abbrev-mode ns-auto-titlebar-mode diredfl-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode beacon-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode diff-hl-dired-mode)
+  5413
+  '(1 nil)
+  t
+  '("/Users/Ying/.emacs.d/lisp/")
+  '((buffer-display-time 24247 10783 695493 540000))
+  '((mark-ring (1))))
+
+(desktop-create-buffer 208
+  "/Users/Ying/dropbox/y/2020Theories/course_theorerical_framework.org"
+  "course_theorerical_framework.org"
+  'org-mode
+  '(abbrev-mode visual-line-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode counsel-mode company-box-mode buffer-face-mode dimmer-mode anzu-mode org-roam-mode org-indent-mode TeX-PDF-mode)
+  20567
+  '(19682 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (indent-tabs-mode) (buffer-display-time 24247 8188 898173 540000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (17228 16282 14785 10675 8745 11548 8748 6578 1 15268))))
+
+(desktop-create-buffer 208
+  "/Users/Ying/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(abbrev-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode goto-address-prog-mode global-auto-revert-mode immortal-scratch-mode auto-compile-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode bug-reference-prog-mode symbol-overlay-mode rainbow-delimiters-mode aggressive-indent-mode paredit-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode highlight-quoted-mode elisp-slime-nav-mode)
+  2675
+  '(2674 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (buffer-display-time 24246 64332 482070 540000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/Ying/.emacs.d/custom.el"
+  "custom.el"
+  'emacs-lisp-mode
+  '(abbrev-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode goto-address-prog-mode global-auto-revert-mode immortal-scratch-mode auto-compile-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode bug-reference-prog-mode symbol-overlay-mode rainbow-delimiters-mode aggressive-indent-mode paredit-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode highlight-quoted-mode elisp-slime-nav-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (buffer-display-time 24247 1385 851413 540000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(abbrev-mode ns-auto-titlebar-mode diredfl-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode beacon-mode counsel-mode company-box-mode dimmer-mode anzu-mode org-roam-mode TeX-PDF-mode diff-hl-dired-mode)
+  1
+  '(nil nil)
+  t
+  '("/Users/Ying/.emacs.d/")
+  '((buffer-display-time 24247 1387 291942 540000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/Ying/Dropbox/y/org/wiki/skinner68_teach_scien_high_school.org"
+  "skinner68_teach_scien_high_school.org"
+  'org-mode
+  '(abbrev-mode visual-line-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode counsel-mode company-box-mode buffer-face-mode dimmer-mode anzu-mode org-roam-mode org-indent-mode TeX-PDF-mode)
+  2442
+  '(1 nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (indent-tabs-mode) (buffer-display-time 24247 19142 250535 148000) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/Ying/Dropbox/y/org/wiki/readinglist.org"
+  "readinglist.org"
+  'org-mode
+  '(abbrev-mode visual-line-mode eldoc-mode ns-auto-titlebar-mode flyspell-mode override-global-mode ivy-mode company-mode disable-mouse-global-mode global-auto-revert-mode immortal-scratch-mode auto-compile-on-load-mode projectile-mode diff-hl-mode whitespace-cleanup-mode which-key-mode hes-mode whole-line-or-region-local-mode page-break-lines-mode beacon-mode counsel-mode company-box-mode buffer-face-mode dimmer-mode anzu-mode org-roam-mode org-indent-mode TeX-PDF-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace . t) (indent-tabs-mode) (buffer-display-time 24247 29728 946148 0) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+

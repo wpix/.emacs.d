@@ -1,33 +1,32 @@
 
-;;======================== Org-ref setting ===========================
-;; (use-package org-ref
-;;   :ensure t
-;;   :after org
-;;   :init
-;;   ;;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
-;;   (add-hook 'org-ref-clean-bibtex-entry-hook 'org-ref-replace-nonascii)
-;;   :config
-;;   (require 'doi-utils)
-;;   (require 'org-id)
-;;   (require 'org-ref-wos)
-;;   (require 'org-ref-scopus)
-;;   (require 'org-ref-isbn)
-;;   (require 'ox-word)
-;;                                         ;(require 'org-ref-pubmed)
-;;                                         ;(require 'org-ref-arxiv)
-;;                                         ;(require 'org-ref-sci-id)
-;;   (setq org-ref-completion-library 'org-ref-helm-cite
-;;         org-ref-show-citation-on-enter nil
-;;         org-ref-show-broken-links t
-;;         org-latex-prefer-user-labels t)
+                                        ;======================== Org-ref setting ===========================
+(use-package org-ref
+  :ensure t
+  :after org
+  :init
+  ;;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
+  (add-hook 'org-ref-clean-bibtex-entry-hook 'org-ref-replace-nonascii)
+  :config
+  (require 'doi-utils)
+  (require 'org-id)
+  (require 'org-ref-wos)
+  (require 'org-ref-scopus)
+  (require 'org-ref-isbn)
+  (require 'ox-word)
+                                        ;(require 'org-ref-pubmed)
+                                        ;(require 'org-ref-arxiv)
+                                        ;(require 'org-ref-sci-id)
+  (setq org-ref-completion-library 'org-ref-ivy-cite
+        org-ref-show-citation-on-enter nil
+        org-ref-show-broken-links t
+        org-latex-prefer-user-labels t)
 
-;;   (setf (cdr (assoc 'org-mode bibtex-completion-format-citation-functions)) 'org-ref-format-citation)
+  (setf (cdr (assoc 'org-mode bibtex-completion-format-citation-functions)) 'org-ref-format-citation)
 
-;;   ;;org-ref-bibtex-generate-longtitle
-;;   ;;org-ref-bibtex-generate-shorttitles
-;;   (add-to-list 'org-ref-bibtex-journal-abbreviations
-;;                '("JIR" "Journal of Irreproducible Research" "J. Irrep. Res."))
-  
+  ;;org-ref-bibtex-generate-longtitle
+  ;;org-ref-bibtex-generate-shorttitles
+  (add-to-list 'org-ref-bibtex-journal-abbreviations
+               '("JIR" "Journal of Irreproducible Research" "J. Irrep. Res.")))
 ;;   ;=============== p d f v i e w  ========================
 ;;   ;; (with-eval-after-load "pdf-tools"
 ;;   ;; (use-package org-pdfview
@@ -39,75 +38,14 @@
 ;;   ;;   (add-to-list 'org-file-apps
 ;;   ;;   	 '("\\.pdf\\'" . (lambda (file link)
 ;;   ;;                          (org-pdfview-open link))))))
-  
+
 ;;   )
-
-;;==================== l a t e x ========================
-(require 'doi-utils)
-(require 'org-id)
-(require 'ox-word)
-(require 'ox-latex)
-;;==============  b i b e r =======================
-(setq org-latex-pdf-process
-      '("pdflatex -interaction nonstopmode -output-directory %o %f"
-        "biber %b"
-        "pdflatex -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -interaction nonstopmode -output-directory %o %f"))
-;;================== b i b t e x =========================
-;; (setq org-latex-pdf-process
-;;       '("pdflatex -interaction nonstopmode -output-directory %o %f"
-;;         "bibtex %b"
-;;         "pdflatex -interaction nonstopmode -output-directory %o %f"
-;;         "pdflatex -interaction nonstopmode -output-directory %o %f"))
-;;(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
-
-;;(setq org-latex-pdf-process '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -f %f"))
-
-(setq org-latex-toc-command "\\tableofcontents \\clearpage")
-;; allow for export=>beamer by placing
-;; #+LaTeX_CLASS: beamer in org files
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-
-(with-eval-after-load "ox-latex"
-  (add-to-list 'org-latex-classes
-               '("koma-article" 
-				 "\\documentclass{scrartcl}
-                \\usepackage{microtype}
-                \\usepackage{tgtermes}
-                \\usepackage[scale=.9]{tgheros}
-                \\usepackage{tgcursor}
-                \\usepackage{paralist}
-                \\newcommand{\\rc}{$^{14}C$}"
-				 ("\\section{%s}" . "\\section*{%s}")
-				 ("\\subsection{%s}" . "\\subsection*{%s}")
-				 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-				 ("\\paragraph{%s}" . "\\paragraph*{%s}")
-				 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
-
-(with-eval-after-load "ox-latex"
-  (add-to-list 'org-latex-classes
-               '("beamer"
-				 "\\documentclass\[presentation\]\{beamer\}"
-				 ("\\section\{%s\}" . "\\section*\{%s\}")
-				 ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
-				 ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}"))))
-
-(with-eval-after-load "ox-latex"
-  (add-to-list 'org-latex-classes
-               '("apa6"
-				 "\\documentclass{apa6}"
-				 ("\\section{%s}" . "\\section*{%s}")
-				 ("\\subsection{%s}" . "\\subsection*{%s}")
-				 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-				 ("\\paragraph{%s}" . "\\paragraph*{%s}")
-				 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 ;;=================== org pandoc ====================================
 ;; https://kitchingroup.cheme.cmu.edu/blog/2015/06/11/ox-pandoc-org-mode-+-org-ref-to-docx-with-bibliographies/
-;; We have to undo that here to insert LaTeX style citations. We do that here so that the key binding for inserting references from org-ref inserts the LaTeX citations. This is necessary for pandoc to convert the reference citations to the bibliography in the docx format. 
+;; We have to undo that here to insert LaTeX style citations. We do that here so that the key binding for inserting references from org-ref inserts the LaTeX citations. This is necessary for pandoc to convert the reference citations to the bibliography in the docx format.
 
-;; (setq helm-bibtex-format-citation-functions      
+;; (setq helm-bibtex-format-citation-functions
 ;;       '((org-mode . (lambda (x) (insert (concat
 ;;                                          "\\cite{"
 ;;                                          (mapconcat 'identity x ",")
